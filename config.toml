@@ -1,0 +1,149 @@
+baseurl = "https://leins275.xyz/"
+theme = "hugo-coder"
+enableInlineShortcodes = true
+paginate = 20
+pygmentsstyle = "native"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+disqusShortname = 'leins275-xyz-1'
+
+defaultcontentlanguage = "ru"
+languagecode = "ru-ru"
+
+title = "leins275"
+copyright = "leins275 All rights reserved"
+
+[languages]
+  [languages.en]
+  	languageName = "English"
+[[languages.en.menu.main]]
+  name = "About me"
+  weight = 1
+  url  = "/cv"
+[[languages.en.menu.main]]
+  name = "Blog"
+  weight = 2
+  url  = "en/posts/"
+[[languages.en.menu.main]]
+  name = "Categories"
+  weight = 3
+  url  = "en/categories/"
+[[languages.en.menu.main]]
+  name = "Tags"
+  weight = 4
+  url  = "en/tags/"
+  [languages.ru]
+  	languageName = "Русский"
+[[languages.ru.menu.main]]
+  name = "Обо мне"
+  weight = 1
+  url  = "/cv"
+[[languages.ru.menu.main]]
+  name = "Блог"
+  weight = 2
+  url  = "posts/"
+[[languages.ru.menu.main]]
+  name = "Разделы"
+  weight = 3
+  url  = "categories/"
+[[languages.ru.menu.main]]
+  name = "Теги"
+  weight = 4
+  url  = "tags/"
+
+[author]
+  name = "leins275"
+  email = "leins275@gmail.com"
+
+[languages.ru.params]
+  author = "Никита Лансков"
+  info = "Инженер-программист из Санкт-Петербурга"
+
+[params]
+  author      = "Nikita Lanskov"
+  info        = "Full Stack DevOps and Magician"
+  description = "leins275's personal website"
+  keywords    = "blog,developer,personal"
+  gravatar    = "leins275@gmail.com"
+  dateFormat  = "2.01.2006"
+
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  footercontent = "The meaning of life is to grow in power."
+  hideFooter    = false
+  hideCredits   = false
+  hideCopyright = false
+  since         = 2021
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+  author   = "authors"
+  series   = "series"
+
+# Social links
+[[params.social]]
+  name   = "Github"
+  icon   = "fa fa-github fa-2x"
+  weight = 1
+  url    = "https://github.com/leins275/"
+[[params.social]]
+  name   = "Telegram"
+  icon   = "fa fa-telegram fa-2x"
+  weight = 2
+  url    = "https://t.me/leins275"
+[[params.social]]
+  name   = "Vk"
+  icon   = "fa fa-vk fa-2x"
+  weight = 3
+  url    = "https://vk.com/leins275"
+[[params.social]]
+  name   = "LinkedIn"
+  icon   = "fa fa-linkedin fa-2x"
+  weight = 4
+  url    = "https://www.linkedin.com/in/leins275/"
+[[params.social]]
+  name   = "Instagram"
+  icon   = "fa fa-instagram fa-2x"
+  weight = 5
+  url    = "https://www.instagram.com/leins275/"
+[[params.social]]
+  name   = "Youtube"
+  icon   = "fa fa-youtube fa-2x"
+  weight = 9
+  url    = "https://www.youtube.com/@leins275"
+[[params.social]]
+  name   = "LiveLib"
+  icon   = "fa fa-book fa-2x"
+  weight = 7
+  url    = "https://www.livelib.ru/reader/leins275"
+[[params.social]]
+  name   = "Dzen"
+  icon   = "fa fa-circle fa-2x"
+  weight = 6
+  url    = "https://dzen.ru/leins275"
+[[params.social]]
+  name   = "RSS"
+  icon   = "fa fa-rss fa-2x"
+  weight = 10
+  url    = "https://leins275.xyz/index.xml"
+  rel    = "alternate"
+  type   = "application/rss+xml"
+
+[params.yandexMetrika]
+  id = "89873635"
+
+# Menu links
+
+# Sitemap settings
+[sitemap]
+  changefreq = 'monthly'
+  filename   = 'sitemap.xml'
+  priority   = 0.5
+

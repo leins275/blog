@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web on leins275</title>
+    <link>https://leins275.xyz/tags/web/</link>
+    <description>Recent content in web on leins275</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <managingEditor>leins275@gmail.com (leins275)</managingEditor>
+    <webMaster>leins275@gmail.com (leins275)</webMaster>
+    <copyright>leins275 All rights reserved</copyright>
+    <lastBuildDate>Sun, 08 Aug 2021 13:13:01 +0300</lastBuildDate><atom:link href="https://leins275.xyz/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Создаем свой сайт на hugo</title>
+      <link>https://leins275.xyz/posts/site-hugo/</link>
+      <pubDate>Sun, 08 Aug 2021 13:13:01 +0300</pubDate>
+      <author>leins275@gmail.com (leins275)</author>
+      <guid>https://leins275.xyz/posts/site-hugo/</guid>
+      <description>Мотивация Я уже давно хотел поднять свой личный сайт. В основном для следующих функций:
+Сайт - визитка. Хочется иметь возможность при необходимости продемонстрировать некоторое резюме заинтересованным людям. Также удобно собрать ссылки на свои соцсети в одном месте, и делиться просто ссылкой на свой сайт. Ссылки на собственные сервисы. Так как я являюсь программистом, да и просто компьютерным гиком, у меня, конечно же, есть свой собственный сервер. А на нем я время от времени разворачиваю различные сервисы.</description>
+    </item>
+    
+  </channel>
+</rss>

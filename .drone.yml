@@ -1,0 +1,23 @@
+kind: pipeline
+name: build-my-site
+type: docker
+
+steps:
+- name: submodules
+  image: alpine/git
+  commands:
+  - git submodule init
+  - git submodule update --recursive --remote
+
+- name: building
+  image: jakejarvis/hugo-extended:latest
+  commands:
+    - hugo -d /tmp/site
+  volumes:
+    - name: cache
+      path: /tmp/site
+
+volumes:
+  - name: cache
+    host:
+      path: /srv/my-site

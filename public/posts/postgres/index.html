@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Никита Лансков">
+    <meta name="description" content="Разворачиваем постгрес на своем сервере">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://leins275.xyz/posts/postgres/img/preview.png"/>
+
+<meta name="twitter:title" content="Postgres для пет проектов"/>
+<meta name="twitter:description" content="Разворачиваем постгрес на своем сервере"/>
+
+    <meta property="og:title" content="Postgres для пет проектов" />
+<meta property="og:description" content="Разворачиваем постгрес на своем сервере" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://leins275.xyz/posts/postgres/" /><meta property="og:image" content="https://leins275.xyz/posts/postgres/img/preview.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-07T05:00:00+03:00" />
+<meta property="article:modified_time" content="2022-08-07T05:00:00+03:00" />
+
+
+
+    <title>
+  Postgres для пет проектов · leins275
+</title>
+
+    
+      <link rel="canonical" href="https://leins275.xyz/posts/postgres/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      leins275
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/cv">Обо мне</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Блог</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/categories/">Разделы</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/tags/">Теги</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://leins275.xyz/en/">English</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://leins275.xyz/posts/postgres/">
+              Postgres для пет проектов
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-08-07T05:00:00&#43;03:00'>
+                7.08.2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              Читать около 4 минут
+            </span>
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/authors/leins275/">leins275</a></div>
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/article/">article</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/it/">it</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/server/">server</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/how-to/">how-to</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/pet-projects/">pet-projects</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><img src="img/preview.png" alt="postgres-logo"></p>
+<p>Обычно СУБД в продакшене это довольно сложная штука. Нужно правильно настроить кластер, позаботиться о его безопасности, эффективной работе и все в таком духе. В этой статье я расскажу, как развернуть СУБД postgresql на выделенном сервере. Я периодически делаю разные небольшие пет-проекты, и в них обычно используется база данных. При этом и объемы данных, и нагрузка на сервер минимальная. Так что в рамках этой статьи мы сфокусируемся на том, как сделать себе надежную СУБД для маленьких проектов с удобным доступом и за небольшие деньги. Ну и немного поговорим о конфигах, дампах и клиентах.</p>
+<h1 id="выбираем-хостинг-и-создаем-сервер">
+  Выбираем хостинг и создаем сервер
+  <a class="heading-link" href="#%d0%b2%d1%8b%d0%b1%d0%b8%d1%80%d0%b0%d0%b5%d0%bc-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3-%d0%b8-%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%b5%d0%bc-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Я буду использовать в качестве хостинга <a href="https://www.digitalocean.com/">DigitalOcean</a>, вы также можете использовать любой другой хостинг. Также рекоммендую свою <a href="/about/">рефералку</a> для регистрации.</p>
+<h2 id="почему-не-database-as-a-service">
+  Почему не database as a service?
+  <a class="heading-link" href="#%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%bd%d0%b5-database-as-a-service">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>DigitalOcean предоставляет возможность использовать базу данных как сервис. Это значит, что все управление и конфигурация базы будет лежать на DigitalOcean, а вы просто будете пользоваться этой СУБД. Я не использую данную опцию просто потому, что она в несколько раз дороже выделенного сервера. При этом если у вас ожидаются более менее серьезные нагрузки на базу, а вы не готовы заниматься ее конфигурацией самостоятельно, думаю эту опцию вполне можно рассмотреть.</p>
+<h1 id="создаем-дроплет">
+  Создаем дроплет
+  <a class="heading-link" href="#%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%b5%d0%bc-%d0%b4%d1%80%d0%be%d0%bf%d0%bb%d0%b5%d1%82">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>На диджитал оушене виртуальный сервер называется дроплетом. Я выбираю самый дешевый сервер, на данный момент такой стоит 4 доллара.</p>
+<p><img src="img/1.png" alt="droplet plans"></p>
+<p>Остальные настройки выбирайте сами, главное не забудьте добавить свой ssh ключ для подключения к серверу. Я рассчитываю на очень скромные нагрузки в первое время, поэтому создаю сервер с минимальными ресурсами. В последствии их можно будет расширить.</p>
+<h1 id="ставим-нужные-пакеты">
+  Ставим нужные пакеты
+  <a class="heading-link" href="#%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d0%bc-%d0%bd%d1%83%d0%b6%d0%bd%d1%8b%d0%b5-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>В качестве операционки я выбрал Ubuntu 22.04, так как она &ldquo;просто работает&rdquo;. Сначала обновим систему и затем поставим сервер постгреса и нгинкс следующими командами.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update -y &amp;&amp; sudo apt upgrade -y
+</span></span><span style="display:flex;"><span>sudo apt install -y postgresql postgresql-contrib nginx
+</span></span></code></pre></div><p>Ну и не забудьте включить все это дело:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl <span style="color:#24909d">enable</span> --now postgresql
+</span></span><span style="display:flex;"><span>sudo systemctl <span style="color:#24909d">enable</span> --now nginx
+</span></span></code></pre></div><h1 id="настраиваем-нгинкс">
+  Настраиваем нгинкс
+  <a class="heading-link" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%b0%d0%b8%d0%b2%d0%b0%d0%b5%d0%bc-%d0%bd%d0%b3%d0%b8%d0%bd%d0%ba%d1%81">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Чтобы нгинкс мог проксировать коннекшн к базе, нужно добавить новый stream block в <code>nginx.conf</code> .</p>
+<p>Изменения в nginx.conf:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"># end of nginx.conf file
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#ed9d13">stream</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">inclue</span> <span style="color:#ed9d13">/etc/nginx/sites-enabled/db</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>При этом мы также создаем файл <code>/etc/nginx/sites-enabled/db</code> с описанием прокси к базе:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">server</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">listen</span> <span style="color:#3677a9">1234</span> <span style="color:#ed9d13">so_keepalive=on</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">allow</span> <span style="color:#3677a9">123</span><span style="color:#ed9d13">.123.123.123</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#999;font-style:italic"># ...
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>	<span style="color:#6ab825;font-weight:bold">deny</span> <span style="color:#ed9d13">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">proxy_connect_timeout</span> <span style="color:#ed9d13">60s</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">proxy_socket_keepalive</span> <span style="color:#40ffff">on</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">proxy_pass</span> localhost:<span style="color:#3677a9">5432</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Тут нужно указать:</p>
+<ul>
+<li>порт, по которому будете подключаться к субд, в примере выше это <code>1234</code></li>
+<li>список айпи адресов, с которых разрешен доступ в базу, можно указать несколько айпишников в несколько строк, до deny all;</li>
+</ul>
+<blockquote>
+<p>Чтобы узнать ip адрес своего компьютера, можно воспользоваться сайтом <a href="https://ifconfig.me/">https://ifconfig.me/</a>.</p>
+</blockquote>
+<p>После изменений в конфигах перезапустите нгинкс, и ваша база данных будет готова обрабатывать соединения.</p>
+<p><a href="https://wasi0013.com/2021/11/15/setup-nginx-reverse-proxy-to-access-postgresql-database-remotely/">исходная статья</a></p>
+<h1 id="настройка-доступов">
+  Настройка доступов
+  <a class="heading-link" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%be%d0%b2">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Перед тем как тестировать, что соединение с базой работает, создадим тестовую базу и роль для подключения. Для этого перейдем в psql и выполним следующие команды:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u postgres psql
+</span></span><span style="display:flex;"><span>create database test123;
+</span></span><span style="display:flex;"><span>create user test123 with password <span style="color:#ed9d13">&#39;123&#39;</span>;
+</span></span><span style="display:flex;"><span>grant all privileges on database test123 to test123;
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">\q</span>
+</span></span></code></pre></div><p>Все, теперь мы можем подключиться к серверу базы как пользователь test123 и паролем <code>123</code> и базой test123.</p>
+<h1 id="пару-слов-о-клиентах">
+  Пару слов о клиентах
+  <a class="heading-link" href="#%d0%bf%d0%b0%d1%80%d1%83-%d1%81%d0%bb%d0%be%d0%b2-%d0%be-%d0%ba%d0%bb%d0%b8%d0%b5%d0%bd%d1%82%d0%b0%d1%85">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Чтобы протестировать подключение к базе, проще всего воспользоваться каким-то клиентом. Можно воспользоваться одним из <a href="https://proglib.io/p/8-luchshih-gui-klientov-postgresql-v-2021-godu-2021-09-20">графических клиентов</a>. Также рекоммендую консольный клиент pgcli. Он позволяет подключиться к удаленной базе и может примерно то же самое что и psql, только с более интересной подсветкой и автодополнением.</p>
+<h1 id="дополнительные-настройки">
+  Дополнительные настройки
+  <a class="heading-link" href="#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b8">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Конфигурационный файл находиться по следующему адресу: <code>/etc/postgresql/&lt;version&gt;/main/postgresql.conf</code>. Я считаю, что в нашем случае можно все настройки оставлять по дефолту, но вы можете при необходимости подкрутить параметры базы в этом файле.</p>
+<h1 id="перенос-данных-базы-в-другую-директорию">
+  Перенос данных базы в другую директорию
+  <a class="heading-link" href="#%d0%bf%d0%b5%d1%80%d0%b5%d0%bd%d0%be%d1%81-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d1%85-%d0%b1%d0%b0%d0%b7%d1%8b-%d0%b2-%d0%b4%d1%80%d1%83%d0%b3%d1%83%d1%8e-%d0%b4%d0%b8%d1%80%d0%b5%d0%ba%d1%82%d0%be%d1%80%d0%b8%d1%8e">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Если вы настраивали базу так же, как в примере, то все данные у вас будут сохраняться в дефолтной директории в разделе /var. В случае, если база будет разрастаться в объеме, может возникнуть необходимость добавить места под данные. Чтобы не расширять конфигурацию сервера, мне кажется удобней будет подключить отдельный диск и перенести данные на него. О том, как перенастроить постгрес на работу с другой директорией с данными, рекоммендую изучить в <a href="https://fitodic.github.io/how-to-change-postgresql-data-directory-on-linux">этой статье</a>.</p>
+<h1 id="бэкапы">
+  Бэкапы
+  <a class="heading-link" href="#%d0%b1%d1%8d%d0%ba%d0%b0%d0%bf%d1%8b">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Ну и немного про сохранность данных. В нашем простом случае имеем:</p>
+<ul>
+<li>данных немного (&laquo; 10Gb).</li>
+<li>Ресурсы на поднятие аналогичного окружения минимальны</li>
+</ul>
+<p>Так что вместо того чтобы долго и упорно конфижить постгрес для оптимальной безотказности и производительности, проще всего настроить бэкапы и если что восстанавливаться из них, при необходимости даже на абсолютно новом окружении.</p>
+<p>В нашем случае достаточно будет утилиты pg_dumpall, вот команда для того чтобы сделать полный дамп всего содержимого нашей СУБД</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pg_dumpall -c -U postgres &gt; dump_<span style="color:#ed9d13">`</span>date +%d-%m-%Y<span style="color:#ed9d13">&#34;_&#34;</span>%H_%M_%S<span style="color:#ed9d13">`</span>.sql
+</span></span></code></pre></div><p>Все. После исполнения этой команды имеем один файл со всеми нашими данными.</p>
+<p>Рекоммендую через <a href="https://timeweb.com/ru/community/articles/chto-takoe-cron">крон</a> настроить сразу периодическое создание дампов и сохранять их там где вам удобно. При использовании каких-то публичных облаков лучше дамп шифровать. Для шифрования рекоммендую gpg, про него можно почитать, например, <a href="https://devpew.com/blog/gpg/">тут</a>.</p>
+<p>Для того, чтобы данные из дампа загрузить в свежесозданный инстанс постгреса:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat yourdump.sql | sudo -u postgres psql
+</span></span></code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "leins275-xyz-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+      2021 -
+    
+    2023
+     Никита Лансков 
+    ·
+    Работает на <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
