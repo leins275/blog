@@ -35,10 +35,6 @@ copyright = "leins275 All rights reserved"
   [languages.ru]
   	languageName = "Русский"
 [[languages.ru.menu.main]]
-  name = "Обо мне"
-  weight = 1
-  url  = "/cv"
-[[languages.ru.menu.main]]
   name = "Блог"
   weight = 2
   url  = "posts/"

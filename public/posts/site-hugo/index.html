@@ -1,423 +1,56 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="ru">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="Никита Лансков">
-    <meta name="description" content="Создаем свой личный сайт, быстро и удобно">
-    <meta name="keywords" content="blog,developer,personal">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Создаем свой сайт на hugo"/>
-<meta name="twitter:description" content="Создаем свой личный сайт, быстро и удобно"/>
-
-    <meta property="og:title" content="Создаем свой сайт на hugo" />
-<meta property="og:description" content="Создаем свой личный сайт, быстро и удобно" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://leins275.xyz/posts/site-hugo/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-08-08T13:13:01+03:00" />
-<meta property="article:modified_time" content="2021-08-08T13:13:01+03:00" />
-
-
-
-    <title>
-  Создаем свой сайт на hugo · leins275
-</title>
-
-    
-      <link rel="canonical" href="https://leins275.xyz/posts/site-hugo/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.111.3">
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
-    <main class="wrapper">
-      <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
-      leins275
-    </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/cv">Обо мне</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Блог</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/categories/">Разделы</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/tags/">Теги</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="https://leins275.xyz/en/">English</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-      <div class="content">
-        
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://leins275.xyz/posts/site-hugo/">
-              Создаем свой сайт на hugo
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime='2021-08-08T13:13:01&#43;03:00'>
-                8.08.2021
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              Читать около 3 минут
-            </span>
-          </div>
-          <div class="authors">
-    <i class="fa fa-user" aria-hidden="true"></i>
-      <a href="/authors/leins275/">leins275</a></div>
-          <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
-    <a href="/categories/article/">article</a></div>
-
-          <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
-    <span class="tag">
-      <a href="/tags/it/">it</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/tags/web/">web</a>
-    </span></div>
-
-        </div>
-      </header>
-
-      <div>
-        
-        <h1 id="мотивация">
-  Мотивация
-  <a class="heading-link" href="#%d0%bc%d0%be%d1%82%d0%b8%d0%b2%d0%b0%d1%86%d0%b8%d1%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h1>
-<p>Я уже давно хотел поднять свой личный сайт. В основном для следующих функций:</p>
-<ol>
-<li>Сайт - визитка. Хочется иметь возможность при необходимости продемонстрировать некоторое резюме заинтересованным людям. Также удобно собрать ссылки на свои соцсети в одном месте, и делиться просто ссылкой на свой сайт.</li>
-<li>Ссылки на собственные сервисы. Так как я являюсь программистом, да и просто компьютерным гиком, у меня, конечно же, есть свой собственный сервер. А на нем я время от времени разворачиваю различные сервисы. Ну и поскольку я не очень люблю вкладки в браузере, было бы удобно сохранить ссылки на свои ресурсы в одном месте.</li>
-<li>Иногда приходится решать разные нетривиальные кейсы, по работе или по каким-то пет проектам. Я считаю, что знаниями необходимо делиться, поэтому иногда возникает желание рассказать кому-то о своем интересном опыте. Особенно, если это поможет решить чью-то проблему.</li>
-</ol>
-<p>Собственно, это основные мои требования к личному сайту. Понятно, что он должен быть статическим, легким для поддержки и гибким в настройке. Собственно, на создание своего сайта, который удовлетворял бы этим требованиям, меня натолкнул автор канала <em>Johe News</em>.</p>
-<h1 id="знакомство-с-hugo">
-  Знакомство с hugo
-  <a class="heading-link" href="#%d0%b7%d0%bd%d0%b0%d0%ba%d0%be%d0%bc%d1%81%d1%82%d0%b2%d0%be-%d1%81-hugo">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h1>
-<p><a href="https://gohugo.io/getting-started/quick-start/">Hugo</a> - проект для генерации статических сайтов. Мне он очень понравился своей простотой, уже за 15 минут следуя quick start у вы сможете получить готовый сайт! Это очень круто для моих задач.</p>
-<p>Отдельно стоит отметить большое разнообразие готовых тем. Темы можно добавить в свой проект сайта как git сабмодуль, что очень классно и удобно. Я просто открыл список доступных тем, добавил ее в проект и все, сайт уже выглядит отлично.</p>
-<p>По умолчанию тема выглядит <a href="https://hugo-coder.netlify.app/">так</a></p>
-<p><img src="/posts/site-hugo/images/1.png" alt="theme view example"></p>
-<h1 id="как-это-работает-у-меня">
-  Как это работает у меня
-  <a class="heading-link" href="#%d0%ba%d0%b0%d0%ba-%d1%8d%d1%82%d0%be-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0%d0%b5%d1%82-%d1%83-%d0%bc%d0%b5%d0%bd%d1%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h1>
-<p>А теперь подробно о том, что вам нужно сделать, чтобы создать свой сайт.</p>
-<h2 id="установка-hugo">
-  Установка hugo
-  <a class="heading-link" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-hugo">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>Установить hugo проще всего следуя <a href="https://gohugo.io/getting-started/installing/">инструкции</a> на офф. сайте. В моем дистрибутиве достаточно выполнить комманду:</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S hugo
-</span></span></code></pre></div><h2 id="создаём-новый-сайт">
-  Создаём новый сайт
-  <a class="heading-link" href="#%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d1%91%d0%bc-%d0%bd%d0%be%d0%b2%d1%8b%d0%b9-%d1%81%d0%b0%d0%b9%d1%82">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>Создаём сайт одной командой</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my_site
-</span></span></code></pre></div><h2 id="настройка-темы">
-  Настройка темы
-  <a class="heading-link" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-%d1%82%d0%b5%d0%bc%d1%8b">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>Инициализируем гит репозиторий, и добавляем тему как сабмодуль гита</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#24909d">cd</span> my_site
-</span></span><span style="display:flex;"><span>git init
-</span></span><span style="display:flex;"><span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-</span></span></code></pre></div><p>Также создаем репозиторий на каком-нибудь гит сервере, и подключаем наш сайт туда.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
-</span></span><span style="display:flex;"><span>git commit -am <span style="color:#ed9d13">&#34;Initial commit&#34;</span>
-</span></span><span style="display:flex;"><span>git remote add origin &lt;your_remote_git_repo_url&gt;
-</span></span><span style="display:flex;"><span>git push -u origin main
-</span></span></code></pre></div><p>Чтобы  склонировать проект впоследствии сразу вместе с темой, рекоммендую использовать флаг <code>--recurse-submodules</code> с коммандой <code>git clone</code>.</p>
-<h2 id="персонализация">
-  Персонализация
-  <a class="heading-link" href="#%d0%bf%d0%b5%d1%80%d1%81%d0%be%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>Для того, чтобы персоонализировать свой сайт, для начала достаточно насторить конфигурационный файл. Я воспрользовался <a href="https://github.com/luizdepra/hugo-coder/wiki/Configurations#complete-example">примером из темы</a></p>
-<h2 id="запускаем-локальный-сервер">
-  Запускаем локальный сервер
-  <a class="heading-link" href="#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba%d0%b0%d0%b5%d0%bc-%d0%bb%d0%be%d0%ba%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>Готово! теперь мы можем запустить локальный сервер нашего сайта, и помотреть как он будет выглядеть.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
-</span></span></code></pre></div><h2 id="генерируем-статический-сайт-для-хостинга">
-  Генерируем статический сайт для хостинга
-  <a class="heading-link" href="#%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b8%d1%80%d1%83%d0%b5%d0%bc-%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9-%d1%81%d0%b0%d0%b9%d1%82-%d0%b4%d0%bb%d1%8f-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3%d0%b0">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>Если все понравилось, то генерируем набор статических файлов, которые можно будет загрузить на хостинг.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo -D
-</span></span></code></pre></div><p>По умолчанию вся сборка будет лежать в каталоге public, но можно указать и другой путь для сборки флагом <code>--directory</code>.</p>
-<h2 id="немного-про-хостинг">
-  Немного про хостинг
-  <a class="heading-link" href="#%d0%bd%d0%b5%d0%bc%d0%bd%d0%be%d0%b3%d0%be-%d0%bf%d1%80%d0%be-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>Я разворачиваю сайт на своем личном сервисе, вы можете делать это, как угодно.
+<!doctype html><html lang=ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="ru"><meta name=color-scheme content="light dark"><meta name=author content="Никита Лансков"><meta name=description content="Создаем свой личный сайт, быстро и удобно"><meta name=keywords content="blog,developer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Создаем свой сайт на hugo"><meta name=twitter:description content="Создаем свой личный сайт, быстро и удобно"><meta property="og:title" content="Создаем свой сайт на hugo"><meta property="og:description" content="Создаем свой личный сайт, быстро и удобно"><meta property="og:type" content="article"><meta property="og:url" content="https://leins275.xyz/posts/site-hugo/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-08-08T13:13:01+03:00"><meta property="article:modified_time" content="2021-08-08T13:13:01+03:00"><title>Создаем свой сайт на hugo · leins275</title><link rel=canonical href=https://leins275.xyz/posts/site-hugo/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.111.3"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>leins275</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Блог</a></li><li class=navigation-item><a class=navigation-link href=/categories/>Разделы</a></li><li class=navigation-item><a class=navigation-link href=/tags/>Теги</a></li><li class="navigation-item menu-separator"><span>|</span></li><li class=navigation-item><a href=https://leins275.xyz/en/>English</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://leins275.xyz/posts/site-hugo/>Создаем свой сайт на hugo</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2021-08-08T13:13:01+03:00>8.08.2021</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+Читать около 3 минут</span></div><div class=authors><i class="fa fa-user" aria-hidden=true></i>
+<a href=/authors/leins275/>leins275</a></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/article/>article</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/it/>it</a></span>
+<span class=separator>•</span>
+<span class=tag><a href=/tags/web/>web</a></span></div></div></header><div><h1 id=мотивация>Мотивация
+<a class=heading-link href=#%d0%bc%d0%be%d1%82%d0%b8%d0%b2%d0%b0%d1%86%d0%b8%d1%8f><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Я уже давно хотел поднять свой личный сайт. В основном для следующих функций:</p><ol><li>Сайт - визитка. Хочется иметь возможность при необходимости продемонстрировать некоторое резюме заинтересованным людям. Также удобно собрать ссылки на свои соцсети в одном месте, и делиться просто ссылкой на свой сайт.</li><li>Ссылки на собственные сервисы. Так как я являюсь программистом, да и просто компьютерным гиком, у меня, конечно же, есть свой собственный сервер. А на нем я время от времени разворачиваю различные сервисы. Ну и поскольку я не очень люблю вкладки в браузере, было бы удобно сохранить ссылки на свои ресурсы в одном месте.</li><li>Иногда приходится решать разные нетривиальные кейсы, по работе или по каким-то пет проектам. Я считаю, что знаниями необходимо делиться, поэтому иногда возникает желание рассказать кому-то о своем интересном опыте. Особенно, если это поможет решить чью-то проблему.</li></ol><p>Собственно, это основные мои требования к личному сайту. Понятно, что он должен быть статическим, легким для поддержки и гибким в настройке. Собственно, на создание своего сайта, который удовлетворял бы этим требованиям, меня натолкнул автор канала <em>Johe News</em>.</p><h1 id=знакомство-с-hugo>Знакомство с hugo
+<a class=heading-link href=#%d0%b7%d0%bd%d0%b0%d0%ba%d0%be%d0%bc%d1%81%d1%82%d0%b2%d0%be-%d1%81-hugo><i class="fa fa-link" aria-hidden=true></i></a></h1><p><a href=https://gohugo.io/getting-started/quick-start/>Hugo</a> - проект для генерации статических сайтов. Мне он очень понравился своей простотой, уже за 15 минут следуя quick start у вы сможете получить готовый сайт! Это очень круто для моих задач.</p><p>Отдельно стоит отметить большое разнообразие готовых тем. Темы можно добавить в свой проект сайта как git сабмодуль, что очень классно и удобно. Я просто открыл список доступных тем, добавил ее в проект и все, сайт уже выглядит отлично.</p><p>По умолчанию тема выглядит <a href=https://hugo-coder.netlify.app/>так</a></p><p><img src=/posts/site-hugo/images/1.png alt="theme view example"></p><h1 id=как-это-работает-у-меня>Как это работает у меня
+<a class=heading-link href=#%d0%ba%d0%b0%d0%ba-%d1%8d%d1%82%d0%be-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0%d0%b5%d1%82-%d1%83-%d0%bc%d0%b5%d0%bd%d1%8f><i class="fa fa-link" aria-hidden=true></i></a></h1><p>А теперь подробно о том, что вам нужно сделать, чтобы создать свой сайт.</p><h2 id=установка-hugo>Установка hugo
+<a class=heading-link href=#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-hugo><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Установить hugo проще всего следуя <a href=https://gohugo.io/getting-started/installing/>инструкции</a> на офф. сайте. В моем дистрибутиве достаточно выполнить комманду:</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo pacman -S hugo
+</span></span></code></pre></div><h2 id=создаём-новый-сайт>Создаём новый сайт
+<a class=heading-link href=#%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d1%91%d0%bc-%d0%bd%d0%be%d0%b2%d1%8b%d0%b9-%d1%81%d0%b0%d0%b9%d1%82><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Создаём сайт одной командой</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>hugo new site my_site
+</span></span></code></pre></div><h2 id=настройка-темы>Настройка темы
+<a class=heading-link href=#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-%d1%82%d0%b5%d0%bc%d1%8b><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Инициализируем гит репозиторий, и добавляем тему как сабмодуль гита</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#24909d>cd</span> my_site
+</span></span><span style=display:flex><span>git init
+</span></span><span style=display:flex><span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</span></span></code></pre></div><p>Также создаем репозиторий на каком-нибудь гит сервере, и подключаем наш сайт туда.</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>git commit -am <span style=color:#ed9d13>&#34;Initial commit&#34;</span>
+</span></span><span style=display:flex><span>git remote add origin &lt;your_remote_git_repo_url&gt;
+</span></span><span style=display:flex><span>git push -u origin main
+</span></span></code></pre></div><p>Чтобы склонировать проект впоследствии сразу вместе с темой, рекоммендую использовать флаг <code>--recurse-submodules</code> с коммандой <code>git clone</code>.</p><h2 id=персонализация>Персонализация
+<a class=heading-link href=#%d0%bf%d0%b5%d1%80%d1%81%d0%be%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Для того, чтобы персоонализировать свой сайт, для начала достаточно насторить конфигурационный файл. Я воспрользовался <a href=https://github.com/luizdepra/hugo-coder/wiki/Configurations#complete-example>примером из темы</a></p><h2 id=запускаем-локальный-сервер>Запускаем локальный сервер
+<a class=heading-link href=#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba%d0%b0%d0%b5%d0%bc-%d0%bb%d0%be%d0%ba%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Готово! теперь мы можем запустить локальный сервер нашего сайта, и помотреть как он будет выглядеть.</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>hugo server -D
+</span></span></code></pre></div><h2 id=генерируем-статический-сайт-для-хостинга>Генерируем статический сайт для хостинга
+<a class=heading-link href=#%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b8%d1%80%d1%83%d0%b5%d0%bc-%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9-%d1%81%d0%b0%d0%b9%d1%82-%d0%b4%d0%bb%d1%8f-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3%d0%b0><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Если все понравилось, то генерируем набор статических файлов, которые можно будет загрузить на хостинг.</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>hugo -D
+</span></span></code></pre></div><p>По умолчанию вся сборка будет лежать в каталоге public, но можно указать и другой путь для сборки флагом <code>--directory</code>.</p><h2 id=немного-про-хостинг>Немного про хостинг
+<a class=heading-link href=#%d0%bd%d0%b5%d0%bc%d0%bd%d0%be%d0%b3%d0%be-%d0%bf%d1%80%d0%be-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Я разворачиваю сайт на своем личном сервисе, вы можете делать это, как угодно.
 Для удобства будем считать, что у вас есть vps c вашим любимым linux дистрибутивом.
-На сервере просто клонируем репозиторий, собираем сайт и раздаем его просто как статику при помощи веб сервера. Лично я использую nginx с простейшим конфигом:</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">server</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">server_name</span> <span style="color:#ed9d13">leins275.xyz</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">listen</span> <span style="color:#3677a9">80</span>; 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">root</span> <span style="color:#ed9d13">/srv/my-site</span>; 
-</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">index</span> <span style="color:#ed9d13">index.html</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">location</span> <span style="color:#ed9d13">/</span> { 
-</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">try_files</span> <span style="color:#40ffff">$uri</span> <span style="color:#40ffff">$uri/</span> <span style="color:#ed9d13">/404.html</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+На сервере просто клонируем репозиторий, собираем сайт и раздаем его просто как статику при помощи веб сервера. Лично я использую nginx с простейшим конфигом:</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=display:flex><span><span style=color:#6ab825;font-weight:700>server</span> {
+</span></span><span style=display:flex><span>    <span style=color:#6ab825;font-weight:700>server_name</span> <span style=color:#ed9d13>leins275.xyz</span>;
+</span></span><span style=display:flex><span>    <span style=color:#6ab825;font-weight:700>listen</span> <span style=color:#3677a9>80</span>; 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#6ab825;font-weight:700>root</span> <span style=color:#ed9d13>/srv/my-site</span>; 
+</span></span><span style=display:flex><span>    <span style=color:#6ab825;font-weight:700>index</span> <span style=color:#ed9d13>index.html</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#6ab825;font-weight:700>location</span> <span style=color:#ed9d13>/</span> { 
+</span></span><span style=display:flex><span>        <span style=color:#6ab825;font-weight:700>try_files</span> <span style=color:#40ffff>$uri</span> <span style=color:#40ffff>$uri/</span> <span style=color:#ed9d13>/404.html</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
 </span></span></code></pre></div><p>Также при помощи certbot легко добавить вашему сайту сертификат.
-Для этого достаточно установить certbot, и выполнить комманду</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo certbot --nginx -d leins275.xyz
-</span></span></code></pre></div><p>Certbot сам проправит ваш nginx конфиг как нужно, чтобы переключить сайт на https.</p>
-<h2 id="немножко-автоматизации">
-  Немножко автоматизации
-  <a class="heading-link" href="#%d0%bd%d0%b5%d0%bc%d0%bd%d0%be%d0%b6%d0%ba%d0%be-%d0%b0%d0%b2%d1%82%d0%be%d0%bc%d0%b0%d1%82%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b8">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h2>
-<p>В целом наш сайт уже развернут и доступен по сети, если вы все сделали правильно.
-Я также использую систему автоматизации деплоя gitea + drone ci. чтобы автоматически добавлять изменения на сайт при коммите в репозиторий. Про то, как эта системе работает я расскажу в другом посте.</p>
-<hr>
-<h1 id="заключение">
-  Заключение
-  <a class="heading-link" href="#%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h1>
-<table>
-<thead>
-<tr>
-<th>плюсы</th>
-<th>минусы</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>автоматизация рутинныx задачи при создании сайта</td>
-<td>ограниченность функционала</td>
-</tr>
-<tr>
-<td>многообразие готовых тем</td>
-<td></td>
-</tr>
-<tr>
-<td>лёгкость управлеия контентом</td>
-<td></td>
-</tr>
-<tr>
-<td>простота настройки</td>
-<td></td>
-</tr>
-<tr>
-<td>скорось работы</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="источники-вдохновения">
-  Источники вдохновения
-  <a class="heading-link" href="#%d0%b8%d1%81%d1%82%d0%be%d1%87%d0%bd%d0%b8%d0%ba%d0%b8-%d0%b2%d0%b4%d0%be%d1%85%d0%bd%d0%be%d0%b2%d0%b5%d0%bd%d0%b8%d1%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
-</h3>
-<p><a href="https://youtu.be/mpwxguP_H5E">Видео на канале  <em>Johe News</em></a></p>
-<p><a href="https://devpew.com/blog/hugo-gatsby-jekyll-pelican/">Статья к видео</a></p>
-
-      </div>
-
-
-      <footer>
-        
-
-
-        <div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "leins275-xyz-1" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        
-        
-      </footer>
-    </article>
-
-    
-  </section>
-
-      </div>
-
-      <footer class="footer">
-  <section class="container">
-    ©
-    
-      2021 -
-    
-    2023
-     Никита Лансков 
-    ·
-    Работает на <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-  </section>
-</footer>
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
-
-</html>
+Для этого достаточно установить certbot, и выполнить комманду</p><div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo certbot --nginx -d leins275.xyz
+</span></span></code></pre></div><p>Certbot сам проправит ваш nginx конфиг как нужно, чтобы переключить сайт на https.</p><h2 id=немножко-автоматизации>Немножко автоматизации
+<a class=heading-link href=#%d0%bd%d0%b5%d0%bc%d0%bd%d0%be%d0%b6%d0%ba%d0%be-%d0%b0%d0%b2%d1%82%d0%be%d0%bc%d0%b0%d1%82%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b8><i class="fa fa-link" aria-hidden=true></i></a></h2><p>В целом наш сайт уже развернут и доступен по сети, если вы все сделали правильно.
+Я также использую систему автоматизации деплоя gitea + drone ci. чтобы автоматически добавлять изменения на сайт при коммите в репозиторий. Про то, как эта системе работает я расскажу в другом посте.</p><hr><h1 id=заключение>Заключение
+<a class=heading-link href=#%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5><i class="fa fa-link" aria-hidden=true></i></a></h1><table><thead><tr><th>плюсы</th><th>минусы</th></tr></thead><tbody><tr><td>автоматизация рутинныx задачи при создании сайта</td><td>ограниченность функционала</td></tr><tr><td>многообразие готовых тем</td><td></td></tr><tr><td>лёгкость управлеия контентом</td><td></td></tr><tr><td>простота настройки</td><td></td></tr><tr><td>скорось работы</td><td></td></tr></tbody></table><h3 id=источники-вдохновения>Источники вдохновения
+<a class=heading-link href=#%d0%b8%d1%81%d1%82%d0%be%d1%87%d0%bd%d0%b8%d0%ba%d0%b8-%d0%b2%d0%b4%d0%be%d1%85%d0%bd%d0%be%d0%b2%d0%b5%d0%bd%d0%b8%d1%8f><i class="fa fa-link" aria-hidden=true></i></a></h3><p><a href=https://youtu.be/mpwxguP_H5E>Видео на канале <em>Johe News</em></a></p><p><a href=https://devpew.com/blog/hugo-gatsby-jekyll-pelican/>Статья к видео</a></p></div><footer><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//leins275-xyz-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></footer></article></section></div><footer class=footer><section class=container>©
+2021 -
+2023
+Никита Лансков
+·
+Работает на <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script></body></html>
