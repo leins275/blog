@@ -9,7 +9,7 @@ categories = ["article"]
 slug = "money-flow"
 tags = []
 series = []
-images = []
+images = ["https://leins275.xyz/posts/money-flow/img/Calc.jpg"]
 +++
 
 ![](img/Calc.jpg)
