@@ -1,8 +1,10 @@
 <!doctype html><html lang=ru>
 <head>
+<title>
+Как майнить эфир · leins275
+</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=content-language content="ru">
 <meta name=color-scheme content="light dark">
 <meta name=author content="Никита Лансков">
 <meta name=description content="Начинаем майнить эфир с нуля">
@@ -16,18 +18,17 @@
 <meta property="og:url" content="https://leins275.xyz/posts/mining/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-03-20T13:28:52+03:00">
 <meta property="article:modified_time" content="2022-03-20T13:28:52+03:00">
-<title>
-Как майнить эфир · leins275
-</title>
 <link rel=canonical href=https://leins275.xyz/posts/mining/>
 <link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
-<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
-<link rel=stylesheet href=/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder.min.5adbe72fc41dcfb852215b84695288939b6b606db73238bd3ee936469572fc9c.css integrity="sha256-WtvnL8Qdz7hSIVuEaVKIk5trYG23Mji9Puk2RpVy/Jw=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any>
 <link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32>
 <link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16>
 <link rel=apple-touch-icon href=/images/apple-touch-icon.png>
 <link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.92.2">
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5>
 </head>
 <body class="preload-transitions colorscheme-auto">
 <div class=float-container>
@@ -50,7 +51,7 @@ leins275
 <a class=navigation-link href=/posts/>Блог</a>
 </li>
 <li class=navigation-item>
-<a class=navigation-link href=/categories/>Разделы</a>
+<a class=navigation-link href=/categories/>Категории</a>
 </li>
 <li class=navigation-item>
 <a class=navigation-link href=/tags/>Теги</a>
@@ -59,7 +60,7 @@ leins275
 <span>|</span>
 </li>
 <li class=navigation-item>
-<a href=https://leins275.xyz/en/>English</a>
+<a href=/en/>English</a>
 </li>
 </ul>
 </section>
@@ -105,11 +106,12 @@ leins275
 </span></div>
 </div>
 </header>
-<div>
+<div class=post-content>
 <h1 id=как-начать-майнить>
 Как начать майнить?
 <a class=heading-link href=#%d0%ba%d0%b0%d0%ba-%d0%bd%d0%b0%d1%87%d0%b0%d1%82%d1%8c-%d0%bc%d0%b0%d0%b9%d0%bd%d0%b8%d1%82%d1%8c>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <p>Это статья для тех, кто еще не успел разобраться с тем, как все устроено в мире криптовалют, но имеет компьютер с видеокартой и
@@ -119,20 +121,22 @@ leins275
 <h1 id=пара-слов-о-майнинге-в-целом>
 Пара слов о майнинге в целом
 <a class=heading-link href=#%d0%bf%d0%b0%d1%80%d0%b0-%d1%81%d0%bb%d0%be%d0%b2-%d0%be-%d0%bc%d0%b0%d0%b9%d0%bd%d0%b8%d0%bd%d0%b3%d0%b5-%d0%b2-%d1%86%d0%b5%d0%bb%d0%be%d0%bc>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <p>В рамках данной статьи не хочется подробно разбирать, какие алгоритмы стоят за процессом майнинга. Для нас с вами важно то, что при
 помощи майнинга вы можете заставить зарабатывать вашу видеокарту.</p>
-<p>Если вы хотите подробней разобраться в майнинге, я рекоммендую прочитать для начала пару статей из блога <a href=https://www.youtube.com/channel/UCL4BwOrBEKggPyqsdVpraFg><em>Johenews</em></a></p>
+<p>Если вы хотите подробней разобраться в майнинге, я рекоммендую прочитать для начала пару статей из блога <a href=https://www.youtube.com/channel/UCL4BwOrBEKggPyqsdVpraFg class=external-link target=_blank rel=noopener><em>Johenews</em></a></p>
 <ol>
-<li><a href=https://devpew.com/blog/cryptourrencies/>Про криптовалюты и блокчейн простым языком</a></li>
-<li><a href=https://devpew.com/blog/pow/>Алгоритм PoW. Что такое Proof-of-Work. Зачем нужны майнеры?</a></li>
+<li><a href=https://devpew.com/blog/cryptourrencies/ class=external-link target=_blank rel=noopener>Про криптовалюты и блокчейн простым языком</a></li>
+<li><a href=https://devpew.com/blog/pow/ class=external-link target=_blank rel=noopener>Алгоритм PoW. Что такое Proof-of-Work. Зачем нужны майнеры?</a></li>
 </ol>
 <h1 id=на-чем-вообще-можно-майнить>
 На чем вообще можно майнить?
 <a class=heading-link href=#%d0%bd%d0%b0-%d1%87%d0%b5%d0%bc-%d0%b2%d0%be%d0%be%d0%b1%d1%89%d0%b5-%d0%bc%d0%be%d0%b6%d0%bd%d0%be-%d0%bc%d0%b0%d0%b9%d0%bd%d0%b8%d1%82%d1%8c>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <p>Вы можете майнить на процессоре, но это будет не особо продуктивно. Для майнинга лучше всего подходят именно видеокарты, так как
@@ -141,13 +145,15 @@ dag файл. Я бы рекоммендовал рассматривать ви
 <h1 id=кошелек>
 Кошелек
 <a class=heading-link href=#%d0%ba%d0%be%d1%88%d0%b5%d0%bb%d0%b5%d0%ba>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <h2 id=что-вообще-представляет-из-себя-кошелек-для-крипты>
 Что вообще представляет из себя кошелек для крипты?
 <a class=heading-link href=#%d1%87%d1%82%d0%be-%d0%b2%d0%be%d0%be%d0%b1%d1%89%d0%b5-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%bb%d1%8f%d0%b5%d1%82-%d0%b8%d0%b7-%d1%81%d0%b5%d0%b1%d1%8f-%d0%ba%d0%be%d1%88%d0%b5%d0%bb%d0%b5%d0%ba-%d0%b4%d0%bb%d1%8f-%d0%ba%d1%80%d0%b8%d0%bf%d1%82%d1%8b>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Прежде всего, чтобы начать майнить, вам нужно создать собственный криптокошелек. По сути, это некоторое аппаратное или программное
@@ -161,7 +167,8 @@ dag файл. Я бы рекоммендовал рассматривать ви
 <h2 id=создаем-свой-первый-криптокошелек>
 Создаем свой первый криптокошелек
 <a class=heading-link href=#%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%b5%d0%bc-%d1%81%d0%b2%d0%be%d0%b9-%d0%bf%d0%b5%d1%80%d0%b2%d1%8b%d0%b9-%d0%ba%d1%80%d0%b8%d0%bf%d1%82%d0%be%d0%ba%d0%be%d1%88%d0%b5%d0%bb%d0%b5%d0%ba>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Мне сейчас удобней всего использовать криптокошелек <code>metamask</code>. Метамаск хранит все данные на вашем устройстве. При этом он предоставляет
@@ -178,23 +185,26 @@ dag файл. Я бы рекоммендовал рассматривать ви
 <h1 id=начинаем-майнить>
 Начинаем майнить
 <a class=heading-link href=#%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d0%b5%d0%bc-%d0%bc%d0%b0%d0%b9%d0%bd%d0%b8%d1%82%d1%8c>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <h2 id=операционная-система-для-майнига>
 Операционная система для майнига
 <a class=heading-link href=#%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d0%b0%d1%8f-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0-%d0%b4%d0%bb%d1%8f-%d0%bc%d0%b0%d0%b9%d0%bd%d0%b8%d0%b3%d0%b0>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Если вы серьезно подошли к вопросу и у вас есть целая ферма и вы готовы выделить отдельный ПК или сервер для майнига и только, то вы
-можете поставить <a href=https://hiveon.com/os_ru/>Hive OS</a>. Это специализированная операционная система для майнинга на основе ubuntu.</p>
+можете поставить <a href=https://hiveon.com/os_ru/ class=external-link target=_blank rel=noopener>Hive OS</a>. Это специализированная операционная система для майнинга на основе ubuntu.</p>
 <p>Но скорее всего у вас просто есть какая-то видеокарта и один рабочий компьютер. Тогда для майнинга вам будет достаточно скачать программу
 майнер, в которой реализован алгоритм майнинга. Далее кратко обсудим выбор программы и рассмотрим одну подробно.</p>
 <h2 id=выбор-программы-для-майнинга>
 Выбор программы для майнинга
 <a class=heading-link href=#%d0%b2%d1%8b%d0%b1%d0%be%d1%80-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d1%8b-%d0%b4%d0%bb%d1%8f-%d0%bc%d0%b0%d0%b9%d0%bd%d0%b8%d0%bd%d0%b3%d0%b0>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Тут важно понимать, что программа для майнинга которую вы выбрали делает именно то, что вы от нее ждете. Мне кажется среди программ
@@ -206,7 +216,7 @@ dag файл. Я бы рекоммендовал рассматривать ви
 <li>Кроме вас тысячи пользователей также могут просмотреть исходный код программы, и если в ней заложено какое-то сомнительное поведение,
 это обязательно рано или поздно будет замечено сообществом.</li>
 </ol>
-<p>Думаю, что решений с открытым кодом довольно много. Я рекоммендую вам пользоваться <a href=https://github.com/ethereum-mining/ethminer>ethminer</a>.
+<p>Думаю, что решений с открытым кодом довольно много. Я рекоммендую вам пользоваться <a href=https://github.com/ethereum-mining/ethminer class=external-link target=_blank rel=noopener>ethminer</a>.
 Ее плюсы очевидны:</p>
 <ul>
 <li>открытый код</li>
@@ -217,11 +227,12 @@ dag файл. Я бы рекоммендовал рассматривать ви
 <h2 id=настраиваем-ethminer-на-linux>
 Настраиваем ethminer на linux
 <a class=heading-link href=#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%b0%d0%b8%d0%b2%d0%b0%d0%b5%d0%bc-ethminer-%d0%bd%d0%b0-linux>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Все настраивается очень просто, следуем инструкциям из репозитория. Для начала нужно скачать
-<a href=https://github.com/ethereum-mining/ethminer/releases>последний релиз</a> программы для вашей ос.
+<a href=https://github.com/ethereum-mining/ethminer/releases class=external-link target=_blank rel=noopener>последний релиз</a> программы для вашей ос.
 Мы рассматриваем майнинг эфира на линуксе, поэтому скачиваем вот эту версию. На момент написания статьи последний релиз выглядит так.</p>
 <p><img src=img/releases.png alt></p>
 <p>Просто скачиваете архив, распаковываете, и добавляете путь к exe в path, если вы на винде, или также добавляете в path если вы на линуксе.
@@ -229,7 +240,8 @@ dag файл. Я бы рекоммендовал рассматривать ви
 <h2 id=запускаем-майнинг-на-linux>
 Запускаем майнинг на linux
 <a class=heading-link href=#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba%d0%b0%d0%b5%d0%bc-%d0%bc%d0%b0%d0%b9%d0%bd%d0%b8%d0%bd%d0%b3-%d0%bd%d0%b0-linux>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Теперь еще немного поговорим о процессе майнинга. Вы можете майнить соло, силами исключительно своей карты. Но эффективней будет
@@ -239,7 +251,7 @@ dag файл. Я бы рекоммендовал рассматривать ви
 всего уточнить используя <code>ethminer --help</code>) и url для майнинга.</p>
 <p>Я запускаю майнинг следующей командой:</p>
 <div class=highlight><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>ethminer -P stratum1+tcp://&lt;wallet-pub-address&gt;.&lt;username&gt;@&lt;mining-pool&gt;:&lt;port&gt;
-</code></pre></div><p>Посмотрите как устроен url для майнинга, который надо передавать в команде <a href=https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md>тут</a>. Вам нужен свой адрес кошелька, который вы можете посмотреть в метамаске, адрес пулла к которому коннектитесь,
+</code></pre></div><p>Посмотрите как устроен url для майнинга, который надо передавать в команде <a href=https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md class=external-link target=_blank rel=noopener>тут</a>. Вам нужен свой адрес кошелька, который вы можете посмотреть в метамаске, адрес пулла к которому коннектитесь,
 а также порт, и еще указать ваш юзернейм.</p>
 <p>И все, по сути вы запускаете майнинг одной командой, вот так вот просто. Вы также можете зайти в веб интерфейс пула и посмотреть свою
 статистику по майнингу. Также у пуллов скорее всего есть телеграм бот, в котором можно посмотреть текущую статистику.</p>
@@ -247,7 +259,8 @@ dag файл. Я бы рекоммендовал рассматривать ви
 <h1 id=выводы>
 Выводы
 <a class=heading-link href=#%d0%b2%d1%8b%d0%b2%d0%be%d0%b4%d1%8b>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <p>Как вы видите, на самом деле чтобы начать майнить вам не нужны глубокие познания в майнинге, криптографии и блокчейне. Если у вас есть
@@ -255,9 +268,7 @@ dag файл. Я бы рекоммендовал рассматривать ви
 </div>
 <footer>
 <div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//leins275-xyz-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+<script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//leins275-xyz-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)}(),document.addEventListener('themeChanged',function(a){document.readyState=='complete'&&DISQUS.reset({reload:!0,config:disqus_config})})</script>
 </footer>
 </article>
 </section>
@@ -269,10 +280,12 @@ dag файл. Я бы рекоммендовал рассматривать ви
 2023
 Никита Лансков
 ·
-Работает на <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+Работает на <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
 </section>
 </footer>
 </main>
-<script src=/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script>
+<script src=/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D+Uk="></script>
+<script type=text/javascript>(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].a=a[b].a||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym("89873635","init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})</script>
+<noscript><div><img src=https://mc.yandex.ru/watch/89873635 style=position:absolute;left:-9999px alt></div></noscript>
 </body>
 </html>

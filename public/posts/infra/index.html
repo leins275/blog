@@ -1,8 +1,10 @@
 <!doctype html><html lang=ru>
 <head>
+<title>
+Создаем свою цифровую инфраструктуру · leins275
+</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=content-language content="ru">
 <meta name=color-scheme content="light dark">
 <meta name=author content="Никита Лансков">
 <meta name=description content="Создаем свою цифровую инфраструктуру">
@@ -16,18 +18,17 @@
 <meta property="og:url" content="https://leins275.xyz/posts/infra/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2021-11-23T11:59:17+03:00">
 <meta property="article:modified_time" content="2021-11-23T11:59:17+03:00">
-<title>
-Создаем свою цифровую инфраструктуру · leins275
-</title>
 <link rel=canonical href=https://leins275.xyz/posts/infra/>
 <link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
-<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
-<link rel=stylesheet href=/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder.min.5adbe72fc41dcfb852215b84695288939b6b606db73238bd3ee936469572fc9c.css integrity="sha256-WtvnL8Qdz7hSIVuEaVKIk5trYG23Mji9Puk2RpVy/Jw=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any>
 <link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32>
 <link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16>
 <link rel=apple-touch-icon href=/images/apple-touch-icon.png>
 <link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.92.2">
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5>
 </head>
 <body class="preload-transitions colorscheme-auto">
 <div class=float-container>
@@ -50,7 +51,7 @@ leins275
 <a class=navigation-link href=/posts/>Блог</a>
 </li>
 <li class=navigation-item>
-<a class=navigation-link href=/categories/>Разделы</a>
+<a class=navigation-link href=/categories/>Категории</a>
 </li>
 <li class=navigation-item>
 <a class=navigation-link href=/tags/>Теги</a>
@@ -59,7 +60,7 @@ leins275
 <span>|</span>
 </li>
 <li class=navigation-item>
-<a href=https://leins275.xyz/en/>English</a>
+<a href=/en/>English</a>
 </li>
 </ul>
 </section>
@@ -109,11 +110,12 @@ leins275
 </span></div>
 </div>
 </header>
-<div>
+<div class=post-content>
 <h1 id=о-чем-пойдет-речь-в-этой-статье>
 О чем пойдет речь в этой статье
 <a class=heading-link href=#%d0%be-%d1%87%d0%b5%d0%bc-%d0%bf%d0%be%d0%b9%d0%b4%d0%b5%d1%82-%d1%80%d0%b5%d1%87%d1%8c-%d0%b2-%d1%8d%d1%82%d0%be%d0%b9-%d1%81%d1%82%d0%b0%d1%82%d1%8c%d0%b5>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <p>В современном мире, в очень насыщенной информационной среде компьютеры, смартфоны и другие гаджеты и электронные устройства играют очень важную роль. У каждого, и у меня в том числе, за долгие годы взаимодействия с компьютером накопилось много разной информации. И не всегда понятно, как это все богатство хранить, чтобы и найти было просто, и доступ был с любого нужного устройства, и чтобы самые важные данные как-то безопасно шифровались для пущей безопасности. Для этого нужна целая экосистема, и сейчас что-то похожее на готовую и целостную экосистему может предложить только apple. Но вообще говоря, если вам не получается ваш мир замкнуть только на устройствах кампании apple, по разным причинам, то нужно какое-то другое решение. Желательно кроссплатформенное, и чтобы еще можно было все данные хранить на своем сервере.</p>
@@ -121,27 +123,30 @@ leins275
 <h1 id=какая-бывает-информация-и-как-ее-хранить>
 Какая бывает информация и как ее хранить
 <a class=heading-link href=#%d0%ba%d0%b0%d0%ba%d0%b0%d1%8f-%d0%b1%d1%8b%d0%b2%d0%b0%d0%b5%d1%82-%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%86%d0%b8%d1%8f-%d0%b8-%d0%ba%d0%b0%d0%ba-%d0%b5%d0%b5-%d1%85%d1%80%d0%b0%d0%bd%d0%b8%d1%82%d1%8c>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <h2 id=файлы>
 Файлы
 <a class=heading-link href=#%d1%84%d0%b0%d0%b9%d0%bb%d1%8b>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
-<p>Более менее важные файлы тоже хочется синхронизировать между устройствами. Для этого лучше всего подходят облака. Можно пользоваться популярными облачными провайдерами, такими как гугл, яндекс и другие. Если же вы беспокоитесь о надежности своих данных, то имеет смысл рассмотреть решения, которые позволяют разворачивать облако на своем сервере. Я пользуюсь <a href=https://nextcloud.com/athome/>nextcloud</a>.</p>
+<p>Более менее важные файлы тоже хочется синхронизировать между устройствами. Для этого лучше всего подходят облака. Можно пользоваться популярными облачными провайдерами, такими как гугл, яндекс и другие. Если же вы беспокоитесь о надежности своих данных, то имеет смысл рассмотреть решения, которые позволяют разворачивать облако на своем сервере. Я пользуюсь <a href=https://nextcloud.com/athome/ class=external-link target=_blank rel=noopener>nextcloud</a>.</p>
 <p>Nextcloud дает много преимуществ, таких как:</p>
 <ul>
 <li>Безопасность данных. Вы храните ваши данные на своем личном сервере, и меньше шансов что кто-то получит к ним доступ.</li>
 <li>На своем сервере вы можете получить больше места за меньшие деньги. У меня это raid1 на 1 терабайт.</li>
 <li>Расширения. Некстклауд имеет ряд очень полезных расширений, которыми вы можете покрыть практически все свои потребности, далее я постараюсь рассказать о самых интересных.</li>
 </ul>
-<p>Как и многое из того, о чем вы прочтете далее, я подсмотрел у автора <a href=https://devpew.com/>этого блога</a>. Вы можете посмотреть его <a href=https://youtu.be/9bs-Q9cfayE>видео о nextcloud</a>, там он рассказывает много интересного.</p>
+<p>Как и многое из того, о чем вы прочтете далее, я подсмотрел у автора <a href=https://devpew.com/ class=external-link target=_blank rel=noopener>этого блога</a>. Вы можете посмотреть его <a href=https://youtu.be/9bs-Q9cfayE class=external-link target=_blank rel=noopener>видео о nextcloud</a>, там он рассказывает много интересного.</p>
 <h2 id=пароли>
 Пароли
 <a class=heading-link href=#%d0%bf%d0%b0%d1%80%d0%be%d0%bb%d0%b8>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Пароли. Никаких &ldquo;Один пароль для всего&rdquo;, &ldquo;пароли в блокнотике&rdquo;, &ldquo;Переставлю циферки в дне рождения бабушки&rdquo;. Сейчас у каждого минимум несколько десятков паролей от различных сервисов, все должны быть длинными, случайными и уникальными. Поэтому обходиться без менеджера паролей очень больно. Менеджер паролей должен позволять автоматически генерировать пароли (а также вводить вручную), синхронизировать их между всеми устройствами, а также обеспечивать их безопасность за счет шифрования.</p>
@@ -149,43 +154,48 @@ leins275
 <h3 id=bitwarden>
 Bitwarden
 <a class=heading-link href=#bitwarden>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
-<p>Очень хороший вариант - <a href=https://bitwarden.com/>Bitwarden</a>. Это классное решение с открытым исходным кодом, и его довольно легко настроить. Также есть возможность развернуть сервер битвардена на своем сервере, для повышения безопасности. Если вы вдохновились этим постом и хотите с нуля начать пользоваться менеджером паролей, и если вы не какой-нибудь продвинутый линуксоид, я вам настоятельно рекоммендую использовать имеено данный вариант, как самый простой и удобный, и при этом с открытым исходным кодом, что для менеджера паролей обязательно.</p>
+<p>Очень хороший вариант - <a href=https://bitwarden.com/ class=external-link target=_blank rel=noopener>Bitwarden</a>. Это классное решение с открытым исходным кодом, и его довольно легко настроить. Также есть возможность развернуть сервер битвардена на своем сервере, для повышения безопасности. Если вы вдохновились этим постом и хотите с нуля начать пользоваться менеджером паролей, и если вы не какой-нибудь продвинутый линуксоид, я вам настоятельно рекоммендую использовать имеено данный вариант, как самый простой и удобный, и при этом с открытым исходным кодом, что для менеджера паролей обязательно.</p>
 <h3 id=pass>
 Pass
 <a class=heading-link href=#pass>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
-<p>Лично я пользуюсь <a href=https://www.passwordstore.org/>pass</a>. Это стандартный менеджер паролей для unix систем. Он использует gpg для шифрования, pwgen для генерации паролей, а также git для синхронизации. Я использую его уже больше года, полет нормальный. Не готов утверждать, что этот вариант более безопасный или удобный, просто я к нему привык и меня все устраивает. В целом с pass тоже довольно просто разобраться, но нужно будет больше времени потратить на то чтобы вникнуть в детали и разобраться с gpg ключами.</p>
+<p>Лично я пользуюсь <a href=https://www.passwordstore.org/ class=external-link target=_blank rel=noopener>pass</a>. Это стандартный менеджер паролей для unix систем. Он использует gpg для шифрования, pwgen для генерации паролей, а также git для синхронизации. Я использую его уже больше года, полет нормальный. Не готов утверждать, что этот вариант более безопасный или удобный, просто я к нему привык и меня все устраивает. В целом с pass тоже довольно просто разобраться, но нужно будет больше времени потратить на то чтобы вникнуть в детали и разобраться с gpg ключами.</p>
 <p>Вообще pass - консольное приложение, но на практике удобней использовать его вместе с каким-то gui фронтоном. Я пользуюсь qtpass, и забиндил его на определенный хоткей. У него есть удобный поиск и все что мне нужно.</p>
 <p><img src=images/pass.png alt></p>
-<p>Видео про pass: <a href=https://youtu.be/niQ41gr1QsQ>1</a>, <a href=https://youtu.be/I2mwqC6HGGE>2</a></p>
+<p>Видео про pass: <a href=https://youtu.be/niQ41gr1QsQ class=external-link target=_blank rel=noopener>1</a>, <a href=https://youtu.be/I2mwqC6HGGE class=external-link target=_blank rel=noopener>2</a></p>
 <h3 id=nextcloud>
 Nextcloud
 <a class=heading-link href=#nextcloud>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
 <p>У некстклауда есть расширение, которое позволяет вам хранить пароли. Это в целом тоже довольно удобный вариант, если вы развернули некстклауд - можете просто пользоваться расширением. Оно поддерживает шифрование паролей и также имеет мобильную версию.</p>
 <h2 id=конфиги>
 Конфиги
 <a class=heading-link href=#%d0%ba%d0%be%d0%bd%d1%84%d0%b8%d0%b3%d0%b8>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Очень больно бывает, когда потратил много времени на настройку рабочего окружения, а потом сменил компьютер. Хочется нажать кнопочку, и чтобы все настройки переехали на новое устройство. Поэтому лично я ужасно не люблю программы, которые нельзя настроить текстовым конфигурационным файлом. К сожалению, без подобных программ не обойтись, но возможность синхронизировать конфигурацию хотя бы части приложений - это уже большое дело.</p>
 <p>И, как ни странно, для такого существуют специальные менеджеры конфигов! Расскажу только про тот, которым пользуюсь сам.</p>
-<p>Мне нравится <a href=https://yadm.io/>yadm</a> - простой и удобный менеджер конфигов, который позволяет немного упростить синхронизацию через гит, а также добавляет некоторые полезные функции. Например, вы можете хранить разные версии конфигов для разных операционных систем, шифровать файлы и даже немного автоматизировать процесс настройки вашего окружения с нуля. Я пока что пользуюсь только функцией синхронизации, но подумываю написать скрипт автоматизации для переноса всех моих данных.</p>
+<p>Мне нравится <a href=https://yadm.io/ class=external-link target=_blank rel=noopener>yadm</a> - простой и удобный менеджер конфигов, который позволяет немного упростить синхронизацию через гит, а также добавляет некоторые полезные функции. Например, вы можете хранить разные версии конфигов для разных операционных систем, шифровать файлы и даже немного автоматизировать процесс настройки вашего окружения с нуля. Я пока что пользуюсь только функцией синхронизации, но подумываю написать скрипт автоматизации для переноса всех моих данных.</p>
 <p>Тут наверное нужно сказать, что вы конечно можете синхронизировать конфиги и без всяких менеджеров, просто скопировав их в то же облако. Просто специальный менеджер позволяет вывести удобство работы с конфигами на совершенно новый уровень.</p>
 <p>Вот так выглядит набор файлов, которые я синхронизирую через yadm:</p>
 <p><img src=images/yadm.png alt></p>
 <h2 id=заметки>
 Заметки
 <a class=heading-link href=#%d0%b7%d0%b0%d0%bc%d0%b5%d1%82%d0%ba%d0%b8>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Вопрос о хранении заметок содержит в себе широкое поле для обсуждений. Я не буду вдаваться в подробности различных методологий ведения заметок, просто расскажу о приложениях которыми пользуюсь я.</p>
@@ -198,44 +208,50 @@ Nextcloud
 <h3 id=simplenote>
 Simplenote
 <a class=heading-link href=#simplenote>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
-<p><a href=https://simplenote.com/>simplenote</a> - очень крутое приложение для заметок. Поддерживает маркдаун, кроссплатформенное, а также позволяет поделиться заметками с другими пользователями.</p>
+<p><a href=https://simplenote.com/ class=external-link target=_blank rel=noopener>simplenote</a> - очень крутое приложение для заметок. Поддерживает маркдаун, кроссплатформенное, а также позволяет поделиться заметками с другими пользователями.</p>
 <h3 id=obsidian>
 Obsidian
 <a class=heading-link href=#obsidian>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
-<p>Очень мощное приложение, вдохновленное методологией ведения заметок <a href=https://habr.com/ru/post/508672/>zettelcasten</a>. Это приложение также базируется на markdown разметке, но в отличие от simplenote позволяет хранить заметки как простые текстовые файлы в своей локальной файловой системе. Также у него есть много классных фич, к примеру можно посмотреть граф своей базы заметок, выглядит очень футуристично. Вот для примера граф моей базы заметок на данный момент, пока что он не очень большой и целиком помещается на скриншоте.</p>
+<p>Очень мощное приложение, вдохновленное методологией ведения заметок <a href=https://habr.com/ru/post/508672/ class=external-link target=_blank rel=noopener>zettelcasten</a>. Это приложение также базируется на markdown разметке, но в отличие от simplenote позволяет хранить заметки как простые текстовые файлы в своей локальной файловой системе. Также у него есть много классных фич, к примеру можно посмотреть граф своей базы заметок, выглядит очень футуристично. Вот для примера граф моей базы заметок на данный момент, пока что он не очень большой и целиком помещается на скриншоте.</p>
 <p><img src=images/graph.png alt=graph></p>
-<p>Если вы заинтересовались темой, вот еще пара видео: <a href=https://youtu.be/PiS3pRRj994>1</a> и <a href=https://youtu.be/272ktGBBg8c>2</a></p>
+<p>Если вы заинтересовались темой, вот еще пара видео: <a href=https://youtu.be/PiS3pRRj994 class=external-link target=_blank rel=noopener>1</a> и <a href=https://youtu.be/272ktGBBg8c class=external-link target=_blank rel=noopener>2</a></p>
 <h3 id=nextcloud-1>
 Nextcloud
 <a class=heading-link href=#nextcloud-1>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
 <p>И тут снова он. Также есть специальное расширение для заметок. Поддерживает маркдаун.</p>
 <h2 id=база-знаний>
 База знаний
 <a class=heading-link href=#%d0%b1%d0%b0%d0%b7%d0%b0-%d0%b7%d0%bd%d0%b0%d0%bd%d0%b8%d0%b9>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Очень кратко: база знаний - набор заметок и каких-то рецептов, которые позволяют вам не тратить время на то, чтобы 100 раз гуглить решения одних и тех же проблем. Думаю что для личного использования оптимально подойдет Obsidian, но для нескольких пользователей лучше использовать, например, wikijs.</p>
 <h2 id=задачи>
 Задачи
 <a class=heading-link href=#%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b8>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
-<p>Очень важно, если слово &ldquo;продуктивность&rdquo; для вас не пустой звук, использовать отдельное место для записи дел, которые вы хотите сделать. В целом вы можете записывать свои дела и на бумаге, но сейчас гораздо удобнее и проще это делать в электронном формате. Я пользуюсь <a href=https://todoist.com/ru>Todoist</a>, его бесплатная версия позволяет синхронизировать задачи между устройствами и делать все базовые вещи.</p>
+<p>Очень важно, если слово &ldquo;продуктивность&rdquo; для вас не пустой звук, использовать отдельное место для записи дел, которые вы хотите сделать. В целом вы можете записывать свои дела и на бумаге, но сейчас гораздо удобнее и проще это делать в электронном формате. Я пользуюсь <a href=https://todoist.com/ru class=external-link target=_blank rel=noopener>Todoist</a>, его бесплатная версия позволяет синхронизировать задачи между устройствами и делать все базовые вещи.</p>
 <h2 id=мероприятия>
 Мероприятия
 <a class=heading-link href=#%d0%bc%d0%b5%d1%80%d0%be%d0%bf%d1%80%d0%b8%d1%8f%d1%82%d0%b8%d1%8f>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Также отдельно стоит выделять из списка дел мероприятия. Это дела, которые имеют смысл в определенный день, в определенное время и в определенном месте. Это может быть визит к врачу, ежедневная пробежка или новогодний корпоратив. По сути - задача, которой вы указываете дату и время и которая имеет к ним жесткую привязку может считаться мероприятием.</p>
@@ -243,28 +259,32 @@ Nextcloud
 <h2 id=проекты>
 Проекты
 <a class=heading-link href=#%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d1%8b>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h2>
 <p>Все проекты, которые я делаю, сохраняются в систему контроля версий git. Не представляю, как кто-то может работать без гита.</p>
 <h3 id=github>
 Github
 <a class=heading-link href=#github>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
 <p>Самый известный и популярный гит сервер. Если вы делаете приличный опенсорз - он должен быть тут.</p>
 <h3 id=gitea>
 Gitea
 <a class=heading-link href=#gitea>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
 <p>Это снова для тех, кому интересен вопрос своей собственной доморощенной инфраструктуры. Gitea - классный гит сервер, написанный на языке программирования go, который потребляет мало ресурсов и при этом приятно выглядит и поддерживает весь необходимый функционал.</p>
 <h3 id=drone-ci>
 Drone CI
 <a class=heading-link href=#drone-ci>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h3>
 <p>Эта штука еще больше &ldquo;не для всех&rdquo;. Но если вы программируете, и хотите чтобы некоторые ваши пет-проекты увидели свет, то очень удобно настроить себе небольшой CI/CD сервис.</p>
@@ -273,13 +293,14 @@ Drone CI
 <h1 id=и-как-это-все-помогает-в-работе>
 И как это все помогает в работе?
 <a class=heading-link href=#%d0%b8-%d0%ba%d0%b0%d0%ba-%d1%8d%d1%82%d0%be-%d0%b2%d1%81%d0%b5-%d0%bf%d0%be%d0%bc%d0%be%d0%b3%d0%b0%d0%b5%d1%82-%d0%b2-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b5>
-<i class="fa fa-link" aria-hidden=true></i>
+<i class="fa fa-link" aria-hidden=true title="Ссылка на заголовок"></i>
+<span class=sr-only>Ссылка на заголовок</span>
 </a>
 </h1>
 <p>Итак, давайте рассмотрим ситуацию: вам выдали на работе новый компьютер, и вы хотите начать на нем работать.</p>
 <ol>
 <li>
-<p>Первым делом - нужно перекинуть приватные ssh и gpg ключи. Для повышения безопасности их хранения я их копирую просто механически. Для ssh ключей может потребоваться настройка прав доступа, gpg ключи же требуется импортировать. Либо в gnupg. Чтобы на маке у меня работал qtpass я также дополнительно ставлю <a href=https://gpgtools.org/>gpg suite</a>. После импорта дампы ключей нужно удалить.</p>
+<p>Первым делом - нужно перекинуть приватные ssh и gpg ключи. Для повышения безопасности их хранения я их копирую просто механически. Для ssh ключей может потребоваться настройка прав доступа, gpg ключи же требуется импортировать. Либо в gnupg. Чтобы на маке у меня работал qtpass я также дополнительно ставлю <a href=https://gpgtools.org/ class=external-link target=_blank rel=noopener>gpg suite</a>. После импорта дампы ключей нужно удалить.</p>
 </li>
 <li>
 <p>После этого нужно склонировать репозитории с паролями и конфигами. Тут есть некоторая особенность. У меня эти репозитории хранятся на личном гит сервере, и чтобы клонировать с него по ssh нужно использовать нестандартный порт. Для этого нужно указывать ссылки на репозиторий в специальном формате:</p>
@@ -308,9 +329,7 @@ yadm clone ssh://git@mydomain.com:[port]/owner/dotfiles_repo
 </div>
 <footer>
 <div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//leins275-xyz-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+<script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//leins275-xyz-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)}(),document.addEventListener('themeChanged',function(a){document.readyState=='complete'&&DISQUS.reset({reload:!0,config:disqus_config})})</script>
 </footer>
 </article>
 </section>
@@ -322,10 +341,12 @@ yadm clone ssh://git@mydomain.com:[port]/owner/dotfiles_repo
 2023
 Никита Лансков
 ·
-Работает на <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+Работает на <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
 </section>
 </footer>
 </main>
-<script src=/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script>
+<script src=/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D+Uk="></script>
+<script type=text/javascript>(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].a=a[b].a||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym("89873635","init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})</script>
+<noscript><div><img src=https://mc.yandex.ru/watch/89873635 style=position:absolute;left:-9999px alt></div></noscript>
 </body>
 </html>

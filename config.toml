@@ -35,7 +35,7 @@ copyright = "leins275 All rights reserved"
   weight = 2
   url  = "posts/"
 [[languages.ru.menu.main]]
-  name = "Разделы"
+  name = "Категории"
   weight = 3
   url  = "categories/"
 [[languages.ru.menu.main]]
