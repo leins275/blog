@@ -5,6 +5,14 @@ This is repository with my static generated site.
 
 Created with [hugo](https://gohugo.io/), theme [coder](https://themes.gohugo.io/themes/hugo-coder/)
 
+# Cloning project
+
+```bash
+git clone my-site && cd my-site
+git submodule init
+git submodule update
+```
+
 # How to maintain
 
 1. Run hugo server locally
