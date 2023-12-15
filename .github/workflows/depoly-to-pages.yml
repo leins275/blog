@@ -10,6 +10,9 @@ jobs:
       - name: Update theme
         run: git submodule update --init --recursive
 
+      - name: print envs
+        run: printenv
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
