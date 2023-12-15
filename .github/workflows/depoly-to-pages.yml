@@ -16,7 +16,7 @@ jobs:
           hugo-version: "0.121.1"
 
       - name: Build
-        run: hugo --gc --minify --baseURL "https://leins275.xyz/"
+        run: hugo --gc --minify --baseURL "https://leins275.github.io/my-site/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
