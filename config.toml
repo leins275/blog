@@ -21,23 +21,16 @@ copyright = "leins275 All rights reserved"
   weight = 2
   url  = "en/posts/"
 [[languages.en.menu.main]]
-  name = "Categories"
-  weight = 3
-  url  = "en/categories/"
-[[languages.en.menu.main]]
   name = "Tags"
   weight = 4
   url  = "en/tags/"
-  [languages.ru]
-  	languageName = "Русский"
+
+[languages.ru]
+  languageName = "Русский"
 [[languages.ru.menu.main]]
   name = "Блог"
   weight = 2
   url  = "posts/"
-[[languages.ru.menu.main]]
-  name = "Категории"
-  weight = 3
-  url  = "categories/"
 [[languages.ru.menu.main]]
   name = "Теги"
   weight = 4
@@ -74,9 +67,8 @@ copyright = "leins275 All rights reserved"
   hidecolorschemetoggle = false
 
 [taxonomies]
-  category = "categories"
-  tag      = "tags"
   author   = "authors"
+  tag      = "tags"
   series   = "series"
 
 # Social links
@@ -89,7 +81,7 @@ copyright = "leins275 All rights reserved"
   name   = "Telegram"
   icon   = "fa fa-telegram fa-2x"
   weight = 2
-  url    = "https://t.me/leins275"
+  url    = "https://t.me/nlanskov"
 [[params.social]]
   name   = "Vk"
   icon   = "fa fa-vk fa-2x"
