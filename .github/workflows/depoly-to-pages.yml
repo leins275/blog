@@ -24,4 +24,5 @@ jobs:
           github_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./public
           cname: leins275.xyz
+          publish_branch: main
 
