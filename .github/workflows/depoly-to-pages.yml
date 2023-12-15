@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  environment:
-    name: github-pages
-    url: https://leins275.xyz/
   deploy:
+    environment:
+      name: github-pages
+      url: https://leins275.xyz/
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo with submodules
