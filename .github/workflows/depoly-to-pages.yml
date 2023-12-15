@@ -4,11 +4,10 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-
-      - name: Update theme
-        run: git submodule update --init --recursive
+      - name: Checkout repo with submodules
+        uses: actions/checkout@v4
+        with:
+          - submodules: recursive
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -21,10 +20,5 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          external_repository: leins275/leins275.github.io
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./public
-          user_name: leins275
-          user_email: leins275@gmail.com
-          publish_branch: main
-          cname: leins275.xyz
