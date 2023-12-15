@@ -1,4 +1,4 @@
-baseurl = "https://leins275.github.io/my-site/"
+baseurl = "https://leins275.xyz/"
 theme = "hugo-coder"
 enableInlineShortcodes = true
 paginate = 20
