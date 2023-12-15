@@ -6,6 +6,9 @@ on:
   workflow_dispatch:
 
 jobs:
+  environment:
+    name: github-pages
+    url: https://leins275.xyz/
   deploy:
     runs-on: ubuntu-22.04
     steps:
