@@ -6,7 +6,6 @@ date = {{ .Date }}
 title = ""
 description = ""
 slug = ""
-tags = []
 series = []
 images = []
 +++

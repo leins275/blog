@@ -20,10 +20,6 @@ copyright = "leins275 All rights reserved"
   name = "Blog"
   weight = 2
   url  = "en/posts/"
-[[languages.en.menu.main]]
-  name = "Tags"
-  weight = 4
-  url  = "en/tags/"
 
 [languages.ru]
   languageName = "Русский"
@@ -31,10 +27,6 @@ copyright = "leins275 All rights reserved"
   name = "Блог"
   weight = 2
   url  = "posts/"
-[[languages.ru.menu.main]]
-  name = "Теги"
-  weight = 4
-  url  = "tags/"
 
 [author]
   name = "leins275"
