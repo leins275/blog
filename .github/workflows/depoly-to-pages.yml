@@ -6,8 +6,6 @@ jobs:
     steps:
       - name: Checkout repo with submodules
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Update theme
         run: git submodule update --init --recursive
