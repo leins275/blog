@@ -1,4 +1,4 @@
-[![Build Status](https://drone.leins275.xyz/api/badges/leins275/my-site/status.svg)](https://drone.leins275.xyz/leins275/my-site)
+
 # my-site
 
 This is repository with my static generated site.
