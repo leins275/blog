@@ -6,7 +6,7 @@ date = 2023-12-16T19:57:05+03:00
 title = "Мои блокноты"
 description = "Принципы ведения аналоговых заметок"
 slug = "my-notebooks"
-series = ["Блокноты"]
+series = ["по теме: Блокноты"]
 images = ["https://leins275.xyz/posts/my-notebooks/img/Notebooks.jpg"]
 +++
 
