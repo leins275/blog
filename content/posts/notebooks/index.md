@@ -7,7 +7,7 @@ title = "Мои блокноты"
 description = "Принципы ведения аналоговых заметок"
 slug = "my-notebooks"
 series = ["Блокноты"]
-images = ["https://leins275.xyz/posts/cargo-cult/img/Notebooks.jpg"]
+images = ["https://leins275.xyz/posts/my-notebooks/img/Notebooks.jpg"]
 +++
 
 ![notebooks](img/Notebooks.jpg)
