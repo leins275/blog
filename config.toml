@@ -10,6 +10,15 @@ disqusShortname = 'leins275-xyz-1'
 title = "leins275"
 copyright = "leins275 All rights reserved"
 
+[languages]
+  [languages.ru]
+    disabled = false
+    languageCode = ''
+    languageDirection = ''
+    languageName = ''
+    title = ''
+    weight = 0
+
 [[menu.main]]
   name = "Блог"
   weight = 1
