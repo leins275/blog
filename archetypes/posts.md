@@ -7,6 +7,7 @@ title = ""
 description = ""
 slug = ""
 series = []
+tags = []
 images = []
 +++
 

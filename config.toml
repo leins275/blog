@@ -15,8 +15,13 @@ copyright = "leins275 All rights reserved"
 
 [[menu.main]]
   name = "Блог"
-  weight = 1
+  weight = 2
   url  = "posts/"
+
+[[menu.main]]
+  name = "Тэги"
+  weight = 1
+  url  = "tags/"
 
 [author]
   name = "leins275"
@@ -46,6 +51,7 @@ copyright = "leins275 All rights reserved"
 
 [taxonomies]
   series   = "series"
+  tag = "tags"
 
 # Social links
 [[params.social]]
