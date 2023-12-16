@@ -18,11 +18,6 @@ copyright = "leins275 All rights reserved"
   weight = 2
   url  = "posts/"
 
-[[menu.main]]
-  name = "Тэги"
-  weight = 1
-  url  = "tags/"
-
 [author]
   name = "leins275"
   email = "leins275@gmail.com"
