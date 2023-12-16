@@ -8,7 +8,7 @@ description = "Насколько сильно чтение может помо�
 categories = ["post"]
 slug = "itstime-24"
 tags = ["itstime"]
-series = ["reading"]
+series = ["по теме: Чтение"]
 images = ["https://leins275.xyz/posts/itstime-24/img/book.jpg"]
 +++
 
