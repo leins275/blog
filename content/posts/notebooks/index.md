@@ -7,6 +7,7 @@ title = "Мои блокноты"
 description = "Принципы ведения аналоговых заметок"
 slug = "my-notebooks"
 series = ["по теме: Блокноты"]
+tags = ["journaling", "notebooks", "bujo"]
 images = ["https://leins275.xyz/posts/my-notebooks/img/Notebooks.jpg"]
 +++
 
