@@ -5,9 +5,11 @@ authors = ["leins275"]
 date = {{ .Date }}
 title = ""
 description = ""
-slug = ""
-series = []
+slug = "{{.Name}}"
+series = ["по теме: "]
+categories = []
 tags = []
-images = []
+images = ["https://leins275.xyz/posts/{{.Name}}/img/preview.jpg"]
 +++
 
+![{{.Name}}](img/preview.jpg)
