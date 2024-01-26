@@ -46,6 +46,7 @@ copyright = "leins275 All rights reserved"
 
 [taxonomies]
   series   = "series"
+  category = "categories"
   tag = "tags"
 
 # Social links
