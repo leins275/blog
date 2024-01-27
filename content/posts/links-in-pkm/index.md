@@ -9,7 +9,7 @@ slug = "links-in-pkm"
 series = ["по теме: PKM"]
 categories = ["post"]
 tags = ["pkm"]
-images = ["https://leins275.xyz/posts/links-in-pkm/img/preview.jpg"]
+images = ["https://leins275.xyz/posts/links-in-pkm/img/preview.JPG"]
 +++
 
 Ключевым элементом организации заметок в моей базе знаний являются ссылки. После того, как я познал дзен, всю работу по структуризации знаний взяли на себя ссылки. 
