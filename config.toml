@@ -14,9 +14,13 @@ title = "leins275"
 copyright = "leins275 All rights reserved"
 
 [[menu.main]]
-  name = "Блог"
-  weight = 2
+  name = "Публикации"
+  weight = 3
   url  = "posts/"
+[[menu.main]]
+  name = "Темы"
+  weight = 2
+  url  = "tags/"
 
 [author]
   name = "leins275"
