@@ -1,13 +1,13 @@
 +++ 
 draft = false
 katex = false
-categories = ["post"]
 authors = ["leins275"]
 date = 2023-01-02T21:39:25+03:00
 title = "О путешествиях"
 description = ""
 slug = "itstime-20"
-tags = ["itstime"]
+categories = ["post"]
+tags = ["travel"]
 images = ["posts/adventures/img/adv.jpg"]
 +++
 ![hiking](img/adv.jpg)

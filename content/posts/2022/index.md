@@ -7,7 +7,7 @@ title = "Лучшие моменты 2022"
 description = "Что хорошего произошло со мной в 2022 году"
 categories = ["post"]
 slug = "best-moments-2022"
-tags = []
+tags = ["personal"]
 series = ["memories"]
 images = ["https://leins275.xyz/posts/itstime-21/img/2022.png"]
 +++

@@ -7,7 +7,7 @@ description = "Настройка todoist в стиле джедайских т�
 slug = "todoist"
 authors = ["leins275"]
 images = ["posts/todoist/img/preview.jpg"]
-series = ["jedi"]
+series = ["по теме: Джедайские техники"]
 tags = ["productivity"]
 +++
 ![todoist-logo](img/preview.jpg)

@@ -5,7 +5,7 @@ title = "Создаем свой сайт на hugo"
 categories = ["article"]
 description = "Создаем свой личный сайт, быстро и удобно"
 authors = ["leins275"]
-tags = ["it", "web"]
+tags = ["digital"]
 +++
 # Мотивация
 

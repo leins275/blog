@@ -7,8 +7,8 @@ title = "Джедайский телеграм"
 description = "Постигаем дзен в омуте чатов"
 categories = ["article"]
 slug = "telegram"
-tags = ["itstime", "productivity"]
-series = ["jedi"]
+tags = ["productivity"]
+series = ["по теме: Джедайские техники"]
 images = ["https://leins275.xyz/posts/telegram/img/1.png"]
 +++
 

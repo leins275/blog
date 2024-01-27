@@ -6,7 +6,7 @@ categories = ["article"]
 description = "Начинаем майнить эфир с нуля"
 slug = "mining"
 authors = ["leins275"]
-tags = ["how-to", "mining"]
+tags = ["digital"]
 +++
 # Как начать майнить?
 

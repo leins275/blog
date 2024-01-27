@@ -7,7 +7,7 @@ title = "Карго культ в IT"
 description = "Не используй X, если не знаешь, чем он крут"
 categories = ["post"]
 slug = "cargo-cult"
-tags = []
+tags = ["digital"]
 series = []
 images = ["https://leins275.xyz/posts/cargo-cult/img/cargo.jpg"]
 +++

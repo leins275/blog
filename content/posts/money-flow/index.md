@@ -7,7 +7,7 @@ title = "Как я веду учет своих финансов"
 description = "Что мне кажется важным в учете финансов"
 categories = ["article"]
 slug = "money-flow"
-tags = []
+tags = ["finance"]
 series = []
 images = ["https://leins275.xyz/posts/money-flow/img/Calc.jpg"]
 +++

@@ -7,7 +7,7 @@ date = 2022-11-15T12:31:25+03:00
 title = "Инвестиции и Спекуляции"
 description = "Как пустить деньги в оборот и не прогадать"
 slug = "itstime-19"
-tags = ["finance", "investments", "itstime"]
+tags = ["finance"]
 images = ["https://leins275.xyz/posts/invest/img/inv.jpg"]
 +++
 ![инвестиции vs спекуляции](img/inv.jpg)

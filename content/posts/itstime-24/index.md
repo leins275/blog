@@ -7,7 +7,7 @@ title = "Чтение как инструмент изучения языка"
 description = "Насколько сильно чтение может помочь прокачать ваш уровень владения иностранным языком?"
 categories = ["post"]
 slug = "itstime-24"
-tags = ["itstime"]
+tags = ["learning"]
 series = ["по теме: Чтение"]
 images = ["https://leins275.xyz/posts/itstime-24/img/book.jpg"]
 +++

@@ -7,6 +7,7 @@ date = 2022-11-01T11:32:35+03:00
 title = "Ежедневник"
 description = "Записные книжки еще на что-то годятся?"
 slug = "bujo"
+tags = ["journaling"]
 series = ["по теме: Блокноты"]
 images = ["https://leins275.xyz/posts/bujo/images/bujo.jpg"]
 +++

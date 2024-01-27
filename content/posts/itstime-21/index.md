@@ -7,7 +7,7 @@ date = 2023-01-20T13:15:53+03:00
 title = "Менеджеры и колготки"
 description = ""
 slug = "itstime-21"
-tags = ["itstime"]
+tags = ["digital"]
 images = ["https://leins275.xyz/posts/itstime-21/img/manager.jpg"]
 +++
 ![manager](img/manager.jpg)

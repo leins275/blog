@@ -6,7 +6,7 @@ title = "Скрипты для автоматизации работы с wiregu
 description = "Дополнение о wireguard"
 slug = "wireguard"
 authors = ["leins275"]
-tags = ["wireguard", "server", "vpn"]
+tags = ["digital"]
 +++
 # Введение
 

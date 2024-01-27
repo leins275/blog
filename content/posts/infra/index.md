@@ -6,7 +6,7 @@ categories = ["article"]
 description = "Создаем свою цифровую инфраструктуру"
 slug = "infra"
 authors = ["leins275"]
-tags = ["productivity", "digital", "it"]
+tags = ["digital"]
 +++
 # О чем пойдет речь в этой статье
 

@@ -6,7 +6,7 @@ title = "Все о RSS"
 description = "Что такое rss и как этим пользоваться"
 slug = "rss"
 authors = ["leins275"]
-tags = ["news"]
+tags = ["digital", "productivity"]
 images = ["posts/rss/img/preview.png"]
 +++
 ![rss](img/preview.png)

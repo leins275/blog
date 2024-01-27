@@ -5,9 +5,9 @@ authors = ["leins275"]
 date = 2023-04-28T00:41:06+03:00
 title = "Поездка в Стамбул за паспортом"
 description = ""
-categories = ["travel"]
+categories = ["article"]
 slug = "istanbul-apr-2023"
-tags = ["istanbul"]
+tags = ["travel", "personal"]
 series = []
 images = ["https://leins275.xyz/posts/istanbul-apr-2023/img/gulhane-1.jpg"]
 +++

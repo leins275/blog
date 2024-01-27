@@ -7,7 +7,7 @@ title = "Скимминг"
 description = "Как выжимать знания из книг. Быстро, точно, надежно."
 categories = ["article"]
 slug = "skimming"
-tags = ["itstime"]
+tags = ["learning"]
 series = ["по теме: Чтение"]
 images = ["https://leins275.xyz/posts/skimming/img/skimming.jpg"]
 +++
