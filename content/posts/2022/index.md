@@ -8,7 +8,7 @@ description = "Что хорошего произошло со мной в 2022 
 categories = ["post"]
 slug = "best-moments-2022"
 tags = ["personal"]
-series = ["memories"]
+series = ["по теме: Итоги года"]
 images = ["https://leins275.xyz/posts/itstime-21/img/2022.png"]
 +++
 ![2022](img/2022.png)
