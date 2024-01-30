@@ -9,7 +9,7 @@ slug = "year-results-2023"
 series = ["по теме: Итоги года"]
 categories = ["post"]
 tags = ["personal"]
-images = ["https://leins275.xyz/posts/year-results-2023/img/preview.jpg"]
+images = ["https://leins275.xyz/posts/year-results-2023/img/preview.JPG"]
 +++
 
 ![year-results-2023](img/preview.JPG)
