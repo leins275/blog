@@ -9,10 +9,10 @@ slug = "year-results-2023"
 series = ["по теме: Итоги года"]
 categories = ["post"]
 tags = ["personal"]
-images = ["https://leins275.xyz/posts/year-results-2023/img/preview.JPG"]
+images = ["https://leins275.xyz/posts/year-results-2023/img/preview.jpg"]
 +++
 
-![year-results-2023](img/preview.JPG)
+![year-results-2023](img/preview.jpg)
 
 Заканчивается январь, пришло время подвести итоги года.
 
