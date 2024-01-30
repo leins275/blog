@@ -12,7 +12,7 @@ tags = ["personal"]
 images = ["https://leins275.xyz/posts/year-results-2023/img/preview.JPG"]
 +++
 
-![year-results-2023](img/preview.jpg)
+![year-results-2023](img/preview.JPG)
 
 Заканчивается январь, пришло время подвести итоги года.
 
