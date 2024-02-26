@@ -2,7 +2,7 @@
 draft = false
 katex = false
 authors = ["leins275"]
-date = 2024-02-26T18:00:00+3:00
+date = 2024-02-26T18:00:00+03:00
 title = "Перегрузка проектов"
 description = "А что вы понимаете под словом проект?"
 slug = "projects"
