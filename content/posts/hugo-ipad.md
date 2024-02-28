@@ -2,7 +2,7 @@
 draft = false
 katex = false
 authors = ["leins275"]
-date = 2024-02-01T12:00:00+03:00
+date = 2024-03-01T12:00:00+03:00
 title = "Hugo + iPad"
 description = "Как я публикую посты в блог с iPad"
 slug = "hugo-ipad"
