@@ -9,7 +9,7 @@ slug = "hugo-ipad"
 series = ["по теме: Блог"]
 categories = ["post"]
 tags = ["blog"]
-images = ["https://leins275.xyz/assets/hugo-ipad/preview.jpg"]
+images = ["https://leins275.xyz/img/hugo-ipad/preview.jpg"]
 +++
 
 ![hugo ipad](/img/hugo-ipad/preview.jpg)
