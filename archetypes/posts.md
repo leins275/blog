@@ -9,7 +9,7 @@ slug = "{{.Name}}"
 series = ["по теме: "]
 categories = []
 tags = []
-images = ["https://leins275.xyz/posts/{{.Name}}/img/preview.jpg"]
+images = ["https://leins275.xyz/img/{{.Name}}/preview.jpg"]
 +++
 
-![{{.Name}}](img/preview.jpg)
+![{{.Name}}](/img/{{.Name}}/preview.jpg)

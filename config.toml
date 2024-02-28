@@ -34,8 +34,8 @@ copyright = "leins275 All rights reserved"
   gravatar    = "leins275@gmail.com"
   dateFormat  = "02.01.2006"
 
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+  favicon_32 = "/favicon-32x32.png"
+  favicon_16 = "/favicon-16x16.png"
 
   footercontent = "The meaning of life is to grow in power."
   hideFooter    = false
