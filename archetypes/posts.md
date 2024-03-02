@@ -12,4 +12,3 @@ tags = []
 images = ["https://leins275.xyz/img/{{.Name}}/preview.jpg"]
 +++
 
-![{{.Name}}](/img/{{.Name}}/preview.jpg)
