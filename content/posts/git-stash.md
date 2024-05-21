@@ -1,5 +1,5 @@
 +++ 
-draft = flase
+draft = false
 katex = false
 authors = ["leins275"]
 date = 2024-05-21T16:52:00+03:00
