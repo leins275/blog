@@ -81,16 +81,6 @@ copyright = "leins275 All rights reserved"
   weight = 9
   url    = "https://www.youtube.com/@leins275"
 [[params.social]]
-  name   = "LiveLib"
-  icon   = "fa fa-book fa-2x"
-  weight = 7
-  url    = "https://www.livelib.ru/reader/leins275"
-[[params.social]]
-  name   = "Dzen"
-  icon   = "fa fa-circle fa-2x"
-  weight = 6
-  url    = "https://dzen.ru/leins275"
-[[params.social]]
   name   = "RSS"
   icon   = "fa fa-rss fa-2x"
   weight = 10
