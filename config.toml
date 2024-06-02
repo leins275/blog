@@ -43,6 +43,7 @@ copyright = "leins275 All rights reserved"
 
   colorScheme = "auto"
   hidecolorschemetoggle = false
+  katex = true
 
 [taxonomies]
   series   = "series"
