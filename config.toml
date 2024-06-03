@@ -1,4 +1,4 @@
-baseurl = "https://leins275.xyz/"
+baseurl = "https://hogo.leins275.xyz/"
 theme = "hugo-coder"
 enableInlineShortcodes = true
 paginate = 20
