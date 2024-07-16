@@ -91,6 +91,8 @@ copyright = "leins275 All rights reserved"
 
 [params.yandexMetrika]
   id = "97527726"
+[params.googleTagManager]
+  id = "GTM-557XLKVM"
 
 # Menu links
 
