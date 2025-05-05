@@ -1,7 +1,6 @@
 baseurl = "https://blog.leins275.xyz/"
 theme = "hugo-coder"
 enableInlineShortcodes = true
-paginate = 20
 pygmentsstyle = "native"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
@@ -12,6 +11,9 @@ defaultContentLanguage = "ru"
 
 title = "leins275"
 copyright = "leins275 All rights reserved"
+
+[pagination]
+  pagerSize = 20
 
 [[menu.main]]
   name = "Блог"
