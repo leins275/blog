@@ -50,3 +50,6 @@ Also you can generate ssl cert with certbot:
 sudo certbot --nginx -d leins275.xyz
 ```
 
+# References
+- https://github.com/luizdepra/hugo-coder/blob/main/exampleSite/hugo.toml
+
