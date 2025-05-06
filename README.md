@@ -1,4 +1,3 @@
-
 # my-site
 
 This is repository with my static generated site.
