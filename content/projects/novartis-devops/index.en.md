@@ -2,7 +2,7 @@
 draft = false
 authors = ["leins275"]
 date = 2025-05-07T23:35:30+03:00
-title = ""
+title = "Novartis - devops support engineer"
 description = ""
 slug = "novartis-devops"
 tags = []
