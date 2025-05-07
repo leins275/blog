@@ -101,25 +101,34 @@ copyright = "leins275 All rights reserved"
   priority   = 0.5
 
 # Languages
-[[menu.main]]
-  name = "Блог"
-  weight = 3
-  url  = "posts/"
+# [[menu.main]]
+#   name = "Блог"
+#   weight = 3
+#   url  = "posts/"
 
 
 [languages.en]
 languageName = ":us:"
 
 [[languages.en.menu.main]]
-name = "Blog"
+name = "About me"
+weight = 1
+url = "about/"
+
+[[languages.en.menu.main]]
+name = "Digital garden"
 weight = 2
-url = "posts/"
+url = "https://leins275.xyz/"
 
 [[languages.en.menu.main]]
 name = "Projects"
-weight = 1
+weight = 3
 url = "projects/"
 
+[[languages.en.menu.main]]
+name = "Blog"
+weight = 4
+url = "posts/"
 
 [languages.ru]
 languageName = "🇷🇺"
@@ -132,11 +141,21 @@ description = "Личный блог"
 keywords = "блог"
 
 [[languages.ru.menu.main]]
-name = "Блог"
-weight = 2
-url = "posts/"
-
-[[languages.en.menu.main]]
-name = "Проекты"
+name = "Обо мне"
 weight = 1
+url = "about/"
+
+[[languages.ru.menu.main]]
+name = "Цифровой сад"
+weight = 2
+url = "https://leins275.xyz/"
+
+[[languages.ru.menu.main]]
+name = "Проекты"
+weight = 3
 url = "projects/"
+
+[[languages.ru.menu.main]]
+name = "Блог"
+weight = 4
+url = "posts/"
