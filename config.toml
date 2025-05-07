@@ -16,11 +16,6 @@ copyright = "leins275 All rights reserved"
 [pagination]
   pagerSize = 20
 
-[[menu.main]]
-  name = "Блог"
-  weight = 3
-  url  = "posts/"
-
 [author]
   name = "leins275"
   email = "leins275@gmail.com"
@@ -106,6 +101,11 @@ copyright = "leins275 All rights reserved"
   priority   = 0.5
 
 # Languages
+[[menu.main]]
+  name = "Блог"
+  weight = 3
+  url  = "posts/"
+
 
 [languages.en]
 languageName = ":us:"
@@ -114,6 +114,12 @@ languageName = ":us:"
 name = "Blog"
 weight = 2
 url = "posts/"
+
+[[languages.en.menu.main]]
+name = "Projects"
+weight = 1
+url = "projects/"
+
 
 [languages.ru]
 languageName = "🇷🇺"
@@ -129,3 +135,8 @@ keywords = "блог"
 name = "Блог"
 weight = 2
 url = "posts/"
+
+[[languages.en.menu.main]]
+name = "Проекты"
+weight = 1
+url = "projects/"
