@@ -6,8 +6,6 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 disqusShortname = 'leins275-xyz-1'
 enableEmoji = true
-
-# languageCode = "ru"
 defaultContentLanguage = "en"
 
 title = "leins275"
@@ -111,23 +109,33 @@ copyright = "leins275 All rights reserved"
 languageName = ":us:"
 
 [[languages.en.menu.main]]
-name = "About me"
-weight = 1
+name = "About"
+weight = 10
 url = "about/"
 
 [[languages.en.menu.main]]
-name = "Digital garden"
-weight = 2
+name = "Garden"
+weight = 50
 url = "https://leins275.xyz/"
 
 [[languages.en.menu.main]]
 name = "Projects"
-weight = 3
+weight = 30
 url = "projects/"
 
 [[languages.en.menu.main]]
+name = "Opensource"
+weight = 35
+url = "opensource/"
+
+[[languages.en.menu.main]]
+name = "Certs"
+weight = 36
+url = "certs/"
+
+[[languages.en.menu.main]]
 name = "Blog"
-weight = 4
+weight = 40
 url = "posts/"
 
 [languages.ru]
@@ -141,21 +149,31 @@ description = "Личный блог"
 keywords = "блог"
 
 [[languages.ru.menu.main]]
-name = "Обо мне"
-weight = 1
+name = "Био"
+weight = 10
 url = "about/"
 
 [[languages.ru.menu.main]]
-name = "Цифровой сад"
-weight = 2
+name = "Садик"
+weight = 50
 url = "https://leins275.xyz/"
 
 [[languages.ru.menu.main]]
 name = "Проекты"
-weight = 3
+weight = 30
 url = "projects/"
 
 [[languages.ru.menu.main]]
+name = "Опенсорс"
+weight = 35
+url = "opensource/"
+
+[[languages.ru.menu.main]]
+name = "Сертификаты"
+weight = 36
+url = "certs/"
+
+[[languages.ru.menu.main]]
 name = "Блог"
-weight = 4
+weight = 40
 url = "posts/"
