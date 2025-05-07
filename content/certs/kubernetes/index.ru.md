@@ -7,7 +7,4 @@ slug = "kubernetes"
 images = ["https://blog.leins275.xyz/certs/kubernetes/img/kubernetes-cert.jpeg"]
 +++
 
-![Сертификат картинкой](img/kubernetes-cert.jpeg)
-
-[Ссылка на линкедин лернинг](https://lnkd.in/dquDQYE5).
-
+[![Сертификат картинкой](img/kubernetes-cert.jpeg)](https://lnkd.in/dquDQYE5)
