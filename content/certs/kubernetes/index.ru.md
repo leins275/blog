@@ -2,12 +2,12 @@
 draft = false
 date = 2025-05-07T20:43:28+03:00
 title = "Кубернетес"
-description = "Сертификат на линкедин лернинг"
+description = "Мои сертификаты"
 slug = "kubernetes" 
-images = ["https://blog.leins275.xyz/certs/kubernetes/img/terraform-cert.jpeg"]
+images = ["https://blog.leins275.xyz/certs/kubernetes/img/kubernetes-cert.jpeg"]
 +++
 
-![Сертификат картинкой](img/terraform-cert.jpeg)
+![Сертификат картинкой](img/kubernetes-cert.jpeg)
 
 [Ссылка на линкедин лернинг](https://lnkd.in/dquDQYE5).
 
