@@ -2,7 +2,7 @@
 draft = false
 authors = ["leins275"]
 date = 2025-05-07T23:30:51+03:00
-title = "MLSH"
+title = "MLSH - ML models showroom"
 description = "ML models showroom"
 slug = "mlsh"
 tags = []
