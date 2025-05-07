@@ -1,4 +1,4 @@
-baseurl = "https://blog.leins275.xyz/"
+baseurl = "https://leins275.xyz/"
 theme = "hugo-coder"
 enableInlineShortcodes = true
 pygmentsstyle = "native"
