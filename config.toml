@@ -7,8 +7,8 @@ pygmentscodefencesguesssyntax = true
 disqusShortname = 'leins275-xyz-1'
 enableEmoji = true
 
-languageCode = "ru"
-defaultContentLanguage = "ru"
+# languageCode = "ru"
+defaultContentLanguage = "en"
 
 title = "leins275"
 copyright = "leins275 All rights reserved"
