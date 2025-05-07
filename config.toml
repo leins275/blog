@@ -116,7 +116,7 @@ url = "about/"
 [[languages.en.menu.main]]
 name = "Garden"
 weight = 50
-url = "https://leins275.xyz/"
+url = "https://garden.leins275.xyz/"
 
 [[languages.en.menu.main]]
 name = "Projects"
@@ -156,7 +156,7 @@ url = "about/"
 [[languages.ru.menu.main]]
 name = "Садик"
 weight = 50
-url = "https://leins275.xyz/"
+url = "https://garden.leins275.xyz/"
 
 [[languages.ru.menu.main]]
 name = "Проекты"
