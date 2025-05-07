@@ -3,10 +3,10 @@ draft = false
 katex = false
 authors = ["leins275"]
 date = 2025-05-05T15:57:30+03:00
-title = "Исполнение и контроль"
-description = "Классификация инструментов продуктивности от Маргулана Сейсембая"
-slug = "calendar-turn"
-series = ["по теме: "]
+title = "Control and execution"
+description = "Productivity instruments classification by Margulan Seisembai"
+slug = "control-and-exec"
+series = ["theme: "]
 categories = []
 tags = []
 +++
