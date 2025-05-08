@@ -1,10 +1,10 @@
 +++ 
 draft = true
 authors = ["leins275"]
-date = {{ .Date }}
+date = 2025-05-08T07:28:54+03:00
 title = ""
 description = ""
-slug = "{{.Name}}"
+slug = "cvtr"
 tags = []
 +++
 
