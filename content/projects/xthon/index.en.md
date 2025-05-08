@@ -14,6 +14,7 @@ The main goal of this project was developing a data store platform for hackathon
 - Deployed platform
 - Set up OAuth2.0
 - Supported platform
+
 # My contribution
 - Developed CI/CD flow
 - Wrote Jenkins declarative pipelines for all services
