@@ -1,11 +1,10 @@
 +++ 
 draft = false
-authors = ["leins275"]
-date = 2025-05-07T23:38:38+03:00
 title = "XTHON - platform for hackathons"
 description = "Digital hackathons platform"
+authors = ["leins275"]
+date = 2025-05-07T23:38:38+03:00
 slug = "xthon"
-tags = []
 +++
 
 The main goal of this project was developing a data store platform for hackathons. Also we provided landing page, and web interface for hackathon participants and another one for platform admins,
