@@ -1,8 +1,8 @@
 +++ 
-draft = true
 authors = ["leins275"]
 date = 2025-05-08T08:34:09+03:00
 slug = "xthon-helpdesk"
+draft = false
 title = "XTHON Helpdesk Automation"
 description = "Helpdesk bot for the workflow simplification"
 +++
