@@ -7,11 +7,11 @@ title = "XTHON Helpdesk Automation"
 description = "Helpdesk bot for the workflow simplification"
 +++
 
-Role: Principal Engineer
+**Role**: Principal Engineer
 
-Tech: Python, aiogram, FastAPI, Docker, PostgreSQL
+**Tech**: Python, aiogram, FastAPI, Docker, PostgreSQL
 
-Duration: Nov 2023 – Feb 2025
+**Duration**: Nov 2023 – Feb 2025
 
 🧩 Problem
 
