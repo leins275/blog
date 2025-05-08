@@ -9,6 +9,8 @@ My name is Nikita Lanskov, and I’m from Saint Petersburg. I studied at Lyceum 
 
 I completed my bachelor’s degree in Applied Mathematics at the Polytechnic Institute. I also enrolled in the master’s program there but did not defend my thesis.
 
+In my second year of university, I started an internship with my algorithms professor. Since then, we've been working together at [ITS](https://www.linkedin.com/company/itsxyz/). In November 2021, I joined the Russian branch of EPAM as a senior engineer. In March 2022, I relocated to Turkey with the company and have been living in Izmir ever since.
+
 ![Икигай](img/ikigai-en.jpg)
 
 My *ikigai* is to improve my life and the world around me by optimizing all processes that can be brought under control.
