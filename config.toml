@@ -90,20 +90,14 @@ copyright = "leins275 All rights reserved"
 [params.googleTagManager]
   id = "G-XQT1SSWG4Z"
 
-# Menu links
-
 # Sitemap settings
+
 [sitemap]
   changefreq = 'monthly'
   filename   = 'sitemap.xml'
   priority   = 0.5
 
-# Languages
-# [[menu.main]]
-#   name = "Блог"
-#   weight = 3
-#   url  = "posts/"
-
+# Menu links
 
 [languages.en]
 languageName = ":us:"
@@ -124,14 +118,9 @@ weight = 30
 url = "projects/"
 
 [[languages.en.menu.main]]
-name = "Opensource"
+name = "Portfolio"
 weight = 35
-url = "opensource/"
-
-[[languages.en.menu.main]]
-name = "Certs"
-weight = 36
-url = "certs/"
+url = "portfolio/"
 
 [[languages.en.menu.main]]
 name = "Blog"
@@ -164,14 +153,9 @@ weight = 30
 url = "projects/"
 
 [[languages.ru.menu.main]]
-name = "Опенсорс"
+name = "Портфолио"
 weight = 35
-url = "opensource/"
-
-[[languages.ru.menu.main]]
-name = "Сертификаты"
-weight = 36
-url = "certs/"
+url = "portfolio/"
 
 [[languages.ru.menu.main]]
 name = "Блог"
