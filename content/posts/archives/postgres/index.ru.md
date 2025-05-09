@@ -7,7 +7,7 @@ title = "Postgres для пет проектов"
 description = "Разворачиваем постгрес на своем сервере"
 slug = "postgres"
 tags = ["digital"]
-images = ["posts/postgres/img/preview.png"]
+images = ["/ru/posts/archives/postgres/img/preview.png"]
 +++
 ![postgres-logo](img/preview.png)
 
