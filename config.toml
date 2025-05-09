@@ -57,11 +57,11 @@ copyright = "leins275 All rights reserved"
   icon   = "fa fa-telegram fa-2x"
   weight = 2
   url    = "https://t.me/nlanskov"
-[[params.social]]
-  name   = "Vk"
-  icon   = "fa fa-vk fa-2x"
-  weight = 3
-  url    = "https://vk.com/leins275"
+# [[params.social]]
+#   name   = "Vk"
+#   icon   = "fa fa-vk fa-2x"
+#   weight = 3
+#   url    = "https://vk.com/leins275"
 [[params.social]]
   name   = "LinkedIn"
   icon   = "fa fa-linkedin fa-2x"
@@ -84,6 +84,11 @@ copyright = "leins275 All rights reserved"
   url    = "https://leins275.xyz/index.xml"
   rel    = "alternate"
   type   = "application/rss+xml"
+[[params.social]]
+  name   = "Digital Garden"
+  icon   = "fa fa-seedling fa-2x"
+  weight = 20
+  url    = "https://garden.leins275.xyz"
 
 [params.yandexMetrika]
   id = "97527726"
@@ -106,11 +111,6 @@ languageName = ":us:"
 name = "About"
 weight = 10
 url = "about/"
-
-[[languages.en.menu.main]]
-name = "Garden"
-weight = 50
-url = "https://garden.leins275.xyz/"
 
 [[languages.en.menu.main]]
 name = "Projects"
@@ -141,11 +141,6 @@ keywords = "блог"
 name = "Био"
 weight = 10
 url = "about/"
-
-[[languages.ru.menu.main]]
-name = "Садик"
-weight = 50
-url = "https://garden.leins275.xyz/"
 
 [[languages.ru.menu.main]]
 name = "Проекты"
