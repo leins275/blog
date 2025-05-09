@@ -123,7 +123,7 @@ weight = 35
 url = "portfolio/"
 
 [[languages.en.menu.main]]
-name = "Library"
+name = "Books"
 weight = 37
 url = "lib/"
 
