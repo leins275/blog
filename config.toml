@@ -123,6 +123,11 @@ weight = 35
 url = "portfolio/"
 
 [[languages.en.menu.main]]
+name = "Library"
+weight = 37
+url = "lib/"
+
+[[languages.en.menu.main]]
 name = "Blog"
 weight = 40
 url = "posts/"
@@ -151,6 +156,11 @@ url = "projects/"
 name = "Портфолио"
 weight = 35
 url = "portfolio/"
+
+[[languages.en.menu.main]]
+name = "Книги"
+weight = 37
+url = "lib/"
 
 [[languages.ru.menu.main]]
 name = "Блог"
