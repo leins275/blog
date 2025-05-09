@@ -1,5 +1,5 @@
 +++ 
-draft = false
+draft = true
 title = "XTHON - platform for hackathons"
 description = "Digital hackathons platform"
 authors = ["leins275"]

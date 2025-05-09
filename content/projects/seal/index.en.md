@@ -1,5 +1,5 @@
 +++ 
-draft = false
+draft = true
 authors = ["leins275"]
 date = 2025-05-07T23:37:30+03:00
 title = "SEAL recognition"

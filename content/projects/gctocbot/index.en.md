@@ -1,6 +1,6 @@
 +++ 
-draft = false
-katex = false
+draft = true
+katex = true
 authors = ["leins275"]
 date = 2025-05-07T10:16:49+03:00
 title = "GCTOCBOT - chatbot for documents search"

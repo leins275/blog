@@ -1,6 +1,5 @@
 +++ 
-draft = false
-katex = false
+draft = true
 authors = ["leins275"]
 date = 2025-05-07T23:28:17+03:00
 title = "iPaaS - Mulesoft based API platform"
