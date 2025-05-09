@@ -157,7 +157,7 @@ name = "Портфолио"
 weight = 35
 url = "portfolio/"
 
-[[languages.en.menu.main]]
+[[languages.ru.menu.main]]
 name = "Книги"
 weight = 37
 url = "lib/"
