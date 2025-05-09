@@ -1,6 +1,6 @@
 +++ 
 draft = true
 title = ""
-date = {{ .Date }}
-slug = "{{.Name}}"
+date  = {{ .Date }}
+slug  = "{{.Name}}"
 +++

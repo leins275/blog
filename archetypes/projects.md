@@ -1,9 +1,13 @@
 +++ 
-draft = true
-title = ""
+draft       = true
+title       = ""
 description = ""
-authors = ["leins275"]
-date = {{ .Date }}
-slug = "{{.Name}}"
+client      = "ITS"
+role        = "Backend engineer"
+tech        = ["Python"]
+start       = "Sep 2021"
+end         = "Feb 2022"
+date        = {{ .Date }}
+slug        = "{{.Name}}"
 +++
 

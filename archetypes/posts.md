@@ -1,13 +1,13 @@
 +++ 
-draft = true
-title = ""
+draft       = true
+title       = ""
 description = ""
-categories = []
-tags = []
-images = ["https://leins275.xyz/img/{{.Name}}/preview.jpg"]
-authors = ["leins275"]
-date = {{ .Date }}
-slug = "{{.Name}}"
-series = ["по теме: "]
+categories  = []
+tags        = []
+series      = ["по теме: "]
+images      = ["https://leins275.xyz/img/{{.Name}}/preview.jpg"]
+authors     = ["leins275"]
+date        = {{ .Date }}
+slug        = "{{.Name}}"
 +++
 
