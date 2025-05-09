@@ -1,10 +1,10 @@
 +++ 
-authors = ["leins275"]
-date = 2025-05-08T08:34:09+03:00
-slug = "xthon-helpdesk"
-draft = false
-title = "XTHON Helpdesk Automation"
-description = "Helpdesk bot for the workflow simplification"
+draft       = false
+title       = "Helpdesk bot"
+description = "Бот для упрощения работы техподдержки"
+client      = "ITS"
+start       = "Nov 2023"
+end         = "Feb 2025"
 +++
 
 **Role**: Principal Engineer

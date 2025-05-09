@@ -1,0 +1,4 @@
+<li>
+  <span class="date">{{ .Params.start | default "???" }} - {{ .Params.end | default "now" }}</span>
+  <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{.Params.client | default "Unknown"}} - {{ .Title }}</a>
+</li>
