@@ -2,7 +2,7 @@
 draft        = false
 title        = "Helpdesk bot"
 description  = "Бот для упрощения работы техподдержки"
-technologies = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL"]
+technologies = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL", "sqladmin"]
 client       = "ITS"
 roles        = ["Principal engineer"]
 start        = "Nov 2023"
