@@ -1,50 +1,52 @@
 +++ 
 draft        = false
 title        = "Helpdesk bot"
-description  = "Бот для упрощения работы техподдержки"
-technologies = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL", "sqladmin"]
+description  = "Helpdesk bot for automation flow"
 client       = "ITS"
-roles        = ["Principal engineer"]
+technologies = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL", "sqladmin"]
+roles        = ["Project manager", "Business analyst", "Team Lead", "DevOps"]
 start        = "Nov 2023"
 end          = "Feb 2025"
 date         = 2025-05-08T08:34:09+03:00
 +++
 
-### 🧩 Problem
+During the development of our digital platform, our team provided technical support to event organizers. As the number of requests grew, it became clear that the process needed to be automated to reduce the load on the support team and simplify communication for users.
 
-Organizers of major hackathons frequently contacted our team for technical support via Telegram. All issues were routed through a single support agent, creating a bottleneck and dependency on one individual.
+To address this, we developed a Telegram bot integrated with Todoist via API. It enabled centralized request handling, faster response times, and the ability to scale the support team.
 
-### 💡 Solution
+## 📈 Key Results
+The bot was actively used from November 2023 to February 2025. It supported 10 Digital Breakthrough hackathons, including one national and one international event.
 
-I initiated and led the development of an internal Telegram-based helpdesk bot, integrated with Todoist via API. The bot enabled real-time two-way communication between organizers and multiple support agents, automatically created tickets, and synchronized updates across systems.
+![Number attendees on events](img/number-attendees.png)
 
-### 🔧 Responsibilities
-- Initiated the project and defined its architecture
-- Assembled and managed the development team
-- Implemented the infrastructure and CI/CD pipeline as lead DevOps engineer
-- Designed communication flows and implemented asynchronous data handling
+Before the bot was introduced, all support was handled by a single experienced agent, who was the sole point of contact. With the bot, we scaled the support team to three agents, reducing the workload on the key specialist and improving service availability through better load distribution and mutual support among agents.
 
-### 📊 Impact
-- Supported 10 large-scale hackathons, including 1 national and 1 international event
-- Reduced single-point-of-failure dependency by scaling the support team from 1 to 3 agents
-- Improved response time and transparency for organizers
-- Enabled comment-based ticket updates directly from Telegram → Todoist → back
-- The bot significantly increased the support system's flexibility and responsiveness compared to traditional email-based helpdesk tools.
-- Internal report based on bot DB logs & xthon platform stats
+> Data confirmed by the bot's internal database and xthon platform statistics.
 
-### 📈 Metrics
-- Used actively for 15 months
-- Processed requests from thousands of participants
-- Increased internal visibility and load balancing via pull-based ticket assignment
+Potential for further development:
 
-![Number of attendees](img/number-attendees.png)
+Unlike traditional email-based helpdesk systems, the Telegram bot provides a much more dynamic, interactive, and responsive real-time support experience. This makes it particularly effective for high-intensity events like hackathons, and we are considering expanding its functionality and possibly open-sourcing the solution.
 
-### 🛠 Architecture & Ops
-- Fully asynchronous API interactions and DB queries
-- Dockerized deployment with CI/CD pipeline
-- Visualized internal architecture and database schema for maintainability
+## 🏗 Architecture and Development Process
+I initiated and led the project: I developed the concept, designed the architecture, assembled the team, launched the solution into production, and integrated it into the support workflow. As the company’s principal DevOps engineer, I also set up the CI/CD pipeline. A backend engineer worked alongside me and implemented most of the functional logic.
 
+Key architecture components:
+- Organizers interact with the Telegram bot, receive notifications, and track their requests in one place.
+- Support agents receive alerts for new requests and pick them up on a pull-based model.
+- All tickets are created in Todoist, where agents manage them via a task board.
 
-![Solution architecture](img/architecture.png)
+Two-way communication is supported: users comment in Telegram, agents reply via Todoist ticket comments.
+
+![Architecture diagram](img/architecture.png)
+
+Development process:
+- We used an agile, iteration-based approach.
+- Infrastructure and deployments were fully automated via CI/CD pipelines.
+- All API and database interactions were implemented asynchronously.
 
 ![DB schema](img/schema_db.png)
+
+## ⚙️ Implementation Details, Features, and Challenges
+- The bot handles all external interactions asynchronously, including Telegram API, Todoist API, and database operations.
+- Internal workflows and support team guidelines were developed and formalized during the rollout.
+- A key feature was using Telegram as the primary interface, which allowed users and agents to stay in context without switching tools.
