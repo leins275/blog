@@ -1,13 +1,13 @@
 +++ 
-date         = 2025-05-11T12:31:17+03:00
-draft        = false
-title        = "Corporate KB"
-description  = "Structured approach for knowledge sharing"
-client       = "ITS"
-roles        = ["Project manager", "Business analyst", "DevOps"]
-skills = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
-start        = "Oct 2020"
-end          = "now"
+date        = 2025-05-11T12:31:17+03:00
+draft       = false
+title       = "Corporate KB"
+description = "Structured approach for knowledge sharing"
+client      = "ITS"
+roles       = ["Project manager", "Business analyst", "DevOps"]
+skills      = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
+start       = "Oct 2020"
+end         = "now"
 +++
 
 In my second year at ITS, I began to think systematically about preserving and transferring knowledge within the team. I was inspired by [this video](https://youtu.be/9hruCcHC4FY?feature=shared), which led me to launch an internal corporate knowledge base.
