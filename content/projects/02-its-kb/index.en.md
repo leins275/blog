@@ -5,7 +5,7 @@ title        = "Corporate KB"
 description  = "Structured approach for knowledge sharing"
 client       = "ITS"
 roles        = ["Project manager", "Business analyst", "DevOps"]
-technologies = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
+skills = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
 start        = "Oct 2020"
 end          = "now"
 +++

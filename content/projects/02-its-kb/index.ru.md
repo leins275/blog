@@ -5,7 +5,7 @@ title        = "Корпоративная база знаний"
 description  = "Структурирование передачи зананий в компании"
 client       = "ITS"
 roles        = ["Project manager", "Business analyst", "DevOps"]
-technologies = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
+skills = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
 start        = "Окт 2020"
 end          = "now"
 +++

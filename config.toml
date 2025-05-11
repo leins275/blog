@@ -46,7 +46,7 @@ copyright = "leins275 All rights reserved"
   series   = "series"
   category = "categories"
   tag = "tags"
-  technology = "technologies"
+  skill = "skills"
 
 # Social links
 [[params.social]]

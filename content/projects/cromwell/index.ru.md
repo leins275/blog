@@ -5,7 +5,7 @@ title        = "Кромвель"
 description  = "Поддержка движка для научных пайплайнов на новом HPC кластере"
 client       = "Новартис"
 roles        = ["Backend engineer"]
-technologies = ["Python", "Pandas", "EasyBuild"]
+skills = ["Python", "Pandas", "EasyBuild"]
 start        = "Apr 2025"
 end          = "now"
 +++

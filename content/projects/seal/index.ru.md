@@ -5,7 +5,7 @@ title        = "Распознавание тюленей"
 description  = "Распознавание тюленей по снимкам с беспилотников"
 client       = "НПО Экофактор"
 roles        = ["CV engineer"]
-technologies = ["Python", "PyTorch", "OpenCV"]
+skills = ["Python", "PyTorch", "OpenCV"]
 start        = "Июл 2019"
 end          = "Апр 2020"
 +++

@@ -5,7 +5,7 @@ title        = "Цифровая платформа для хакатонов"
 description  = "Платформа для проведения онлайн мероприятий в игровой форме"
 client       = "RSV"
 roles        = ["Backend engineer", "Frontend engineer", "Support engineer", "Team Lead", "Tech Lead", "DevOps"]
-technologies = ["Python", "ElasticSearch", "React", "JavaScript", "SCSS", ]
+skills = ["Python", "ElasticSearch", "React", "JavaScript", "SCSS", ]
 start        = "Апр 2020"
 end          = "Янв 2025"
 +++

@@ -5,7 +5,7 @@ title        = ""
 description  = ""
 client       = "ITS"
 roles        = ["Backend engineer"]
-technologies = ["Python"]
+skills = ["Python"]
 start        = "Sep 2021"
 end          = "Feb 2022"
 +++
