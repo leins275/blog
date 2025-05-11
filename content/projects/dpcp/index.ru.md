@@ -6,8 +6,8 @@ description  = "Платформа для проведения онлайн ме
 client       = "RSV"
 roles        = ["Backend engineer", "Frontend engineer", "Support engineer", "Team Lead", "Tech Lead", "DevOps"]
 technologies = ["Python", "ElasticSearch", "React", "JavaScript", "SCSS", ]
-start        = "Apr 2020"
-end          = "Jan 2025"
+start        = "Апр 2020"
+end          = "Янв 2025"
 +++
 
 ## Описание проекта, цели и задачи 
