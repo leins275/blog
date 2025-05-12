@@ -1,13 +1,13 @@
 +++ 
 date        = {{ .Date }}
 slug        = "{{.Name}}"
+authors     = ["leins275"]
+categories  = ["post"]
 draft       = true
 title       = ""
 description = ""
-categories  = []
 tags        = []
 series      = ["по теме: "]
 images      = ["https://leins275.xyz/img/{{.Name}}/preview.jpg"]
-authors     = ["leins275"]
 +++
 
