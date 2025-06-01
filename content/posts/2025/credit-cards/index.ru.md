@@ -3,7 +3,7 @@ date        = 2025-06-01T16:26:14+03:00
 slug        = "credit-cards"
 authors     = ["leins275"]
 categories  = ["post"]
-draft       = true
+draft       = false
 title       = "Открытия мая"
 description = "Что нового я узнал про эту жизнь"
 +++
