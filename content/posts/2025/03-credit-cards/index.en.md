@@ -21,4 +21,4 @@ I bought myself a pair of trekking sneakers, liked them so much that I got anoth
 ## Hackathons
 
 For the past couple of months, my colleagues and I have been preparing a hackathon in Portugal. Over the last five years, one of my professional focuses has been developing and maintaining a digital platform for hackathons. However, despite my extensive experience, independently organizing an event has brought many interesting challenges to our small team.
-Come [join us at the hackathon](https://l.xthon.eu/) on June 13–14 to see how we tackled those challenges! You’ll also meet new people and solve one of three interesting cases. And if you happen to be in Lisbon — you’ve got a unique opportunity to attend our hackathon offline!
+Come [join us at the hackathon](https://l.xthon.eu/) on June 13–14 to see how we tackled those challenges! You’ll also meet new people and solve one of three interesting problems. And if you happen to be in Lisbon — you’ve got a unique opportunity to attend our hackathon offline!
