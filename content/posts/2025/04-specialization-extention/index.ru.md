@@ -1,9 +1,9 @@
 +++ 
-date        = 2025-06-03T19:15:05+03:00
+date        = 2025-06-09T12:05:05+03:00
 slug        = "specialization-extention"
 authors     = ["leins275"]
 categories  = ["post"]
-draft       = true
+draft       = false
 title       = "Расширение специализации"
 description = "Айтишники должны делать больше"
 tags        = ["it"]
