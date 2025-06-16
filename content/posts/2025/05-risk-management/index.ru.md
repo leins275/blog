@@ -1,5 +1,5 @@
 +++ 
-date        = 2025-06-06T20:26:38+03:00
+date        = 2025-06-16T10:26:38+03:00
 slug        = "risk-management"
 authors     = ["leins275"]
 categories  = ["post"]
