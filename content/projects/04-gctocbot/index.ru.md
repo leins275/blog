@@ -1,12 +1,13 @@
 +++ 
-draft = true
-authors = ["leins275"]
-date = 2025-05-07T10:16:49+03:00
-title = "Чат-бот для поиска документов"
+categories  = ["project"]
+draft       = true
+authors     = ["leins275"]
+date        = 2025-05-07T10:16:49+03:00
+title       = "Чат-бот для поиска документов"
 description = "Чат бот с продвинутыми функциями поиска документов внутри компании"
-slug = "gctocbot"
-tags = []
-client = "Merck"
+slug        = "gctocbot"
+tags        = []
+client      = "Merck"
 +++
 
 In this project, I worked as a DevOps engineer on the bot development team. One of the key challenges
