@@ -135,7 +135,7 @@ description = "Личный блог"
 keywords = "блог"
 
 [[languages.ru.menu.main]]
-name = "Био"
+name = "БИО"
 weight = 10
 url = "about/"
 
