@@ -1,26 +1,28 @@
 +++ 
-draft = true
-authors = ["leins275"]
-date = 2025-05-07T23:35:30+03:00
-title = "Novartis - devops support engineer"
-description = ""
-slug = "novartis-devops"
-tags = []
+priority = 200
+draft    = true
+authors  = ["leins275"]
+date     = 2021-11-07T23:35:30+03:00
+title    = "DevOps support engineer"
+client   = "Novartis"
+roles    = ["DevOps engineer"]
+skills   = ["AWS", "Azure AD", "Oauth2.0", "PKCE", "Terraform", "Python", "Groovy", "Jenkins", "Bash", "Chef"]
+start    = "Nov 2021"
+end      = "Jun 2023"
 +++
+# Инженер по OAuth
+Разработка Terraform-модулей для поддержки различных сценариев авторизации в AWS.
 
-# Oauth engineer
-Create terraform modules to support different AWS Authorization flows
-
-## Responsibilities
-- Developed and tested some authorization strategies based on AWS services such as AWS ALB and API Gateway. For each strategy, we created a terraform module to make our solutions scalable for many teams.
-- I created an example Python web service with code examples of token issuing with different OAuth flows( Authorization Code, OBO).
-- I developed Python lambda that can parse auth tokens and provide claims in headers (this case is for support legacy apps). And as an alternative for this lambda, I created an openresty (Nginx + Lua runtime) configuration with the same functionality
+## Обязанности
+- Разрабатывал и тестировал различные стратегии авторизации на базе сервисов AWS, таких как ALB и API Gateway. Для каждой стратегии создавался отдельный Terraform-модуль, чтобы сделать решения масштабируемыми для множества команд.
+- Создал пример веб-сервиса на Python с демонстрацией получения токенов по различным OAuth-потокам (Authorization Code, OBO).
+- Разработал Lambda-функцию на Python, которая парсит токены авторизации и передаёт claims в заголовках (для поддержки легаси-приложений). В качестве альтернативы создал конфигурацию OpenResty (Nginx + Lua), реализующую ту же функциональность.
 
 # PAM
-Help different scientific application teams integrate PAM solutions with various CI/CD toolsets
+Помощь научным командам в интеграции PAM-решений с различными CI/CD-инструментами.
 
-## Responsibilities
-- Support scientific application teams with PAM tools integration
-- Write chef recipes to support credentials injections in a reliable way
-- Create Jenkins pipelines with the Conjure plugin
-- Write bash scripts to support various PAM credential injection flows
+## Обязанности
+- Поддержка команд научных приложений при интеграции с PAM-инструментами
+- Написание Chef-рецептов для надёжной инъекции учётных данных
+- Создание Jenkins-пайплайнов с использованием плагина Conjur
+- Написание bash-скриптов для поддержки различных сценариев передачи учётных данных через PAM

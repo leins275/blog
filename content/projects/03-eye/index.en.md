@@ -1,5 +1,6 @@
 +++ 
-date        = 2025-05-11T12:45:12+03:00
+priority    = 300
+date        = 2021-09-11T12:45:12+03:00
 draft       = false
 title       = "Microcirculation"
 description = "Detection and classification of blood vessels in the anterior surface of the eye"

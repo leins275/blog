@@ -1,13 +1,14 @@
 +++ 
-draft        = false
-title        = "Helpdesk bot"
-description  = "Helpdesk bot for automation flow"
-client       = "ITS"
-skills = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL", "sqladmin"]
-roles        = ["Project manager", "Business analyst", "Team Lead", "DevOps"]
-start        = "Nov 2023"
-end          = "Feb 2025"
-date         = 2025-05-08T08:34:09+03:00
+priority    = 1
+date        = 2023-11-08T08:34:09+03:00
+draft       = false
+title       = "Helpdesk bot"
+description = "Helpdesk bot for automation flow"
+client      = "ITS"
+skills      = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL", "sqladmin"]
+roles       = ["Project manager", "Business analyst", "Team Lead", "DevOps"]
+start       = "Nov 2023"
+end         = "Feb 2025"
 +++
 
 During the development of our digital platform, our team provided technical support to event organizers. As the number of requests grew, it became clear that the process needed to be automated to reduce the load on the support team and simplify communication for users.

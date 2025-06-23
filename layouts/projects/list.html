@@ -12,7 +12,9 @@
     </header>
     {{ .Content }}
     <ul>
-      {{- range .Paginator.Pages -}}
+      {{- $sortedPages := sort .Pages ".Params.priority" "desc" -}}
+      {{- $paginator := .Paginate $sortedPages -}}
+      {{- range $paginator.Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
     </ul>

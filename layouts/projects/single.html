@@ -23,6 +23,7 @@
           </div>
           {{ with .GetTerms "skills" }}{{ partial "taxonomy/skills.html" . }}{{ end }}
           {{ with .GetTerms "roles" }}{{ partial "taxonomy/roles.html" . }}{{ end }}
+          {{ with .GetTerms "categories" }}{{ partial "taxonomy/skills.html" . }}{{ end }}
         </div>
       </header>
 

@@ -1,13 +1,15 @@
 +++ 
-draft        = false
-title        = "Бот техподдержки"
-description  = "Бот для упрощения работы техподдержки"
-client       = "ITS"
-skills = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL", "sqladmin"]
-roles        = ["Project manager", "Business analyst", "Team Lead", "DevOps"]
-start        = "Ноя 2023"
-end          = "Фев 2025"
-date         = 2025-05-08T08:34:09+03:00
+priority    = 300
+date        = 2023-11-08T08:34:09+03:00
+categories  = ["project"]
+draft       = false
+title       = "Бот техподдержки"
+description = "Бот для упрощения работы техподдержки"
+client      = "ITS"
+skills      = ["Python", "aiogram", "FastAPI", "Docker", "PostgreSQL", "sqladmin"]
+roles       = ["Project manager", "Business analyst", "Team Lead", "DevOps"]
+start       = "Ноя 2023"
+end         = "Фев 2025"
 +++
 
 Во время работы над цифровой платформой мы с командой оказывали техническую поддержку организаторам мероприятий. С ростом числа обращений стало ясно, что процесс необходимо автоматизировать, чтобы разгрузить поддержку и упростить коммуникацию для пользователей.

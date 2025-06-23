@@ -1,5 +1,6 @@
 +++ 
-date        = {{ .Date }}
+priority    = 100
+categories  = ["project"]
 draft       = true
 title       = ""
 description = ""

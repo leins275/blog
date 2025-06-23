@@ -1,5 +1,6 @@
 +++ 
-date        = 2025-05-11T12:31:17+03:00
+priority    = 125
+date        = 2020-10-11T11:10:51+03:00
 draft       = false
 title       = "Corporate KB"
 description = "Structured approach for knowledge sharing"

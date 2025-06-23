@@ -1,13 +1,14 @@
 +++ 
-date         = 2025-05-11T11:10:51+03:00
-draft        = false
-title        = "Корпоративная база знаний"
-description  = "Структурирование передачи зананий в компании"
-client       = "ITS"
-roles        = ["Project manager", "Business analyst", "DevOps"]
-skills = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
-start        = "Окт 2020"
-end          = "now"
+priority    = 125
+date        = 2020-10-11T11:10:51+03:00
+draft       = false
+title       = "Корпоративная база знаний"
+description = "Структурирование передачи зананий в компании"
+client      = "ITS"
+roles       = ["Project manager", "Business analyst", "DevOps"]
+skills      = ["Git", "Knowledge sharing", "Change management", "PostgreSQL", "SSO", "Keycloak", "Docker"]
+start       = "Окт 2020"
+end         = "now"
 +++
 
 На втором году работы в компании ITS я начал системно задумываться о сохранении и передаче знаний внутри команды. Мотивацией послужило [вдохновляющее видео](https://youtu.be/9hruCcHC4FY?feature=shared), после просмотра которого я решил запустить внутреннюю корпоративную базу знаний.
