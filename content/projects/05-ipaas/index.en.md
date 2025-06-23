@@ -2,7 +2,7 @@
 priority    = 300
 date        = 2024-01-23T19:02:35+03:00
 categories  = ["project"]
-draft       = true
+draft       = false
 title       = "iPaaS"
 description = "API platform"
 client      = "Merck"

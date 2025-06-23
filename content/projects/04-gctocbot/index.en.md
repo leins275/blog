@@ -2,7 +2,7 @@
 priority    = 300
 categories  = ["project"]
 date        = 2025-05-07T10:16:49+03:00
-draft       = true
+draft       = false
 title       = "Document Search Chatbot"
 description = "A chatbot with advanced document search capabilities inside the company"
 client      = "Merck"

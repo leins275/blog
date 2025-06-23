@@ -2,7 +2,7 @@
 priority    = 300
 categories  = ["project"]
 date        = 2025-05-07T10:16:49+03:00
-draft       = true
+draft       = false
 title       = "Чат-бот для поиска документов"
 description = "Чат бот с продвинутыми функциями поиска документов внутри компании"
 client      = "Merck"

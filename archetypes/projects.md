@@ -1,9 +1,7 @@
 +++ 
-priority    = 100
-categories  = ["project"]
 draft       = true
+priority    = 100
 title       = ""
-description = ""
 client      = "ITS"
 roles       = ["Backend engineer"]
 skills      = ["Python"]
