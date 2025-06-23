@@ -1,7 +1,7 @@
 +++ 
 priority    = 100
 categories  = ["project"]
-draft       = true
+draft       = false
 title       = "Карьерный ассистент"
 description = "Мобильное приложение, соединяющее карьерных экспертов с желающими проконсультироваться"
 client      = "Kaspersky lab"

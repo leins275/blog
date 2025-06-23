@@ -1,7 +1,7 @@
 +++ 
 priority    = 150
 categories  = ["project"]
-draft       = true
+draft       = false
 title       = "ML showroom"
 client      = "ITS"
 roles       = ["Project Manager"]

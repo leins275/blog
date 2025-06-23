@@ -1,7 +1,7 @@
 +++ 
 priority    = 100
 categories  = ["project"]
-draft       = true
+draft       = false
 title       = "Мобильное приложение для походов по музеям"
 client      = "ITS"
 roles       = ["Backend engineer", "Mobile developer"]

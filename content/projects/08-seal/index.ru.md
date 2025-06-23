@@ -1,7 +1,7 @@
 +++ 
 priority    = 100
 categories  = ["project"]
-draft       = true
+draft       = false
 title       = "Распознавание тюленей на снимках с беспилотников"
 client      = "ITS"
 roles       = ["ML engineer"]

@@ -1,7 +1,7 @@
 +++ 
 priority    = 150
 categories  = ["project"]
-draft       = true
+draft       = false
 title       = "Infrastructure support"
 client      = "ITS"
 roles       = ["DevOps engineer", "CIO"]

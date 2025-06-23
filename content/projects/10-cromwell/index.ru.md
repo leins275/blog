@@ -1,6 +1,6 @@
 +++ 
 priority    = 600
-draft       = true
+draft       = false
 title       = "Cromwell"
 description = "Поддержка движка для научных пайплайнов на новом HPC кластере"
 client      = "Novartis"

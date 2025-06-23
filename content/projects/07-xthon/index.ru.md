@@ -1,7 +1,7 @@
 +++ 
 priority    = 500
 categories  = ["project"]
-draft       = true
+draft       = false
 title       = "XTHON"
 description = "Цифровая платформа для проведения онлайн мероприятий в игровой форме"
 client      = "ITS"
