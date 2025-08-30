@@ -5,7 +5,7 @@ authors     = ["leins275"]
 categories  = ["post"]
 title       = "About the heroism"
 tags        = []
-draft       = fasle
+draft       = false
 +++
 
 For me, heroism is the necessity to exert extraordinary effort in order to achieve a goal. And extraordinary effort is primarily associated with sacrifice—of energy, time, health—it doesn’t matter. It’s about giving up something you wouldn’t want to give up under normal circumstances.
