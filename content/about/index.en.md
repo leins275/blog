@@ -17,4 +17,4 @@ My *ikigai* is to improve my life and the world around me by optimizing all proc
 
 At work, I set up efficient CI/CD processes, automate routine tasks, visualize workflows, and structure them into a clear pipeline. In everyday life, I find the most joy in being prepared for any turn of events—when my potential energy is at its peak.
 
-Also, I have a lot of hobbies! Cycling, Guitar playing, hiking. I used to go to be a water tourist every summer when I lived in Saint-Petersburg. But right now my focus is more on notetaking and undirected research. I fall in love with Digital Garden concept, so I created one for me to share my planted ideas. If you understand russian, you can [check it out](https://garden.leins275.xyz/).
+Also, I have a lot of hobbies! Cycling, Guitar playing, hiking. I used to go to be a water tourist every summer when I lived in Saint-Petersburg. But right now my focus is more on notetaking and undirected research. 
