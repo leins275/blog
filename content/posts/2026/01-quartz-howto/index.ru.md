@@ -6,12 +6,8 @@ categories  = ["post"]
 title       = "Настройка quartz"
 tags        = []
 draft       = false
-description = "Как настроить кварц"
+description = "Инструкция: Как настроить Quartz сайт с GitHub Pages"
 +++
-
-# Инструкция: Как настроить Quartz сайт с GitHub Pages
-
-На основе ваших заметок я подготовил полную инструкцию по настройке Quartz с публикацией на GitHub Pages.
 
 ## Что такое Quartz?
 
