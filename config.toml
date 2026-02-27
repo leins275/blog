@@ -140,11 +140,6 @@ weight = 10
 url = "about/"
 
 [[languages.ru.menu.main]]
-name = "CV"
-weight = 20
-url = "files/nikita_lanskov.pdf"
-
-[[languages.ru.menu.main]]
 name = "Портфолио"
 weight = 30
 url = "portfolio/"
