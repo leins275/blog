@@ -110,9 +110,9 @@ weight = 10
 url = "about/"
 
 [[languages.en.menu.main]]
-name = "Projects"
+name = "CV"
 weight = 20
-url = "projects/"
+url = "files/nikita_lanskov.pdf"
 
 [[languages.en.menu.main]]
 name = "Portfolio"
@@ -140,9 +140,9 @@ weight = 10
 url = "about/"
 
 [[languages.ru.menu.main]]
-name = "Проекты"
+name = "CV"
 weight = 20
-url = "projects/"
+url = "files/nikita_lanskov.pdf"
 
 [[languages.ru.menu.main]]
 name = "Портфолио"
