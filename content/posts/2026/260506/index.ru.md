@@ -1,5 +1,5 @@
 +++
-date        = "2026-05-06T10:46:27+00:00"
+date        = "2026-05-06T7:46:27+00:00"
 slug        = "AI-outstaffing"
 authors     = ["leins275"]
 categories  = ["article"]
