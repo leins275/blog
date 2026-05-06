@@ -1,0 +1,10 @@
+{{- /* Load mermaid.js for pages that use ```mermaid code fences. */ -}}
+{{- /* The theme's baseof.html already loads it for the {{< mermaid >}} shortcode, */ -}}
+{{- /* so skip here if that path already fired to avoid double-init. */ -}}
+{{ if and (.Page.Store.Get "hasMermaid") (not (.HasShortcode "mermaid")) }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"
+  integrity="sha256-QdTG1YTLLTwD3b95jLqFxpQX9uYuJMNAtVZgwKX4oYU=" crossorigin="anonymous"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+{{ end }}
