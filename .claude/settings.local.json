@@ -5,7 +5,10 @@
       "Bash(hugo version *)",
       "Bash(xargs -I{} echo \"SCRIPT_INCLUDES={}\" echo \"---other-page-check \\(should be 0\\)---\" grep -c 'cdn.jsdelivr.net/npm/mermaid' /tmp/mermaid_build/posts/2026/260506/index.html)",
       "Bash(hugo --destination /tmp/mermaid_build)",
-      "Bash(hugo)"
+      "Bash(hugo)",
+      "Bash(timeout 8 make run)",
+      "Bash(grep *)",
+      "Bash(awk *)"
     ]
   }
 }

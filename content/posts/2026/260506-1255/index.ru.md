@@ -50,17 +50,17 @@ draft       = false
 
 ```mermaid
 flowchart LR
-    A[Партнёрские TG-каналы] -->|Telethon NewMessage<br/>user session| B[Bot worker]
-    B --> Q[(TaskIQ + Redis)]
-    Q --> X[Extractor agents:<br/>title / skills / rate / ...<br/>gpt-4o-mini]
-    X --> DB[(SQLAlchemy + SQLite<br/>Position, Engineer, Match)]
-    DB --> M[Semantic matcher<br/>o3-mini, 8-dim scoring]
+    A["Партнёрские TG-каналы"] -->|"Telethon NewMessage<br/>user session"| B["Bot worker"]
+    B --> Q[("TaskIQ + Redis")]
+    Q --> X["Extractor agents:<br/>title / skills / rate / ...<br/>gpt-4o-mini"]
+    X --> DB[("SQLAlchemy + SQLite<br/>Position, Engineer, Match")]
+    DB --> M["Semantic matcher<br/>o3-mini, 8-dim scoring"]
     M --> DB
-    DB --> P[Django dashboard<br/>unmanaged ORM, Bootstrap 5]
-    P --> O[Оператор]
-    O -->|Отклик через портал| A2[Партнёр]
-    P --> Auth[oauth2-proxy → Keycloak OIDC]
-    Net[Caddy reverse proxy] --> P
+    DB --> P["Django dashboard<br/>unmanaged ORM, Bootstrap 5"]
+    P --> O["Оператор"]
+    O -->|"Отклик через портал"| A2["Партнёр"]
+    P --> Auth["oauth2-proxy → Keycloak OIDC"]
+    Net["Caddy reverse proxy"] --> P
 ```
 
 Ниже — по компонентам.
