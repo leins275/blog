@@ -22,8 +22,46 @@
     opacity: 0.75;
   }
 
+  /* Override theme defaults that hurt CV readability:
+     - .content article p applies text-align: justify + hyphens: auto,
+       which inflates word-spacing and produces hyphenated breaks in
+       a CV; specificity 0,1,2 — match it via `.cv article ...`.
+     - heading-link icons clutter every heading.
+     - external-link ↗ icons after phone / linkedin / portfolio. */
+  .cv,
+  .cv article p,
+  .cv article li {
+    text-align: left;
+    hyphens: manual;
+  }
+
+  .cv .heading-link {
+    display: none;
+  }
+
+  .cv a.external-link::after {
+    content: none;
+  }
+
   .cv h1 {
-    margin-bottom: 0.25rem;
+    margin: 0 0 0.25rem 0;
+  }
+
+  /* Tagline — the role/location line immediately after the name. */
+  .cv h1 + p {
+    margin: 0 0 0.5rem 0;
+    opacity: 0.85;
+  }
+
+  /* Contacts — the link strip immediately after the tagline.
+     Each contact link must stay on a single line so phone numbers
+     don't wrap mid-digits. Separators between links can still wrap. */
+  .cv h1 + p + p {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .cv h1 + p + p a {
+    white-space: nowrap;
   }
 
   .cv h2 {
@@ -86,6 +124,11 @@
     background: transparent !important;
   }
 
+  .cv {
+    text-align: left;
+    hyphens: manual;
+  }
+
   main.wrapper,
   .wrapper,
   .content,
@@ -138,6 +181,19 @@
 
   .cv p {
     margin: 2pt 0;
+  }
+
+  /* Tagline + contact strip directly under the name. */
+  .cv h1 + p {
+    margin: 0 0 2pt 0;
+  }
+
+  .cv h1 + p + p {
+    margin: 0 0 8pt 0;
+  }
+
+  .cv h1 + p + p a {
+    white-space: nowrap;
   }
 
   .cv ul {

@@ -11,6 +11,7 @@ draft = false
 # Nikita Lanskov
 
 Senior Software Engineer · Izmir, Turkey · open to EU relocation
+
 [nikitalanskov@gmail.com](mailto:nikitalanskov@gmail.com) · [+90 531 601 4154](https://wa.me/905316014154) · [linkedin.com/in/leins275](https://linkedin.com/in/leins275) · [leins275.xyz](https://leins275.xyz)
 
 ## Profile
