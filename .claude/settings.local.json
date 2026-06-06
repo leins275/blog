@@ -8,7 +8,30 @@
       "Bash(hugo)",
       "Bash(timeout 8 make run)",
       "Bash(grep *)",
-      "Bash(awk *)"
+      "Bash(awk *)",
+      "Bash(npx skills *)",
+      "Bash(nohup hugo server --port 1313 --baseURL http://localhost:1313/ --bind 127.0.0.1 --disableLiveReload)",
+      "Bash(echo \"PID=$!\")",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/cv/)",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_evaluate",
+      "Bash(google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --no-pdf-header-footer --print-to-pdf=/tmp/cv-after.pdf http://localhost:1313/cv/)",
+      "mcp__playwright__browser_close",
+      "Bash(kill 79234)",
+      "Bash(rm -f /tmp/cv-after.pdf /home/leins275/Projects/publishing/blog/cv-before-desktop.png /home/leins275/Projects/publishing/blog/cv-after-desktop.png /home/leins275/Projects/publishing/blog/cv-after-ru-desktop.png)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(curl -sS \"http://localhost:1313/cv/\")",
+      "Bash(curl -sS \"http://localhost:1313/css/cv-print.min.7233c7ffa46c9159d1c5e6752cbebc741b0badf9cdf758dc64b6ccf0ed0e5231.css\")",
+      "Bash(curl -sS \"http://localhost:1313/css/coder.css\")",
+      "Bash(google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --no-pdf-header-footer --print-to-pdf=/tmp/cv-fixed.pdf http://localhost:1313/cv/)",
+      "Bash(kill 83734)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)"
     ]
   }
 }

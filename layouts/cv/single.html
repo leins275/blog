@@ -11,6 +11,11 @@
           </a>
         </p>
       {{ end }}
+      {{ if and .Params.cross_link_url .Params.cross_link_label }}
+        <p class="cv-actions no-print">
+          <a class="cv-download" href="{{ .Params.cross_link_url }}">{{ .Params.cross_link_label }}</a>
+        </p>
+      {{ end }}
       {{ .Content }}
     </article>
   </section>

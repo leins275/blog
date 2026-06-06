@@ -1,11 +1,13 @@
 +++
 title = "Резюме"
-slug = "cv"
 date = 2026-06-06
 type = "cv"
+layout = "single"
 draft = false
 [params]
-  pdf = "/files/Nikita-Lanskov-Senior-Software-Engineer-RU.pdf"
+  pdf              = "/files/Nikita-Lanskov-Senior-Software-Engineer-RU.pdf"
+  cross_link_url   = "/ru/cv/summary/"
+  cross_link_label = "Краткая версия →"
 +++
 
 # Никита Лансков

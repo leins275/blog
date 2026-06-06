@@ -1,11 +1,13 @@
 +++
 title = "CV"
-slug = "cv"
 date = 2026-06-06
 type = "cv"
+layout = "single"
 draft = false
 [params]
-  pdf = "/files/Nikita-Lanskov-Senior-Software-Engineer.pdf"
+  pdf              = "/files/Nikita-Lanskov-Senior-Software-Engineer.pdf"
+  cross_link_url   = "/cv/summary/"
+  cross_link_label = "Short summary →"
 +++
 
 # Nikita Lanskov
