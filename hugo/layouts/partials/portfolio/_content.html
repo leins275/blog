@@ -1,0 +1,9 @@
+{{- /* Shift markdown heading levels down two so embedded h1 sits below the
+       enclosing section's h2 (h1 → h3, h3 → h5). Highest-level first so we
+       don't double-shift. */ -}}
+{{- $c := .Content -}}
+{{- $c = replaceRE "<(/?)h4" "<${1}h6" $c -}}
+{{- $c = replaceRE "<(/?)h3" "<${1}h5" $c -}}
+{{- $c = replaceRE "<(/?)h2" "<${1}h4" $c -}}
+{{- $c = replaceRE "<(/?)h1" "<${1}h3" $c -}}
+{{- $c | safeHTML -}}

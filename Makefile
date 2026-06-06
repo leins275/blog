@@ -6,7 +6,11 @@ BASE_URL ?= http://localhost:1313/
 PORT ?= 1313
 
 TYPST ?= typst
+CLAUDE ?= claude
 PDF_DIR := $(HUGO_DIR)/public/files
+CV_DIR := cv
+CV_SRC_DIR := $(CV_DIR)/sources
+CV_TEMPLATE := $(CV_DIR)/template.typ
 CV_NAME := nikita-lanskov-senior-software-engineer
 
 INTER_VERSION ?= 4.1
@@ -15,7 +19,7 @@ FONT_DIR := $(HOME)/.local/share/fonts/inter
 export HUGO_ENVIRONMENT
 export HUGO_ENV
 
-.PHONY: run build clean pdf install-fonts
+.PHONY: run build clean pdf cv install-fonts
 
 run:
 	$(HUGO) server --source $(HUGO_DIR) --gc --minify --baseURL "$(BASE_URL)" --port $(PORT) --bind 0.0.0.0
@@ -32,8 +36,24 @@ clean:
 pdf:
 	@command -v $(TYPST) >/dev/null 2>&1 || { echo "typst not found in PATH. Install: cargo install --locked typst-cli, or https://github.com/typst/typst/releases" >&2; exit 1; }
 	@mkdir -p $(PDF_DIR)
-	$(TYPST) compile cv/cv.en.typ $(PDF_DIR)/$(CV_NAME).pdf
-	$(TYPST) compile cv/cv.ru.typ $(PDF_DIR)/$(CV_NAME)-ru.pdf
+	$(TYPST) compile $(CV_DIR)/cv.en.typ $(PDF_DIR)/$(CV_NAME).pdf
+	$(TYPST) compile $(CV_DIR)/cv.ru.typ $(PDF_DIR)/$(CV_NAME)-ru.pdf
+
+# Full CV rebuild: regenerate typst from markdown sources via the cv-builder
+# skill, then compile PDFs. The md→typ step is agentic (creative consolidation)
+# so it shells out to `claude` in headless mode; the typ→pdf step is the
+# deterministic `pdf` target.
+cv: $(CV_DIR)/cv.en.typ $(CV_DIR)/cv.ru.typ pdf
+
+$(CV_DIR)/cv.en.typ: $(CV_SRC_DIR)/cv.en.md $(CV_TEMPLATE)
+	@command -v $(CLAUDE) >/dev/null 2>&1 || { echo "claude CLI not found in PATH" >&2; exit 1; }
+	$(CLAUDE) -p --allowed-tools "Read,Write,Edit" \
+	  "Invoke the project-scoped cv-builder skill. Source: $<. Language: en. Output: $@. Template: $(CV_TEMPLATE). Mode: Overview (no position description). Overwrite $@ in place. Do not narrate; just produce the file."
+
+$(CV_DIR)/cv.ru.typ: $(CV_SRC_DIR)/cv.ru.md $(CV_TEMPLATE)
+	@command -v $(CLAUDE) >/dev/null 2>&1 || { echo "claude CLI not found in PATH" >&2; exit 1; }
+	$(CLAUDE) -p --allowed-tools "Read,Write,Edit" \
+	  "Invoke the project-scoped cv-builder skill. Source: $<. Language: ru. Output: $@. Template: $(CV_TEMPLATE). Mode: Overview (no position description). Overwrite $@ in place. Do not narrate; just produce the file."
 
 # One-time setup: download Inter into the user's font dir and refresh the
 # system font cache so typst can resolve "Inter". Idempotent; safe to re-run.

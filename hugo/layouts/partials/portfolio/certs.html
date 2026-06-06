@@ -1,0 +1,14 @@
+{{- $page := . -}}
+<div class="cert-grid">
+  {{- range $page.Params.items }}
+    {{- $title := .title -}}
+    {{- $link  := .link -}}
+    {{- $img   := $page.Resources.GetMatch .image -}}
+    <a class="cert-card" href="{{ $link | safeURL }}" target="_blank" rel="noopener noreferrer">
+      {{- with $img }}
+        <img src="{{ .RelPermalink }}" alt="{{ $title }}" loading="lazy"/>
+      {{- end }}
+      <span>{{ $title }}</span>
+    </a>
+  {{- end }}
+</div>

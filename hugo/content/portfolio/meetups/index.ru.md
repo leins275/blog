@@ -4,13 +4,17 @@ slug  = "meetups"
 draft = false
 title = "Выступления"
 weight = 30
+
+[build]
+render = "never"
+list = "always"
+publishResources = true
+
+[[videos]]
+title   = "Митап по управлению знаниями"
+youtube = "sdgjbPIgvRQ"
+
+[[videos]]
+title   = "Лекция по сегментации изображений с использованием U-net"
+youtube = "unuBcZAFOvY"
 +++
-
-# Митап по управлению знаниями
-
-{{< youtube sdgjbPIgvRQ >}}
-
-# Лекция по сегментации изображений с использованием U-net
-
-{{< youtube unuBcZAFOvY >}}
-

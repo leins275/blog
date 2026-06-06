@@ -15,16 +15,47 @@
       <div class="post-content">
         {{ .Content }}
 
-        {{- $sections := where .Pages "Params.draft" "!=" true -}}
-        {{- range (sort $sections "Weight") }}
-          <section id="{{ .File.ContentBaseName }}" class="portfolio-section">
-            <h2>
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </h2>
-            {{ .Content }}
+        {{- range (sort .Pages "Weight") }}
+          {{- $slug := .File.ContentBaseName }}
+          <section id="{{ $slug }}" class="portfolio-section portfolio-{{ $slug }}">
+            <h2>{{ .Title }}</h2>
+            {{ partial (printf "portfolio/%s.html" $slug) . }}
           </section>
         {{- end }}
       </div>
     </article>
   </section>
+
+  <style>
+    .portfolio .portfolio-section { margin-top: 2rem; }
+    .portfolio .portfolio-section > h2 { margin: 0 0 .75rem; }
+    .portfolio .portfolio-section h3,
+    .portfolio .portfolio-section h4 { margin: .75rem 0 .25rem; }
+    .portfolio .portfolio-section p { margin: .25rem 0; }
+    .portfolio .portfolio-section ul { margin: .25rem 0 .5rem 1.25rem; }
+    .portfolio .portfolio-section li { margin: .15rem 0; }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: .5rem;
+    }
+    .cert-card {
+      display: flex; flex-direction: column; align-items: center; gap: .35rem;
+      text-decoration: none; text-align: center; font-size: .9em;
+    }
+    .cert-card img { max-width: 100%; height: auto; border-radius: .25rem; }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1rem;
+      margin-top: .5rem;
+    }
+    .video-card figcaption { margin-top: .35rem; font-size: .9em; }
+    .video-card iframe {
+      width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: .25rem;
+    }
+  </style>
 {{ end }}

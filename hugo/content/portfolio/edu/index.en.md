@@ -3,6 +3,11 @@ draft = false
 date = 2025-05-09T10:43:03+03:00
 title = "Education"
 weight = 10
+
+[build]
+render = "never"
+list = "always"
+publishResources = true
 +++
 
 # University

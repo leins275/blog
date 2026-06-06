@@ -4,13 +4,17 @@ slug  = "meetups"
 draft = false
 title = "Meetups"
 weight = 30
+
+[build]
+render = "never"
+list = "always"
+publishResources = true
+
+[[videos]]
+title   = "Personal Knowledge Management meetup"
+youtube = "sdgjbPIgvRQ"
+
+[[videos]]
+title   = "Image segmentation with U-net"
+youtube = "unuBcZAFOvY"
 +++
-
-# Personal Knowledge Management meetup
-
-{{< youtube sdgjbPIgvRQ >}}
-
-# Image segmentation with U-net
-
-{{< youtube unuBcZAFOvY >}}
-
