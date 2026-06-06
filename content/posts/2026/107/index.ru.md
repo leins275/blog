@@ -5,10 +5,8 @@ authors: [leins275]
 categories: [post]
 title: Клод код, Телешоу и Турецкий...
 draft: false
-images: [/img/posts/2026/107/preview.jpg]
 ---
 
-![preview](/img/posts/2026/107/preview.jpg)
 
 Клод код, Телешоу и Турецкий язык
 

@@ -11,7 +11,7 @@ const sorted = [...entries].sort((a, b) => (a.data.weight ?? 0) - (b.data.weight
 
 const rendered = await Promise.all(
   sorted.map(async (entry) => {
-    const slug = entry.id.replace(/\/index\.(en|ru)$/, '').split('/').pop()!;
+    const slug = entry.id.split('/')[0];
     const { Content } = await render(entry);
     return { entry, slug, Content };
   }),

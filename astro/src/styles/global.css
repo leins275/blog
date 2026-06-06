@@ -192,6 +192,12 @@ article .body pre code { background: none; border: 0; padding: 0; font-size: inh
   padding: 6px 12px; border-radius: 30px;
 }
 .about p { color: var(--ink-soft); }
+.about .body { color: var(--ink-soft); font-size: 18px; line-height: 1.65; }
+.about .body p { margin: .9em 0; }
+.about .body a { color: var(--accent); border-bottom: 1px solid var(--rule-strong); }
+.about .body a:hover { border-color: var(--accent); }
+.about .body em { font-style: italic; }
+.about .body img { display: block; max-width: 100%; height: auto; margin: 24px auto; border-radius: 10px; }
 .hobbies { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .hobbies span {
   font-family: var(--mono); font-size: 12px; letter-spacing: .03em;
