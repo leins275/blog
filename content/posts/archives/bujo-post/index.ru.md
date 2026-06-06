@@ -3,7 +3,7 @@ draft: false
 katex: false
 categories: [post]
 authors: [leins275]
-date: 2022-11-01 11:32:35+03:00
+date: 2022-11-01T11:32:35+03:00
 title: Ежедневник
 description: Записные книжки еще на что-то годятся?
 slug: bujo

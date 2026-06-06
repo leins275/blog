@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2021-08-08 13:13:01+03:00
+date: 2021-08-08T13:13:01+03:00
 title: Создаем свой сайт на hugo
 categories: [article]
 description: Создаем свой личный сайт, быстро и удобно

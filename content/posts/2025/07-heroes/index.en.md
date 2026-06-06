@@ -1,5 +1,5 @@
 ---
-date: 2025-07-06 12:08:03+03:00
+date: 2025-07-06T12:08:03+03:00
 slug: 07-heroes
 authors: [leins275]
 categories: [post]

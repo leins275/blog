@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2024-01-30 23:35:18+03:00
+date: 2024-01-30T23:35:18+03:00
 title: 'Мои итоги года: 2023'
 description: Лучшие моменты 2023 года
 slug: year-results-2023

@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2023-05-29 15:00:08+03:00
+date: 2023-05-29T15:00:08+03:00
 title: Как я веду учет своих финансов
 description: Что мне кажется важным в учете финансов
 categories: [article]

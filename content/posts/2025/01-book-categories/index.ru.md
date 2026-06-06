@@ -1,5 +1,5 @@
 ---
-date: 2025-05-12 10:12:28+03:00
+date: 2025-05-12T10:12:28+03:00
 slug: book-categories
 authors: [leins275]
 categories: [post]

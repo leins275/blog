@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2022-07-31 19:50:54+03:00
+date: 2022-07-31T19:50:54+03:00
 categories: [article]
 title: Все о RSS
 description: Что такое rss и как этим пользоваться

@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2023-04-28 00:41:06+03:00
+date: 2023-04-28T00:41:06+03:00
 title: Поездка в Стамбул за паспортом
 description: ''
 categories: [article]

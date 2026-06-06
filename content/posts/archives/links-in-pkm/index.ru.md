@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2024-01-26 18:05:11+03:00
+date: 2024-01-26T18:05:11+03:00
 title: Ссылки в базе знаний
 description: Главный элемент структурной организации
 slug: links-in-pkm

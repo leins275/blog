@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2023-12-16 19:57:05+03:00
+date: 2023-12-16T19:57:05+03:00
 title: Мои блокноты
 description: Принципы ведения аналоговых заметок
 slug: my-notebooks

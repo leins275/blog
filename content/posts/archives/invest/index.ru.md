@@ -3,7 +3,7 @@ draft: false
 katex: false
 categories: [post]
 authors: [leins275]
-date: 2022-11-15 12:31:25+03:00
+date: 2022-11-15T12:31:25+03:00
 title: Инвестиции и Спекуляции
 description: Как пустить деньги в оборот и не прогадать
 slug: itstime-19

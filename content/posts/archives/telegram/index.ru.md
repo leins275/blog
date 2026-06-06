@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2023-03-27 21:59:28+03:00
+date: 2023-03-27T21:59:28+03:00
 title: Джедайский телеграм
 description: Постигаем дзен в омуте чатов
 categories: [article]

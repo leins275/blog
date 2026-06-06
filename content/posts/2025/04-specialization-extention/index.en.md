@@ -1,5 +1,5 @@
 ---
-date: 2025-06-09 12:05:05+03:00
+date: 2025-06-09T12:05:05+03:00
 slug: specialization-extention
 authors: [leins275]
 categories: [post]

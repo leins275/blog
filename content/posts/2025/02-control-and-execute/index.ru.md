@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2025-05-05 15:57:30+03:00
+date: 2025-05-05T15:57:30+03:00
 title: Исполнение и контроль
 description: Классификация инструментов продуктивности от Маргулана Сейсембая
 slug: control-and-exec

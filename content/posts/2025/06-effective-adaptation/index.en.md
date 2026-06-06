@@ -1,5 +1,5 @@
 ---
-date: 2025-06-30 00:41:29+03:00
+date: 2025-06-30T00:41:29+03:00
 slug: 06-effective-adaptation
 authors: [leins275]
 categories: [post]

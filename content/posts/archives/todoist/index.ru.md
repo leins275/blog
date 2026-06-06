@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2022-07-07 01:18:01+03:00
+date: 2022-07-07T01:18:01+03:00
 categories: [article]
 title: Джедайский todoist
 description: Настройка todoist в стиле джедайских техник

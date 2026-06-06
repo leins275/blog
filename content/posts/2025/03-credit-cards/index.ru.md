@@ -1,5 +1,5 @@
 ---
-date: 2025-06-01 16:26:14+03:00
+date: 2025-06-01T16:26:14+03:00
 slug: credit-cards
 authors: [leins275]
 categories: [post]

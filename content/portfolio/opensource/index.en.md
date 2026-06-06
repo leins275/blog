@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2025-05-08 07:30:29+03:00
+date: 2025-05-08T07:30:29+03:00
 title: Opensource contribution
 weight: 20
 build: {render: never, list: always, publishResources: true}

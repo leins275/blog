@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2024-05-28 01:02:12+03:00
+date: 2024-05-28T01:02:12+03:00
 title: Кулинарная колонка
 description: Готовить или не готовить, вот в чем вопрос
 slug: cooking

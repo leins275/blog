@@ -3,7 +3,7 @@ draft: false
 katex: false
 categories: [post]
 authors: [leins275]
-date: 2023-01-20 13:15:53+03:00
+date: 2023-01-20T13:15:53+03:00
 title: Менеджеры и колготки
 description: ''
 slug: itstime-21

@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2022-03-20 13:28:52+03:00
+date: 2022-03-20T13:28:52+03:00
 title: Как майнить эфир
 categories: [article]
 description: Начинаем майнить эфир с нуля

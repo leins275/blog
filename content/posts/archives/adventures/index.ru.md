@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2023-01-02 21:39:25+03:00
+date: 2023-01-02T21:39:25+03:00
 title: О путешествиях
 description: ''
 slug: itstime-20

@@ -2,7 +2,7 @@
 draft: false
 authors: [leins275]
 categories: [article]
-date: 2022-08-07 05:00:00+03:00
+date: 2022-08-07T05:00:00+03:00
 title: Postgres для пет проектов
 description: Разворачиваем постгрес на своем сервере
 slug: postgres

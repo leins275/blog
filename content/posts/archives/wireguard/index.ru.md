@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2022-03-18 00:18:42+03:00
+date: 2022-03-18T00:18:42+03:00
 categories: [article]
 title: Скрипты для автоматизации работы с wireguard
 description: Дополнение о wireguard

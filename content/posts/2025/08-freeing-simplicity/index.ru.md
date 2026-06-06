@@ -1,5 +1,5 @@
 ---
-date: 2025-08-03 22:35:04+03:00
+date: 2025-08-03T22:35:04+03:00
 slug: 08-freeing-simplicity
 authors: [leins275]
 categories: [post]

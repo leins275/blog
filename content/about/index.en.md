@@ -1,5 +1,5 @@
 ---
-{draft: false, date: !!timestamp '2025-05-07 10:39:36+03:00', title: About me, slug: about}
+{draft: false, date: !!timestamp '2025-05-07T10:39:36+03:00', title: About me, slug: about}
 ---
 
 My name is Nikita Lanskov, and I’m from Saint Petersburg. I studied at Lyceum No. 144 and transferred to Lyceum No. 30 in the ninth grade. I consider this one of the best decisions I’ve made, as I have never encountered anything more advanced in terms of education and environment.

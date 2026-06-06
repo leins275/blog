@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2024-05-21 16:52:00+03:00
+date: 2024-05-21T16:52:00+03:00
 title: Git stash
 description: Great way to manage local git changes without commits
 slug: git-stash

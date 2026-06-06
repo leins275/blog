@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2025-05-08 06:43:21+03:00
+date: 2025-05-08T06:43:21+03:00
 title: My certificates
 weight: 40
 build: {render: never, list: always, publishResources: true}

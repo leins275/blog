@@ -1,5 +1,5 @@
 ---
-date: 2026-02-15 22:23:40+03:00
+date: 2026-02-15T22:23:40+03:00
 slug: 01-quartz-howto
 authors: [leins275]
 categories: [post]

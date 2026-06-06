@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2024-03-09 21:00:00+03:00
+date: 2024-03-09T21:00:00+03:00
 title: Трекер привычек
 description: Следим за привычками на android
 slug: habit-tracker

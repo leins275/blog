@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2022-07-24 23:34:25+03:00
+date: 2022-07-24T23:34:25+03:00
 categories: [article]
 title: О пет проектах
 description: Что такое пет-проекты, и надо ли их иметь

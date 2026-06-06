@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2023-03-20 15:41:50+03:00
+date: 2023-03-20T15:41:50+03:00
 title: Скимминг
 description: Как выжимать знания из книг. Быстро, точно, надежно.
 categories: [article]

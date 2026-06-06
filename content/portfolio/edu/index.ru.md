@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2025-05-09 10:43:03+03:00
+date: 2025-05-09T10:43:03+03:00
 title: Образование
 weight: 10
 build: {render: never, list: always, publishResources: true}

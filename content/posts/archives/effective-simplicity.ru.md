@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2024-04-06 12:00:00+03:00
+date: 2024-04-06T12:00:00+03:00
 title: Каждому свое
 description: Правильная степень сложности
 slug: effective-simplicity

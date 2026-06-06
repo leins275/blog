@@ -2,7 +2,7 @@
 draft: true
 katex: false
 authors: [leins275]
-date: 2023-03-05 16:15:28+03:00
+date: 2023-03-05T16:15:28+03:00
 title: Лучшие моменты 2022
 description: Что хорошего произошло со мной в 2022 году
 categories: [post]

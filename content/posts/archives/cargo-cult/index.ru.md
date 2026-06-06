@@ -2,7 +2,7 @@
 draft: false
 katex: false
 authors: [leins275]
-date: 2023-07-15 17:44:16+03:00
+date: 2023-07-15T17:44:16+03:00
 title: Карго культ в IT
 description: Не используй X, если не знаешь, чем он крут
 categories: [post]
