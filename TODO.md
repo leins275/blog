@@ -1,0 +1,6 @@
+- [ ] Сделать лого/фавикон
+- [x] Remove garden link from the menu
+- [x] Rename writing to blog
+- [x] Replace Magician to Wizard
+- [x] Return back my Avatar, mention all my social networks on main page, as in hugo
+- [x] Remove opensousrce section from the portfolio

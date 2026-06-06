@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nikita Lanskov — leins275</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f3ec; --raise:#fbfaf5; --ink:#211f1b; --ink-soft:#46433c; --mut:#8c887d;
+    --rule:#e1ddd2; --rule-strong:#d2cdc0; --accent:#9a4a2f; --accent-soft:#b9694b;
+    --sel:#e7d9c9;
+    --serif:"Newsreader",Georgia,serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+    --measure:38rem; --wide:52rem;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  html[data-theme="dark"]{
+    --paper:#15140f; --raise:#1c1a14; --ink:#ece7da; --ink-soft:#c3bdae; --mut:#827d6f;
+    --rule:#2a271f; --rule-strong:#3a362c; --accent:#e0996c; --accent-soft:#cd825a;
+    --sel:#3a2c1f;
+  }
+  *{box-sizing:border-box;}
+  ::selection{background:var(--sel);}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+    font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased;
+    transition:background .5s var(--ease),color .5s var(--ease);
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none;}
+  .mono{font-family:var(--mono);}
+  .kick{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:500;}
+  .meta{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--mut);}
+
+  /* ---------- shell ---------- */
+  .wrap{max-width:var(--wide);margin:0 auto;padding:0 28px;}
+  header.site{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);transition:background .5s var(--ease),border-color .5s var(--ease);}
+  .bar{max-width:var(--wide);margin:0 auto;padding:15px 28px;display:flex;align-items:center;gap:22px;}
+  .logo{font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.02em;display:flex;align-items:center;gap:8px;}
+  .logo .mk{display:inline-grid;place-items:center;width:24px;height:24px;border:1.5px solid var(--ink);border-radius:50%;font-size:12px;transition:.25s var(--ease);}
+  .logo:hover .mk{background:var(--accent);border-color:var(--accent);color:#fff;transform:rotate(-12deg);}
+  nav.main{margin-left:auto;display:flex;align-items:center;gap:4px;}
+  nav.main a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);
+    padding:7px 11px;border-radius:4px;position:relative;transition:color .2s;}
+  nav.main a:hover{color:var(--ink);}
+  nav.main a.active{color:var(--ink);}
+  nav.main a.active::after{content:"";position:absolute;left:11px;right:11px;bottom:2px;height:1.5px;background:var(--accent);}
+  nav.main .ext::after{content:"↗";position:static;font-size:10px;margin-left:3px;color:var(--mut);background:none;}
+  .ctrls{display:flex;align-items:center;gap:6px;margin-left:6px;padding-left:12px;border-left:1px solid var(--rule);}
+  .ctrl{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--mut);background:none;border:1px solid var(--rule-strong);
+    border-radius:5px;padding:5px 8px;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:5px;}
+  .ctrl:hover{color:var(--ink);border-color:var(--ink);}
+  .lang b{color:var(--ink);}
+  .lang span{opacity:.5;}
+
+  /* ---------- page transitions ---------- */
+  main{min-height:62vh;}
+  .page{display:none;}
+  .page.on{display:block;}
+
+  /* ---------- home ---------- */
+  .hero{max-width:var(--measure);margin:0 auto;padding:78px 0 30px;text-align:center;}
+  .hero .name{font-size:clamp(44px,8vw,72px);line-height:.98;font-weight:500;letter-spacing:-.02em;margin:14px 0 0;}
+  .hero .name em{font-style:italic;color:var(--accent);}
+  .hero .lede{font-size:21px;line-height:1.55;color:var(--ink-soft);margin:24px auto 0;max-width:33rem;}
+  .hero .lede em{font-style:italic;}
+  .where{margin-top:26px;}
+  .socials{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-top:26px;}
+  .socials a{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--mut);border:1px solid var(--rule-strong);
+    border-radius:30px;padding:6px 13px;transition:.22s var(--ease);}
+  .socials a:hover{color:var(--paper);background:var(--ink);border-color:var(--ink);transform:translateY(-2px);}
+
+  .rulehead{display:flex;align-items:center;gap:16px;max-width:var(--measure);margin:64px auto 6px;}
+  .rulehead::after{content:"";flex:1;height:1px;background:var(--rule);}
+
+  .postlist{max-width:var(--measure);margin:0 auto;}
+  .post-row{display:flex;align-items:baseline;gap:18px;padding:18px 8px;border-bottom:1px solid var(--rule);
+    transition:padding .3s var(--ease);position:relative;}
+  .post-row .idx{font-family:var(--mono);font-size:11px;color:var(--mut);width:22px;flex:none;}
+  .post-row .ti{font-size:21px;font-weight:500;flex:1;transition:color .2s,transform .3s var(--ease);}
+  .post-row .dt{font-family:var(--mono);font-size:11.5px;color:var(--mut);white-space:nowrap;}
+  .post-row .arw{color:var(--accent);opacity:0;transform:translateX(-6px);transition:.3s var(--ease);}
+  .post-row:hover{padding-left:18px;}
+  .post-row:hover .ti{color:var(--accent);}
+  .post-row:hover .arw{opacity:1;transform:none;}
+  .seeall{max-width:var(--measure);margin:22px auto 0;}
+  .seeall a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent);border-bottom:1px solid transparent;transition:.2s;}
+  .seeall a:hover{border-color:var(--accent);}
+
+  /* ---------- generic page head ---------- */
+  .phead{max-width:var(--measure);margin:0 auto;padding:70px 0 8px;}
+  .phead h1{font-size:clamp(34px,6vw,52px);font-weight:500;letter-spacing:-.02em;line-height:1.02;margin:10px 0 0;}
+  .phead p.sub{color:var(--ink-soft);font-size:19px;margin:14px 0 0;max-width:34rem;}
+
+  /* ---------- blog index ---------- */
+  .yeargroup{max-width:var(--measure);margin:0 auto;}
+  .yearlabel{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--mut);margin:42px 0 2px;text-transform:uppercase;}
+
+  /* ---------- article ---------- */
+  article{max-width:var(--measure);margin:0 auto;padding-top:70px;}
+  article .ahead{text-align:center;border-bottom:1px solid var(--rule);padding-bottom:30px;margin-bottom:8px;}
+  article h1{font-size:clamp(32px,5.5vw,48px);font-weight:500;letter-spacing:-.02em;line-height:1.05;margin:12px 0 16px;}
+  article .byline{display:flex;justify-content:center;gap:14px;align-items:center;}
+  article .body{font-size:20px;line-height:1.7;color:var(--ink-soft);}
+  article .body p{margin:1.35em 0;}
+  article .body p:first-of-type{margin-top:1.6em;}
+  article .body p:first-of-type::first-letter{font-size:3.4em;line-height:.8;float:left;font-weight:500;
+    padding:6px 10px 0 0;color:var(--accent);}
+  article .body h2{font-family:var(--serif);font-size:27px;font-weight:600;color:var(--ink);margin:1.8em 0 .2em;letter-spacing:-.01em;}
+  article .body em{font-style:italic;}
+  article .body strong{font-weight:600;color:var(--ink);}
+  article blockquote{margin:1.7em 0;padding:4px 0 4px 26px;border-left:2px solid var(--accent);
+    font-size:25px;line-height:1.4;font-style:italic;color:var(--ink);}
+  article .body a{color:var(--accent);border-bottom:1px solid var(--rule-strong);}
+  article .body a:hover{border-color:var(--accent);}
+  .artnav{max-width:var(--measure);margin:46px auto 0;padding-top:24px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:16px;}
+  .artnav a{font-family:var(--mono);font-size:12px;color:var(--mut);transition:.2s;}
+  .artnav a:hover{color:var(--accent);}
+
+  /* ---------- about ---------- */
+  .about{max-width:var(--measure);margin:0 auto;}
+  .ikigai{width:100%;aspect-ratio:16/9;border:1px solid var(--rule-strong);border-radius:10px;margin:30px 0;
+    background:
+      radial-gradient(circle at 32% 40%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 40%),
+      radial-gradient(circle at 68% 40%,color-mix(in srgb,#3a6b8f 26%,transparent),transparent 40%),
+      radial-gradient(circle at 32% 66%,color-mix(in srgb,#3a7d5a 24%,transparent),transparent 40%),
+      radial-gradient(circle at 68% 66%,color-mix(in srgb,#caa53e 30%,transparent),transparent 40%),
+      var(--raise);
+    display:grid;place-items:center;}
+  .ikigai .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);
+    background:color-mix(in srgb,var(--paper) 80%,transparent);padding:6px 12px;border-radius:30px;}
+  .about p{color:var(--ink-soft);}
+  .hobbies{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .hobbies span{font-family:var(--mono);font-size:12px;letter-spacing:.03em;border:1px solid var(--rule-strong);
+    border-radius:30px;padding:7px 14px;color:var(--ink-soft);transition:.2s;}
+  .hobbies span:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* ---------- portfolio ---------- */
+  .pf{max-width:var(--measure);margin:0 auto;}
+  .pf section{margin-top:50px;}
+  .pf .sect-h{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;}
+  .pf .sect-h h2{font-size:15px;font-family:var(--mono);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0;}
+  .pf .sect-h::after{content:"";flex:1;height:1px;background:var(--rule);}
+  .entry{padding:18px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:6px 18px;}
+  .entry .t{font-size:20px;font-weight:500;}
+  .entry .t a{border-bottom:1px solid var(--rule-strong);transition:.2s;}
+  .entry .t a:hover{color:var(--accent);border-color:var(--accent);}
+  .entry .yr{font-family:var(--mono);font-size:12px;color:var(--mut);white-space:nowrap;text-align:right;}
+  .entry .d{grid-column:1/-1;color:var(--ink-soft);font-size:17px;line-height:1.55;margin:0;max-width:36rem;}
+  .entry .stack{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;}
+  .entry .stack b{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.03em;color:var(--mut);
+    border:1px solid var(--rule);border-radius:4px;padding:3px 8px;}
+  .talks{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
+  .talk{border:1px solid var(--rule-strong);border-radius:10px;overflow:hidden;transition:.25s var(--ease);background:var(--raise);}
+  .talk:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.10);border-color:var(--accent);}
+  .talk .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#2a2620,#4a4036);display:grid;place-items:center;position:relative;}
+  .talk .thumb::after{content:"▶";color:#fff;font-size:20px;width:46px;height:46px;border-radius:50%;
+    background:rgba(0,0,0,.35);display:grid;place-items:center;backdrop-filter:blur(2px);}
+  .talk .cap{padding:13px 15px;font-size:16px;color:var(--ink-soft);line-height:1.4;}
+  .certs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px;}
+  .cert{display:flex;align-items:center;gap:13px;border:1px solid var(--rule-strong);border-radius:10px;padding:13px 15px;transition:.25s var(--ease);}
+  .cert:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .cert .ic{width:38px;height:38px;border-radius:8px;flex:none;display:grid;place-items:center;font-family:var(--mono);
+    font-size:14px;font-weight:700;color:#fff;}
+  .cert .cn{font-size:16px;line-height:1.25;}
+  .cert .cv{font-family:var(--mono);font-size:11px;color:var(--mut);}
+
+  @media(max-width:680px){
+    .talks,.certs{grid-template-columns:1fr;}
+    nav.main a{padding:7px 8px;}
+    .bar{flex-wrap:wrap;gap:12px;}
+    body{font-size:18px;}
+  }
+
+  /* ---------- footer ---------- */
+  footer.site{border-top:1px solid var(--rule);margin-top:90px;}
+  .foot{max-width:var(--wide);margin:0 auto;padding:30px 28px 50px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;}
+  .foot .c{font-family:var(--mono);font-size:11.5px;color:var(--mut);letter-spacing:.03em;}
+  .foot .fl{display:flex;gap:16px;margin-left:auto;}
+  .foot .fl a{font-family:var(--mono);font-size:11.5px;color:var(--mut);transition:.2s;}
+  .foot .fl a:hover{color:var(--accent);}
+
+  [data-show-lang]{display:none;}
+  html[data-lang="en"] [data-show-lang="en"]{display:revert;}
+  html[data-lang="ru"] [data-show-lang="ru"]{display:revert;}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="#/" data-link="home"><span class="mk">✦</span>leins275</a>
+    <nav class="main" id="nav">
+      <a href="#/about" data-link="about"><span data-show-lang="en">About</span><span data-show-lang="ru">Био</span></a>
+      <a href="#/portfolio" data-link="portfolio"><span data-show-lang="en">Portfolio</span><span data-show-lang="ru">Портфолио</span></a>
+      <a href="#/blog" data-link="blog"><span data-show-lang="en">Writing</span><span data-show-lang="ru">Блог</span></a>
+      <a href="https://leins275.xyz/files/nikita-lanskov-senior-software-engineer.pdf" class="ext" target="_blank" rel="noopener">CV</a>
+      <a href="#" class="ext"><span data-show-lang="en">Garden</span><span data-show-lang="ru">Сад</span></a>
+    </nav>
+    <div class="ctrls">
+      <button class="ctrl lang" id="lang" title="Language"><b data-show-lang="en">EN</b><span data-show-lang="en">RU</span><span data-show-lang="ru">EN</span><b data-show-lang="ru">RU</b></button>
+      <button class="ctrl" id="theme" title="Theme"><span id="themeico">◐</span></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- ========== HOME ========== -->
+  <section class="page" data-page="home" data-screen-label="Home">
+    <div class="hero reveal">
+      <div class="kick"><span data-show-lang="en">Full&nbsp;Stack DevOps &amp; Magician</span><span data-show-lang="ru">Full&nbsp;Stack DevOps &amp; Фокусник</span></div>
+      <h1 class="name">Nikita <em>Lanskov</em></h1>
+      <p class="lede">
+        <span data-show-lang="en">I build and operate systems for a living — and pull off the occasional card trick. This is where I write notes on engineering, focus, and the craft of doing fewer things well.</span>
+        <span data-show-lang="ru">Я строю и эксплуатирую системы — и иногда показываю фокусы. Здесь я пишу заметки об инженерии, фокусе и искусстве делать меньше, но лучше.</span>
+      </p>
+      <div class="meta where">Izmir, Türkiye · UTC+3</div>
+      <div class="socials">
+        <a href="#">GitHub</a><a href="#">Telegram</a><a href="#">LinkedIn</a><a href="#">YouTube</a><a href="#">RSS</a>
+      </div>
+    </div>
+
+    <div class="rulehead"><span class="kick"><span data-show-lang="en">Recent writing</span><span data-show-lang="ru">Недавние записи</span></span></div>
+    <div class="postlist" id="homeposts"></div>
+    <div class="seeall"><a href="#/blog" data-link="blog"><span data-show-lang="en">All writing →</span><span data-show-lang="ru">Все записи →</span></a></div>
+  </section>
+
+  <!-- ========== BLOG INDEX ========== -->
+  <section class="page" data-page="blog" data-screen-label="Blog index">
+    <div class="phead reveal">
+      <div class="kick"><span data-show-lang="en">The blog</span><span data-show-lang="ru">Блог</span></div>
+      <h1><span data-show-lang="en">Writing</span><span data-show-lang="ru">Записи</span></h1>
+      <p class="sub"><span data-show-lang="en">Notes and essays on engineering, systems, and living deliberately. Mostly short, occasionally not.</span><span data-show-lang="ru">Заметки и эссе об инженерии, системах и осознанной жизни. В основном короткие.</span></p>
+    </div>
+    <div class="yeargroup" id="blogposts"></div>
+  </section>
+
+  <!-- ========== SINGLE POST ========== -->
+  <section class="page" data-page="post" data-screen-label="Single post">
+    <article class="reveal">
+      <div class="ahead">
+        <div class="kick">#notes · 6 min read</div>
+        <h1>About the heroism</h1>
+        <div class="byline"><span class="meta">Nikita Lanskov</span><span class="meta">·</span><span class="meta">July 6, 2025</span></div>
+      </div>
+      <div class="body">
+        <p>Every team has a hero — the person who stays late, who knows the one undocumented incantation that brings the cluster back, who is paged at 3am because nobody else can. We celebrate them. We should be worried about them instead.</p>
+        <p>Heroism is a <em>symptom</em>. It is the visible, sympathetic surface of a system that has quietly stopped being legible to everyone except one person. The hero is not the cause of fragility; they are its last line of defense — and the more reliably they save us, the longer we get to avoid asking why we keep needing to be saved.</p>
+        <blockquote>The goal is not a team without heroes. It is a team that never needs one.</blockquote>
+        <h2>What heroism hides</h2>
+        <p>When the same name appears on every postmortem as the person who resolved the incident, that is not a story about talent. It is a map of where knowledge has failed to spread. <strong>Each heroic save is a deferred investment</strong> — in documentation, in tooling, in the boring runbook nobody wanted to write.</p>
+        <p>The uncomfortable part is that heroism feels good. It feels good to be needed, and it feels good to be rescued. Both sides of that exchange have an incentive to keep it going. Breaking the loop means trading a dramatic, legible win for a diffuse, invisible one — and we are bad at valuing the invisible.</p>
+        <h2>Designing it out</h2>
+        <p>So the work is deliberate: write the thing down the second time you explain it. Rotate the pager. Make the heroic path slightly inconvenient and the documented path slightly easier. Reward the person who made themselves unnecessary, not the one who made themselves indispensable.</p>
+        <p>It is slower. It is less satisfying. And it is the only version that scales past the limits of a single tired human at 3am.</p>
+      </div>
+    </article>
+    <div class="artnav">
+      <a href="#/blog" data-link="blog">← <span data-show-lang="en">All writing</span><span data-show-lang="ru">Все записи</span></a>
+      <a href="#/post" data-link="post"><span data-show-lang="en">Next: Efficiency Adaptation</span><span data-show-lang="ru">Далее</span> →</a>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="page" data-page="about" data-screen-label="About">
+    <div class="about reveal">
+      <div class="phead" style="padding-left:0;padding-right:0;margin:0;max-width:none">
+        <div class="kick"><span data-show-lang="en">About</span><span data-show-lang="ru">Био</span></div>
+        <h1><span data-show-lang="en">Hi, I'm Nikita</span><span data-show-lang="ru">Привет, я Никита</span></h1>
+      </div>
+      <div class="ikigai"><span class="lbl">ikigai diagram</span></div>
+      <p data-show-lang="en">I'm a Full Stack DevOps engineer based in Izmir. I spend my days where software meets the systems it runs on — pipelines, infrastructure, the unglamorous plumbing that keeps things alive. I care about making complex systems legible: the kind of work where the best outcome is that nothing dramatic happens.</p>
+      <p data-show-lang="ru">Я Full Stack DevOps инженер из Измира. Моя работа — там, где софт встречается с системами, на которых он работает: пайплайны, инфраструктура, неприметная сантехника, которая держит всё на плаву. Мне важно делать сложные системы понятными.</p>
+      <p data-show-lang="en">Outside of work I'm an amateur magician — close-up card stuff, mostly. I think sleight of hand and good engineering share a principle: the audience should only ever see the clean, simple surface. Everything difficult happens out of view.</p>
+      <p data-show-lang="ru">Вне работы я фокусник-любитель — в основном карточные фокусы вблизи. Думаю, у фокусов и хорошей инженерии общий принцип: зритель должен видеть только чистую, простую поверхность.</p>
+      <div class="kick" style="margin-top:30px"><span data-show-lang="en">Things I love</span><span data-show-lang="ru">Что люблю</span></div>
+      <div class="hobbies">
+        <span>🚲 cycling</span><span>🎸 guitar</span><span>🥾 hiking</span><span>📝 note-taking</span><span>🃏 card magic</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO ========== -->
+  <section class="page" data-page="portfolio" data-screen-label="Portfolio">
+    <div class="phead reveal">
+      <div class="kick"><span data-show-lang="en">Portfolio</span><span data-show-lang="ru">Портфолио</span></div>
+      <h1><span data-show-lang="en">Background &amp; work</span><span data-show-lang="ru">Опыт и работы</span></h1>
+      <p class="sub"><span data-show-lang="en">Education, open-source contributions, talks, and certifications.</span><span data-show-lang="ru">Образование, опенсорс, выступления и сертификаты.</span></p>
+    </div>
+
+    <div class="pf">
+      <section>
+        <div class="sect-h"><h2><span data-show-lang="en">Education</span><span data-show-lang="ru">Образование</span></h2></div>
+        <div class="entry">
+          <div class="t"><a href="https://amcp.spbstu.ru/" target="_blank" rel="noopener">SPbPU IPMM — Master's</a></div>
+          <div class="yr">2020 – 2022</div>
+          <p class="d"><span data-show-lang="en">Completed all coursework; did not defend the thesis, so the degree is unfinished.</span><span data-show-lang="ru">Прошёл все курсы программы, но диплом не защищал — обучение не закончено.</span></p>
+        </div>
+        <div class="entry">
+          <div class="t"><a href="https://amcp.spbstu.ru/" target="_blank" rel="noopener">SPbPU IPMM — Bachelor's</a></div>
+          <div class="yr">2016 – 2020</div>
+        </div>
+        <div class="entry">
+          <div class="t"><a href="https://school30.spb.ru/" target="_blank" rel="noopener">SPb PML No. 30</a></div>
+          <div class="yr">2013 – 2016</div>
+          <p class="d"><span data-show-lang="en">Spent half a year in CGSG — a meaningful chapter.</span><span data-show-lang="ru">Полгода в CGSG — значимый этап.</span></p>
+        </div>
+        <div class="entry">
+          <div class="t"><a href="http://lyceum144.ru/" target="_blank" rel="noopener">Lyceum No. 144, St. Petersburg</a></div>
+          <div class="yr">2005 – 2013</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sect-h"><h2><span data-show-lang="en">Open source</span><span data-show-lang="ru">Опенсорс</span></h2></div>
+        <div class="entry">
+          <div class="t"><a href="https://github.com/leins275/cran-parser" target="_blank" rel="noopener">CRAN parser</a></div>
+          <div class="yr">EPAM</div>
+          <p class="d"><span data-show-lang="en">A test task at EPAM: resolve the full dependency tree for a list of R packages, used for working with EasyBuild modules.</span><span data-show-lang="ru">Тестовая задача в EPAM: составить полный список зависимостей для R-пакетов, для работы с модулями EasyBuild.</span></p>
+        </div>
+        <div class="entry">
+          <div class="t"><a href="https://github.com/luizdepra/hugo-coder" target="_blank" rel="noopener">hugo-coder theme</a></div>
+          <div class="yr">contributor</div>
+          <p class="d"><span data-show-lang="en">Listed contributor — added Yandex Metrika support, which the maintainer merged. (It's the theme this very site ran on.)</span><span data-show-lang="ru">Контрибьютор — добавил поддержку Яндекс.Метрики, фича смерджена. На этой теме работал сайт.</span></p>
+        </div>
+        <div class="entry">
+          <div class="t"><a href="https://github.com/MikhailFokanov/sanctions-check" target="_blank" rel="noopener">Sanctions check</a></div>
+          <div class="yr">EPAM</div>
+          <p class="d"><span data-show-lang="en">A PoC for matching names against sanctions lists — search via OpenSearch plus extra processing through the GPT API.</span><span data-show-lang="ru">PoC для проверки имён в санкционных списках — поиск через OpenSearch и обработка через GPT API.</span></p>
+          <div class="stack"><b>OpenSearch</b><b>Python</b><b>ChatGPT API</b></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sect-h"><h2><span data-show-lang="en">Talks</span><span data-show-lang="ru">Выступления</span></h2></div>
+        <div class="talks">
+          <a class="talk" href="https://www.youtube.com/watch?v=sdgjbPIgvRQ" target="_blank" rel="noopener">
+            <div class="thumb"></div>
+            <div class="cap"><span data-show-lang="en">Meetup on knowledge management</span><span data-show-lang="ru">Митап по управлению знаниями</span></div>
+          </a>
+          <a class="talk" href="https://www.youtube.com/watch?v=unuBcZAFOvY" target="_blank" rel="noopener">
+            <div class="thumb"></div>
+            <div class="cap"><span data-show-lang="en">Lecture: image segmentation with U-Net</span><span data-show-lang="ru">Лекция: сегментация изображений с U-Net</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="sect-h"><h2><span data-show-lang="en">Certificates</span><span data-show-lang="ru">Сертификаты</span></h2></div>
+        <div class="certs">
+          <a class="cert" href="https://verify.skilljar.com/c/b7fa6r9bdqf2" target="_blank" rel="noopener">
+            <div class="ic" style="background:#9a4a2f">A</div>
+            <div><div class="cn">Claude Certified Architect</div><div class="cv">verify.skilljar.com ↗</div></div>
+          </a>
+          <a class="cert" href="#" target="_blank" rel="noopener">
+            <div class="ic" style="background:#5c4ee5">T</div>
+            <div><div class="cn">Terraform</div><div class="cv">LinkedIn Learning ↗</div></div>
+          </a>
+          <a class="cert" href="#" target="_blank" rel="noopener">
+            <div class="ic" style="background:#2b2b2b">$</div>
+            <div><div class="cn">Linux — bash</div><div class="cv">LinkedIn Learning ↗</div></div>
+          </a>
+          <a class="cert" href="#" target="_blank" rel="noopener">
+            <div class="ic" style="background:#326ce5">K</div>
+            <div><div class="cn">Kubernetes</div><div class="cv">LinkedIn Learning ↗</div></div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="foot">
+    <span class="c">© 2021–2026 Nikita Lanskov</span>
+    <span class="fl">
+      <a href="#">GitHub</a><a href="#">Telegram</a><a href="#">RSS</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  const POSTS=[
+    {t:"About the heroism",d:"Jul 6, 2025",y:2025,read:"6 min"},
+    {t:"Efficiency Adaptation",d:"Jun 30, 2025",y:2025,read:"4 min"},
+    {t:"Risk Management",d:"Jun 16, 2025",y:2025,read:"5 min"},
+    {t:"Specialization Extension",d:"Jun 9, 2025",y:2025,read:"3 min"},
+    {t:"May Discoveries",d:"Jun 1, 2025",y:2025,read:"7 min"},
+    {t:"Book Classification",d:"May 12, 2025",y:2025,read:"4 min"},
+    {t:"Control and execution",d:"May 5, 2025",y:2025,read:"6 min"},
+  ];
+
+  // home recent
+  document.getElementById('homeposts').innerHTML=POSTS.slice(0,5).map((p,i)=>`
+    <a class="post-row" href="#/post" data-link="post">
+      <span class="idx">${String(i+1).padStart(2,'0')}</span>
+      <span class="ti">${p.t}</span>
+      <span class="dt">${p.d}</span>
+      <span class="arw">→</span>
+    </a>`).join('');
+
+  // blog grouped by year
+  const byYear={};
+  POSTS.forEach(p=>{(byYear[p.y]=byYear[p.y]||[]).push(p);});
+  document.getElementById('blogposts').innerHTML=Object.keys(byYear).sort((a,b)=>b-a).map(y=>`
+    <div class="yearlabel">${y}</div>
+    ${byYear[y].map((p,i)=>`
+      <a class="post-row" href="#/post" data-link="post">
+        <span class="idx">${String(i+1).padStart(2,'0')}</span>
+        <span class="ti">${p.t}</span>
+        <span class="dt">${p.read} · ${p.d}</span>
+        <span class="arw">→</span>
+      </a>`).join('')}
+  `).join('');
+
+  // router
+  const pages=[...document.querySelectorAll('.page')];
+  const navlinks=[...document.querySelectorAll('[data-link]')];
+  const routeFor={home:'home',about:'about',portfolio:'portfolio',blog:'blog',post:'post'};
+  function go(page){
+    pages.forEach(p=>p.classList.toggle('on',p.dataset.page===page));
+    navlinks.forEach(a=>a.classList.toggle('active',a.dataset.link===page && a.closest('nav')));
+    window.scrollTo({top:0,behavior:'instant'in window?'instant':'auto'});
+  }
+  function parse(){
+    const h=location.hash.replace(/^#\//,'')||'home';
+    go(routeFor[h]?h:'home');
+  }
+  window.addEventListener('hashchange',parse);
+  parse();
+
+  // theme
+  const root=document.documentElement;
+  const tIco=document.getElementById('themeico');
+  function applyTheme(t){root.dataset.theme=t;tIco.textContent=t==='dark'?'☾':'◐';localStorage.setItem('ls-theme',t);}
+  document.getElementById('theme').onclick=()=>applyTheme(root.dataset.theme==='dark'?'light':'dark');
+  const savedT=localStorage.getItem('ls-theme');
+  if(savedT)applyTheme(savedT);
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)applyTheme('dark');
+
+  // lang
+  function applyLang(l){root.dataset.lang=l;root.setAttribute('lang',l);localStorage.setItem('ls-lang',l);}
+  document.getElementById('lang').onclick=()=>applyLang(root.dataset.lang==='ru'?'en':'ru');
+  const savedL=localStorage.getItem('ls-lang');if(savedL)applyLang(savedL);
+</script>
+</body>
+</html>
