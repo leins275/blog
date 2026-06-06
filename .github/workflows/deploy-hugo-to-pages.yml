@@ -59,7 +59,13 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Install Chromium for CV PDF rendering
+        run: sudo apt-get update && sudo apt-get install -y chromium-browser
+      - name: Render CV PDFs via headless Chrome
+        env:
+          CHROME: chromium-browser
+        run: make pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

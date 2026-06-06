@@ -112,7 +112,7 @@ url = "about/"
 [[languages.en.menu.main]]
 name = "CV"
 weight = 20
-url = "files/nikita_lanskov.pdf"
+url = "cv/"
 
 [[languages.en.menu.main]]
 name = "Portfolio"
@@ -138,6 +138,11 @@ keywords = "блог"
 name = "БИО"
 weight = 10
 url = "about/"
+
+[[languages.ru.menu.main]]
+name = "РЕЗЮМЕ"
+weight = 20
+url = "ru/cv/"
 
 [[languages.ru.menu.main]]
 name = "Портфолио"

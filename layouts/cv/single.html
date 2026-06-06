@@ -1,0 +1,17 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+{{ define "content" }}
+  {{ $css := resources.Get "css/cv-print.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+  <section class="container page cv">
+    <article>
+      {{ with .Params.pdf }}
+        <p class="cv-actions no-print">
+          <a class="cv-download" href="{{ . }}" download>
+            {{ if eq $.Site.Language.Lang "ru" }}Скачать PDF{{ else }}Download PDF{{ end }}
+          </a>
+        </p>
+      {{ end }}
+      {{ .Content }}
+    </article>
+  </section>
+{{ end }}
