@@ -15,7 +15,7 @@ draft = false
 
 ## О себе
 
-Senior Software Engineer с опытом 6+ лет в проектировании production-инфраструктуры и backend-сервисов на AWS, Kubernetes и Terraform для фармацевтических и tech-клиентов. Проектирую CI/CD-пайплайны, пишу сервисы обработки и интеграции данных на Python и Rust, веду DevOps-автоматизацию end-to-end. Как CTO консалтинговой компании на 30 человек совмещаю практическую инженерию с лидерством команды, ответственностью за поставку и техническим менторством.
+Senior Software Engineer с 8 годами опыта поставки production backend-сервисов и облачной инфраструктуры — Python, Rust, AWS, Kubernetes, Terraform — для регулируемых корпоративных клиентов (Novartis, Merck) в EPAM. Проектирую CI/CD-пайплайны и веду DevOps-автоматизацию end-to-end; за плечами миграции критичных нагрузок без downtime — Multi-AZ RDS, CI/CD-платформы, HPC workflow-движки. Параллельно CTO инженерной консалтинговой компании на 30 человек, выросшей из 5: владею поставкой, технической методологией и пресейлом.
 
 ## Навыки
 
@@ -27,13 +27,15 @@ Senior Software Engineer с опытом 6+ лет в проектировани
 
 **IaC и оркестрация** — Terraform, Terragrunt, Ansible, Chef, Kubernetes, Helm, Argo CD, Sealed Secrets, Docker, Docker Compose, EasyBuild
 
-**CI/CD и инструменты** — GitHub Actions, GitLab CI, Jenkins, Drone CI, pre-commit, uv, Make
+**CI/CD и инструменты** — GitHub Actions, GitLab CI, Jenkins, Drone CI, pre-commit, uv, Make, Hugo, Nginx, OpenResty
 
 **Данные и стриминг** — PostgreSQL, MySQL, Elasticsearch, Firebase, Pandas, Debezium (CDC)
 
-**Наблюдаемость и аутентификация** — Prometheus, Grafana, OAuth 2.0, PKCE, OpenID Connect, Keycloak, Azure AD, PAM/Conjur
+**Identity и наблюдаемость** — OAuth 2.0, PKCE, OpenID Connect, Keycloak, Azure AD, PAM/Conjur, Prometheus, Grafana
 
-**Прочее** — Hugo, Nginx, OpenResty, MuleSoft, Wiki.js, ML/CV (PyTorch, OpenCV, U-Net, QuPath), React Native, Flutter
+**Mobile и ML** — React Native, Flutter (Dart), PyTorch, OpenCV, U-Net, QuPath
+
+**Прочее** — MuleSoft, Wiki.js
 
 ## Опыт работы
 
@@ -43,104 +45,104 @@ Senior Software Engineer с опытом 6+ лет в проектировани
 
 **Стек:** Python, Pandas, EasyBuild, Cromwell, HPC
 
-- Перенёс workflow-движок Cromwell с Docker/Singularity на EasyBuild-бандл, упаковав Python, Perl и бинарь Cromwell в один разворачиваемый модуль.
-- Спроектировал логику валидации для инструмента проверки входов пайплайна, сохранив существующую архитектуру очереди задач и переработав бизнес-правила.
-- Реализовал ETL-пайплайн обработки данных reconciliation на Pandas.
+- Переплатформировал научный workflow-движок Cromwell с Docker/Singularity на единый EasyBuild-модуль с Python, Perl и бинарём Cromwell — убрав сопровождение container-runtime и пошаговую установку для HPC-пользователей.
+- Переписал правила валидации входов для инструмента проверки задач на отправку, сохранив существующую архитектуру очереди и модернизировав бизнес-логику.
+- Построил ETL на Pandas для кросс-системных reconciliation-данных, заменив ручную обработку для научных потребителей данных.
 
 #### Document Search Chatbot (GCToC) *(Merck · ноя 2023 – фев 2025)*
 
 **Стек:** Python, Terraform, AWS Lambda, AWS (API Gateway, S3, Cognito, CloudFront, VPC), JavaScript, Jenkins, GitHub Actions
 
-- Полностью мигрировал CI/CD с Jenkins на GitHub Actions, включая рефакторинг пайплайнов и интеграцию Artifactory для хранения артефактов Lambda.
-- Построил автоматизацию на AWS Lambda + Jenkins для импорта SharePoint-отчётов в MySQL, что сократило ~4 часа ручной работы в неделю.
-- Поднял с нуля новое тестовое окружение под security-моделью MERCK (CloudFront-managed internet, S3 bucket policies, переопределения Cognito-пулов).
-- Расширил Terraform-модули до полного покрытия IaC; настроил интеграцию API Gateway через VPC endpoint с CloudFront.
+- Полностью мигрировал CI/CD проекта с Jenkins на GitHub Actions — отрефакторил пайплайны и подключил Artifactory как хранилище артефактов Lambda, открыв команде self-service деплой.
+- Построил автоматизацию на AWS Lambda + Jenkins, импортирующую SharePoint-отчёты в MySQL, что убрало ~4 часа ручной обработки в неделю.
+- Развернул изолированное тестовое окружение под корпоративной security-моделью Merck — CloudFront-managed egress, S3 bucket policies, переопределения Cognito-пулов — сняв блокер для QA-команды.
+- Закрыл пробелы в Terraform до полного покрытия IaC; настроил API Gateway через VPC endpoint за CloudFront для compliant-ingress.
 
 #### iPaaS — платформа API-интеграции *(Merck · янв 2024 – дек 2024)*
 
 **Стек:** Python, Terraform, Terragrunt, Kubernetes, AWS (EKS, RDS, S3), MuleSoft, Flask, Jenkins, GitHub Actions, Grafana
 
-- Построил с нуля систему алертинга на Grafana: Flask-webhook для MERCK Mail API с SSL, рефакторинг cert-manager в Kubernetes, правила алертов по EKS-нодам, квотам MuleSoft, Nginx и логированию.
-- Мигрировал single-instance RDS на Multi-AZ-кластер с переносом боевых данных под нагрузкой; реализовал бэкап-флоу по требованиям MERCK (репликация снимков в S3).
-- Автоматизировал создание MuleSoft RTF на Python, реверс-инжинирингом API из Anypoint UI dev tools — обошёл отсутствие RTF-поддержки в Terraform-провайдере.
-- Сопровождал федеративные команды при переходе на новую IAM-стратегию в их AWS-аккаунтах.
+- Построил систему алертинга проекта с нуля — Flask-webhook к Merck Mail API через SSL, рефакторинг cert-manager в Kubernetes, правила алертов по EKS-нодам, квотам MuleSoft, Nginx и log-пайплайнам — превратив on-call из слепого в инструментированный.
+- Мигрировал production RDS с single-instance на Multi-AZ с переносом данных под нагрузкой (zero downtime для федеративных команд); реализовал compliant backup-флоу с кросс-аккаунтной репликацией снимков в S3 по политике Merck.
+- Автоматизировал провижининг MuleSoft RTF на Python, реверс-инжинирингом приватного API Anypoint UI — закрыл пробел Terraform-провайдера и разблокировал IaC-adoption.
+- Перевёл федеративные команды на новую IAM-стратегию в их AWS-аккаунтах, заменив ad-hoc паттерны доступа.
 
 #### Novartis DevOps Support — OAuth и PAM *(Novartis · ноя 2021 – июн 2023)*
 
 **Стек:** AWS (ALB, API Gateway), Azure AD, OAuth 2.0, PKCE, Terraform, Python, Groovy, Jenkins, Bash, Chef, OpenResty, Lua
 
-- Спроектировал и выпустил переиспользуемые Terraform-модули для OAuth2-авторизации на AWS API Gateway и ALB, принятые несколькими командами; реализовал example-сервис на Python с потоками Authorization Code и On-Behalf-Of.
-- Построил Python Lambda для парсинга OAuth-токенов и проброса claims в заголовках; зеркальную логику реализовал на OpenResty (Nginx + Lua) для legacy-приложений.
-- Написал Chef-рецепты и Jenkins-пайплайны с Conjur-плагином для инжекции PAM-кредов в CI/CD научных команд; сопроводил Bash-скриптами для разных PAM-флоу.
+- Выпустил переиспользуемые Terraform-модули для OAuth 2.0-авторизации на AWS API Gateway и ALB, принятые несколькими командами Novartis; добавил reference-сервис на Python с потоками Authorization Code + PKCE и On-Behalf-Of.
+- Построил Python Lambda для парсинга OAuth-токенов и проброса claims в заголовках на уровне edge; зеркальную логику реализовал на OpenResty (Nginx + Lua), что позволило подключить legacy-приложения без изменения их кода.
+- Написал Chef-рецепты и Jenkins-Conjur пайплайны, инжектирующие PAM-кредениалы в CI/CD научных команд, заменив ручное обращение с секретами в нескольких PAM-флоу.
 
 ### ITS — CTO · янв 2020 – наст. вр. *(в ITS с июн 2018)*
 
-*Инженерное руководство несколькими продуктами и внутренней инфраструктурой. Вырастил команду с 5 до 30 человек. Владею общекомпанейской инженерной методологией, пресейлом и поставкой проектов.*
+*Инженерное руководство несколькими продуктами и внутренней платформой компании. Вырастил команду с 5 до 30 инженеров. Владею общекомпанейской инженерной методологией, пресейлом и поставкой проектов.*
 
 #### Helpdesk Bot — автоматизация поддержки *(ITS · ноя 2023 – фев 2025)*
 
 **Стек:** Python, aiogram, FastAPI, Docker, PostgreSQL, sqladmin, Todoist API
 
-- Спроектировал и запустил Telegram + Todoist бот для технической поддержки на хакатонах; использован на 10 событиях Digital Breakthrough, включая национальный и международный финалы.
+- Спроектировал и запустил Telegram + Todoist бот, обеспечивающий техподдержку 10 хакатонов Digital Breakthrough, включая национальный и международный финалы.
 - Реализовал двустороннюю асинхронную коммуникацию между Telegram-пользователями и Todoist-агентами; масштабировал команду поддержки с 1 до 3 агентов через pull-модель распределения тикетов.
-- Вёл проект end-to-end: архитектура, сборка команды, продакшен-запуск, CI/CD.
+- Владел поставкой end-to-end: архитектура, сборка команды, CI/CD, продакшен-запуск.
 
 #### Microcirculation — детекция сосудов глаза *(Far East Innovations · сен 2021 – ноя 2023)*
 
 **Стек:** Python, PyTorch, OpenCV, FastAPI, Vue, U-Net, QuPath
 
-- Дообучил U-Net до качества сегментации 0.678 Dice/F1 для детекции кровеносных сосудов на снимках со щелевой лампы.
-- Построил пост-процессинг на вычислительной геометрии: декомпозиция сосудов, скелетонизация, замер длины/ширины, классификация по метрикам офтальмологов.
-- Калибровал оптические измерения с помощью напечатанных на 3D моделей глаз под каждый микроскоп для получения преобразований координат.
-- Выложил как web-сервис на FastAPI + Vue с публичным демо на [eye.its.xyz](https://eye.its.xyz); руководил тремя бакалаврскими/магистерскими работами по сегментации и синтетическим данным; зарегистрировал свидетельство на БД; выступил с докладом про U-Net на митапе.
+- Дообучил U-Net до качества 0.678 Dice/F1 для сегментации кровеносных сосудов на снимках со щелевой лампы.
+- Построил пост-процессинг на вычислительной геометрии — декомпозиция сосудов, скелетонизация, замер длины/ширины, классификация по метрикам офтальмологов — превращающий сырые маски в клинически валидные измерения.
+- Калибровал оптические измерения 3D-печатными моделями глаз под каждый микроскоп для получения преобразований координат.
+- Выложил web-сервис на FastAPI + Vue с публичным демо на [eye.its.xyz](https://eye.its.xyz); руководил тремя бакалаврскими/магистерскими работами, зарегистрировал свидетельство на БД и выступил с докладом про U-Net на митапе.
 
 #### ML Showroom *(ITS · сен 2021 – фев 2022)*
 
 **Стек:** Python
 
-- Вёл доставку CV-демо-платформы как PM: проскоупил MVP, координировал команду из 3 инженеров, передал заказчику.
+- Вёл поставку CV-демо-платформы как PM: проскоупил MVP, координировал команду из 3 инженеров, передал заказчику.
 
 #### Career Assistant — мобильное приложение *(Kaspersky Lab · янв 2021 – апр 2021)*
 
 **Стек:** Python, Flutter, Dart, Firebase, GraphQL
 
-- Первый проект в роли PM: Flutter + Firebase приложение, соединяющее карьерных экспертов с junior-специалистами; проект закрылся до запуска, дал устойчивый урок про KISS и риски выбора стека.
+- Первая роль PM: Flutter + Firebase приложение, соединяющее карьерных экспертов с junior-специалистами. Проект закрылся до запуска — формирующий урок про KISS и риски выбора стека, который с тех пор задаёт мои решения по скоупингу.
 
 #### Корпоративная база знаний *(ITS · окт 2020 – наст. вр.)*
 
 **Стек:** Wiki.js, Docker Compose, PostgreSQL, Elasticsearch, Keycloak, SSO, Git
 
-- Запустил и вырастил внутреннюю вики компании до 31 уникального контрибьютора (9 — с 50+ коммитами); SSO через корпоративный Keycloak.
-- Развернул через Docker Compose + PostgreSQL с Git-синхронизацией контента: бэкап, отслеживание авторства, история версий.
-- Стимулировал adoption через митапы по управлению знаниями; вики стала частью культуры компании.
+- Запустил и вырастил Wiki.js базу знаний компании до 31 активного контрибьютора (9 — с 50+ коммитами); SSO через корпоративный Keycloak.
+- Развернул на Docker Compose + PostgreSQL с Git-синхронизацией контента для бэкапа, отслеживания авторства и истории версий.
+- Стимулировал adoption через внутренние митапы по управлению знаниями, встроив вики в дефолтный рабочий процесс команды.
 
 #### XTHON — платформа для хакатонов *(ITS · июн 2020 – наст. вр.)*
 
 **Стек:** Python, Flask, SQLAlchemy, JavaScript, React, Next.js, OpenResty, Nginx, Material UI, Docker
 
-- Построил и вырастил XTHON в геймифицированную платформу онлайн-хакатонов на 100+ событий, включая Digital Breakthrough и Lisbon Hackathon; прошёл роли frontend → backend → DevOps → инженерный лид.
-- Мигрировал лендинги на Next.js c SSR (ранее Pug + OpenResty meta-tag injection); собрал отдельную JS API-библиотеку на S3 для встраивания в legacy-страницы.
-- Эволюционировал DevOps: отдельные репы и Jenkins → multi-stage Docker → приватные реестры (JCR → GitLab) → монорепа на GitHub Flow.
-- Вёл рефакторинг бэкенда: вынес бизнес-логику из контроллеров в сервисы, добавил юнит-тесты в CI; управлял спринтами команды 2–12 человек.
+- Построил и вырастил XTHON в геймифицированную платформу онлайн-хакатонов на 100+ событий (Digital Breakthrough, Lisbon Hackathon); прошёл роли frontend → backend → DevOps → инженерный лид.
+- Мигрировал SPA-лендинги на Next.js SSR (на смену Pug + OpenResty meta-tag injection) и собрал отдельную JS API-библиотеку на S3 для встраивания в legacy-страницы партнёров.
+- Эволюционировал DevOps-стек: per-repo Jenkins + S3 → multi-stage Docker на приватных реестрах (JCR → GitLab) → монорепа на GitHub Flow, на каждом шаге снижая трение релизов.
+- Вёл рефакторинг бэкенда: вынес бизнес-логику из контроллеров в сервисы, добавил юнит-тесты в CI; вёл спринты команды 2–12 инженеров.
 
 #### ITS Core Infrastructure *(ITS · июн 2020 – наст. вр.)*
 
 **Стек:** Jenkins, GitLab, Linux, Bash, Docker
 
-- Построил и эксплуатирую внутреннюю платформу ITS с нуля — self-hosted GitLab + GitLab CI, Jenkins, Linux-серверы, контейнеризированный service mesh на Docker — поддерживая 30 инженеров и 100+ проведённых хакатонов.
+- Построил и эксплуатирую внутреннюю инженерную платформу ITS с нуля — self-hosted GitLab + GitLab CI, Jenkins, Linux-серверы, контейнеризированный service mesh на Docker — поддерживая 30 инженеров и 100+ проведённых хакатонов.
 
 #### Museum Guide — мобильное приложение *(ITS · июн 2018 – июн 2019)*
 
 **Стек:** Python, React Native
 
-- Сделал бэкенд (Python) и мобильное приложение (React Native) для аудиогида по музею.
+- Сделал Python-бэкенд и React Native-клиент для аудиогида по музею.
 
 #### Распознавание тюленей по аэрофотосъёмке *(ITS · май 2018 – май 2020)*
 
 **Стек:** Python, OpenCV, PyTorch
 
-- Обучил deep-learning модель (OpenCV + PyTorch) для детекции тюленей на снимках с БПЛА; эксперименты с аугментациями и преобразованиями цветового пространства.
-- Защитил бакалаврский диплом в СПбПУ по этой работе.
+- Обучил deep-learning модель (PyTorch + OpenCV) для детекции тюленей на снимках с БПЛА; эксперименты с аугментациями и преобразованиями цветового пространства.
+- Тема защищённого бакалаврского диплома в СПбПУ.
 
 ### RUVENTS LTD — Backend-инженер · янв 2021 – окт 2021
 
@@ -148,7 +150,7 @@ Senior Software Engineer с опытом 6+ лет в проектировани
 
 **Стек:** Python, Django, AngularJS
 
-- Вёл production-поддержку портала на Django + AngularJS: добавил структурированное логирование и runbook по алертам, что сократило время триажа инцидентов.
+- Вёл production-поддержку портала на Django + AngularJS; ввёл структурированное логирование и runbook по алертам, что сократило время триажа инцидентов.
 
 ## Личные проекты / Open Source
 
@@ -156,25 +158,25 @@ Senior Software Engineer с опытом 6+ лет в проектировани
 
 **Стек:** Rust, Cargo, GitHub Actions, codecov.
 
-- Open-source библиотека для направленного графа с автоматическим сборщиком мусора, используется виртуальной машиной EO; [опубликована на crates.io](https://crates.io/crates/sodg) с CI-гейтами по coverage и линту в GitHub Actions.
+- Open-source структура данных направленного графа с автоматическим сборщиком мусора, используется виртуальной машиной EO; [опубликована на crates.io](https://crates.io/crates/sodg) с CI-гейтами по coverage и линту в GitHub Actions.
 
 ### Matrix homeserver — production-развёртывание на Ansible
 
 **Стек:** Ansible, Docker Compose, Matrix Synapse, LiveKit, Coturn, Matrix Auth Service (OIDC), PostgreSQL, Let's Encrypt, UFW, fail2ban.
 
-- Воспроизводимый IaC для self-hosted Synapse с voice/video, OIDC-аутентификацией и system hardening; двухступенчатый деплой через Makefile (~10 минут с чистой VM).
+- Воспроизводимый IaC для self-hosted Synapse с voice/video, OIDC-аутентификацией и system hardening; двухступенчатый деплой через Makefile доводит до production за ~10 минут с чистой VM.
 
 ### grand-chat — платформа real-time чата
 
 **Стек:** Django 5, DRF, React + TypeScript, Centrifugo, PostgreSQL, Debezium (CDC), Prometheus, Grafana, Docker Compose.
 
-- End-to-end real-time чат с CDC-стримингом обновлений из PostgreSQL в WebSocket-клиенты через Centrifugo; полный стек наблюдаемости (Prometheus + Grafana) внутри compose.
+- End-to-end real-time чат: изменения PostgreSQL стримятся в WebSocket-клиенты через Debezium CDC → Centrifugo; полный стек наблюдаемости Prometheus + Grafana внутри compose.
 
 ### tg-smm — мост Telegram → Hugo-блог
 
 **Стек:** Python (async), python-telegram-bot, GitHub Git Data API, Kubernetes, Argo CD, Sealed Secrets, GitHub Actions, GHCR.
 
-- Async-бот, буферизующий медиа-группы из Telegram и коммитящий отрендеренный Markdown прямо в репозиторий блога через GitHub API; GitOps-деплой в Kubernetes с Sealed Secrets at rest.
+- Async-бот, буферизующий медиа-группы из Telegram и коммитящий отрендеренный Markdown прямо в репозиторий блога через GitHub Git Data API; GitOps-деплой в Kubernetes с Sealed Secrets at rest.
 
 ## Образование
 
@@ -186,7 +188,7 @@ Senior Software Engineer с опытом 6+ лет в проектировани
 
 - Диплом: распознавание тюленей по аэрофотосъёмке (OpenCV, PyTorch).
 
-## Языки
+## Разговорные языки
 
 Русский (родной) · Английский (B2+)
 
