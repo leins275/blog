@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import remarkReadingTime from 'remark-reading-time';
 import rehypeExternalLinks from 'rehype-external-links';
+import remarkStripDuplicateTitle from './src/remark/strip-duplicate-title.mjs';
 
 export default defineConfig({
   site: 'https://leins275.xyz',
@@ -14,7 +15,7 @@ export default defineConfig({
   },
   markdown: {
     shikiConfig: { theme: 'github-dark', wrap: true },
-    remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [remarkStripDuplicateTitle, remarkReadingTime],
     rehypePlugins: [
       [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'nofollow'] }],
     ],
