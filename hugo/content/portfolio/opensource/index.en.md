@@ -2,6 +2,7 @@
 draft = false
 date = 2025-05-08T07:30:29+03:00
 title = "Opensource contribution"
+weight = 20
 +++
 
 # [hugo-coder theme](https://github.com/luizdepra/hugo-coder)

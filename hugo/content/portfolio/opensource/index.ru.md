@@ -2,6 +2,7 @@
 draft = false
 date = 2025-05-08T07:30:21+03:00
 title = "Опенсорс"
+weight = 20
 +++
 
 # [CRAN parser](https://github.com/leins275/cran-parser)

@@ -2,6 +2,7 @@
 draft = false
 date = 2025-05-08T06:43:21+03:00
 title = "My certificates"
+weight = 40
 +++
 
 [![Claude-certified-architect](img/claude-certified-architect.jpg)](https://verify.skilljar.com/c/b7fa6r9bdqf2)
