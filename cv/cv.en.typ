@@ -4,9 +4,11 @@
 
 = Nikita Lanskov
 
-Senior Software Engineer · Izmir, Turkey · open to EU relocation
+_Senior Software Engineer · Izmir, Turkey · open to EU relocation_
 
-#link("mailto:nikitalanskov@gmail.com")[nikitalanskov\@gmail.com] · #link("https://wa.me/905316014154")[+90 531 601 4154] · #link("https://linkedin.com/in/leins275")[linkedin.com/in/leins275] · #link("https://leins275.xyz")[leins275.xyz]
+#text(size: 9.5pt)[#link("mailto:nikitalanskov@gmail.com")[nikitalanskov\@gmail.com] · #link("https://wa.me/905316014154")[+90 531 601 4154] · #link("https://linkedin.com/in/leins275")[linkedin.com/in/leins275] · #link("https://leins275.xyz")[leins275.xyz]]
+
+#line(length: 100%, stroke: 0.4pt + luma(70%))
 
 == Profile
 
