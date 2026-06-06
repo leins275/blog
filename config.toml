@@ -112,7 +112,8 @@ url = "about/"
 [[languages.en.menu.main]]
 name = "CV"
 weight = 20
-url = "cv/"
+url = "/files/nikita-lanskov-senior-software-engineer.pdf"
+params = { urlFunc = "relURL" }
 
 [[languages.en.menu.main]]
 name = "Portfolio"
@@ -142,7 +143,8 @@ url = "about/"
 [[languages.ru.menu.main]]
 name = "РЕЗЮМЕ"
 weight = 20
-url = "ru/cv/"
+url = "/files/nikita-lanskov-senior-software-engineer-ru.pdf"
+params = { urlFunc = "relURL" }
 
 [[languages.ru.menu.main]]
 name = "Портфолио"
