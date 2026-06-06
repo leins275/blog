@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PortfolioSection from '../../components/PortfolioSection.astro';
+
+const entries = await getCollection('portfolioRu');
+---
+<Layout title="Портфолио — leins275" description="Образование, опенсорс, выступления, сертификаты." lang="ru" activeNav="portfolio">
+  <PortfolioSection lang="ru" entries={entries} />
+</Layout>

@@ -1,0 +1,19 @@
+---
+const { label = 'Theme' } = Astro.props;
+---
+<button class="ctrl" id="theme-toggle" title={label} aria-label={label}>
+  <span id="theme-ico">◐</span>
+</button>
+<script>
+  const btn = document.getElementById('theme-toggle');
+  const ico = document.getElementById('theme-ico');
+  const root = document.documentElement;
+  const sync = () => { if (ico) ico.textContent = root.dataset.theme === 'dark' ? '☾' : '◐'; };
+  sync();
+  btn?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('ls-theme', next); } catch {}
+    sync();
+  });
+</script>

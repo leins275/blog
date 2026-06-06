@@ -5,6 +5,9 @@ HUGO_ENV ?= production
 BASE_URL ?= http://localhost:1313/
 PORT ?= 1313
 
+ASTRO_DIR := astro
+ASTRO_PORT ?= 4321
+
 TYPST ?= typst
 CLAUDE ?= claude
 PDF_DIR := $(HUGO_DIR)/public/files
@@ -19,7 +22,9 @@ FONT_DIR := $(HOME)/.local/share/fonts/inter
 export HUGO_ENVIRONMENT
 export HUGO_ENV
 
-.PHONY: run build clean pdf cv install-fonts
+.PHONY: run build clean pdf cv install-fonts \
+        astro-install astro-run astro-build astro-check astro-clean \
+        backfill-previews
 
 run:
 	$(HUGO) server --source $(HUGO_DIR) --gc --minify --baseURL "$(BASE_URL)" --port $(PORT) --bind 0.0.0.0
@@ -29,6 +34,29 @@ build:
 
 clean:
 	rm -rf $(HUGO_DIR)/public $(HUGO_DIR)/resources/_gen
+
+# Astro pipeline (new SSG, sibling to hugo/). Reads ../content/ via the content
+# collection glob loaders. Coexists with the Hugo targets above during cutover.
+astro-install:
+	cd $(ASTRO_DIR) && npm install --no-audit --no-fund
+
+astro-run:
+	cd $(ASTRO_DIR) && npm run dev -- --host --port $(ASTRO_PORT)
+
+astro-build:
+	cd $(ASTRO_DIR) && npm run build
+
+astro-check:
+	cd $(ASTRO_DIR) && npm run check
+
+astro-clean:
+	rm -rf $(ASTRO_DIR)/dist $(ASTRO_DIR)/.astro
+
+# One-shot: walk content/posts/**/index.{en,ru}.md, inject `preview: ./preview.jpg`
+# into frontmatter when a sibling preview.jpg exists and the field is missing.
+# Idempotent; safe to re-run. Needed for Astro's image() schema to resolve covers.
+backfill-previews:
+	uv run --with pyyaml python scripts/backfill-preview-frontmatter.py
 
 # Build the CV PDFs from Typst sources into public/files/. Independent of Hugo
 # (no HTML rendering step). Install typst with `cargo install --locked typst-cli`

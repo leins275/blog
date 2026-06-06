@@ -1,0 +1,32 @@
+---
+import PostRow from './PostRow.astro';
+import type { Lang, PostEntry } from '../lib/posts';
+
+const { lang, posts } = Astro.props as { lang: Lang; posts: PostEntry[] };
+const t = (en: string, ru: string) => (lang === 'ru' ? ru : en);
+const blogPath = lang === 'en' ? '/blog/' : '/ru/blog/';
+const rssPath = lang === 'en' ? '/rss.xml' : '/ru/rss.xml';
+---
+<div class="hero">
+  <div class="kick">{t('Full Stack DevOps & Magician', 'Full Stack DevOps & Фокусник')}</div>
+  <h1 class="name">Nikita <em>Lanskov</em></h1>
+  <p class="lede">
+    {t(
+      'I build and operate systems for a living — and pull off the occasional card trick. This is where I write notes on engineering, focus, and the craft of doing fewer things well.',
+      'Я строю и эксплуатирую системы — и иногда показываю фокусы. Здесь я пишу заметки об инженерии, фокусе и искусстве делать меньше, но лучше.',
+    )}
+  </p>
+  <div class="meta where">Izmir, Türkiye · UTC+3</div>
+  <div class="socials">
+    <a href="https://github.com/leins275" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://t.me/leins275" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://www.linkedin.com/in/leins275" target="_blank" rel="noopener">LinkedIn</a>
+    <a href={rssPath}>RSS</a>
+  </div>
+</div>
+
+<div class="rulehead"><span class="kick">{t('Recent writing', 'Недавние записи')}</span></div>
+<div class="postlist">
+  {posts.map((p, i) => <PostRow entry={p} index={i} lang={lang} />)}
+</div>
+<div class="seeall"><a href={blogPath}>{t('All writing →', 'Все записи →')}</a></div>

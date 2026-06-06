@@ -1,0 +1,18 @@
+---
+import { formatDate, postUrl, type Lang, type PostEntry } from '../lib/posts';
+const { entry, index, lang, showReading = false, readingText } = Astro.props as {
+  entry: PostEntry;
+  index: number;
+  lang: Lang;
+  showReading?: boolean;
+  readingText?: string;
+};
+const dt = formatDate(entry.data.date, lang);
+const dateLabel = showReading && readingText ? `${readingText} · ${dt}` : dt;
+---
+<a class="post-row" href={postUrl(entry, lang)}>
+  <span class="idx">{String(index + 1).padStart(2, '0')}</span>
+  <span class="ti">{entry.data.title}</span>
+  <span class="dt">{dateLabel}</span>
+  <span class="arw">→</span>
+</a>

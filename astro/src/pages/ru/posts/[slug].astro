@@ -1,0 +1,40 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import { listPosts, cleanSlug, formatDate } from '../../../lib/posts';
+
+export const getStaticPaths = (async () => {
+  const posts = await listPosts('ru');
+  return posts.map((entry) => ({ params: { slug: cleanSlug(entry) }, props: { entry } }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(entry);
+const readingText: string | undefined = remarkPluginFrontmatter?.readingTime?.text;
+const cat = entry.data.categories?.[0] ?? 'notes';
+---
+<Layout
+  title={`${entry.data.title} — leins275`}
+  description={entry.data.description}
+  lang="ru"
+  activeNav="blog"
+>
+  <article>
+    <div class="ahead">
+      <div class="kick">#{cat}{readingText ? ` · ${readingText}` : ''}</div>
+      <h1>{entry.data.title}</h1>
+      <div class="byline">
+        <span class="meta">Никита Лансков</span>
+        <span class="meta">·</span>
+        <span class="meta">{formatDate(entry.data.date, 'ru')}</span>
+      </div>
+    </div>
+    <div class="body">
+      <Content />
+    </div>
+  </article>
+  <div class="artnav">
+    <a href="/ru/blog/">← Все записи</a>
+  </div>
+</Layout>

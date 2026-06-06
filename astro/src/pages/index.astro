@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomeSection from '../components/HomeSection.astro';
+import { listPosts } from '../lib/posts';
+
+const posts = (await listPosts('en')).slice(0, 5);
+---
+<Layout
+  title="Nikita Lanskov — leins275"
+  description="Notes on engineering, focus, and the craft of doing fewer things well."
+  lang="en"
+  activeNav="home"
+>
+  <HomeSection lang="en" posts={posts} />
+</Layout>

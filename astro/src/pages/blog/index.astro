@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogIndexSection from '../../components/BlogIndexSection.astro';
+import { listPosts } from '../../lib/posts';
+
+const posts = await listPosts('en');
+---
+<Layout title="Writing — leins275" description="All posts." lang="en" activeNav="blog">
+  <BlogIndexSection lang="en" posts={posts} />
+</Layout>

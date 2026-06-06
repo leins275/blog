@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const all = await getCollection('aboutRu');
+const entry = all[0];
+const rendered = entry ? await render(entry) : null;
+const Content = rendered?.Content;
+---
+<Layout title="Био — leins275" description="О Никите Ланскове." lang="ru" activeNav="about">
+  <div class="about">
+    <div class="phead" style="padding-left:0;padding-right:0;margin:0;max-width:none">
+      <div class="kick">Био</div>
+      <h1>Привет, я Никита</h1>
+    </div>
+    <div class="body">
+      {Content ? <Content /> : <p>Страница пуста.</p>}
+    </div>
+    <div class="kick" style="margin-top:30px">Что люблю</div>
+    <div class="hobbies">
+      <span>🚲 велосипед</span>
+      <span>🎸 гитара</span>
+      <span>🥾 походы</span>
+      <span>📝 заметки</span>
+      <span>🃏 карточные фокусы</span>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,97 @@
+---
+import '../styles/global.css';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import LangSwitch from '../components/LangSwitch.astro';
+
+type Lang = 'en' | 'ru';
+type Nav = 'home' | 'about' | 'portfolio' | 'blog' | null;
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: Lang;
+  activeNav?: Nav;
+  ogImage?: string;
+}
+
+const { title, description, lang = 'en', activeNav = null, ogImage } = Astro.props;
+
+const homePath = lang === 'en' ? '/' : '/ru/';
+const aboutPath = lang === 'en' ? '/about/' : '/ru/about/';
+const portfolioPath = lang === 'en' ? '/portfolio/' : '/ru/portfolio/';
+const blogPath = lang === 'en' ? '/blog/' : '/ru/blog/';
+const rssPath = lang === 'en' ? '/rss.xml' : '/ru/rss.xml';
+
+const pathname = Astro.url.pathname;
+const otherLangHref = lang === 'en'
+  ? (pathname === '/' ? '/ru/' : `/ru${pathname}`)
+  : (pathname.replace(/^\/ru/, '') || '/');
+
+const t = (en: string, ru: string) => (lang === 'ru' ? ru : en);
+const canonical = new URL(pathname, Astro.site).toString();
+---
+<!doctype html>
+<html lang={lang} data-lang={lang} data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{title}</title>
+  {description && <meta name="description" content={description} />}
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang={lang === 'en' ? 'ru' : 'en'} href={new URL(otherLangHref, Astro.site).toString()} />
+  <link rel="alternate" type="application/rss+xml" title={`leins275 — ${lang.toUpperCase()}`} href={rssPath} />
+  <meta property="og:title" content={title} />
+  {description && <meta property="og:description" content={description} />}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <script is:inline>
+    (() => {
+      try {
+        const stored = localStorage.getItem('ls-theme');
+        const t = stored ?? (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = t;
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="bar">
+      <a class="logo" href={homePath}><span class="mk">✦</span>leins275</a>
+      <nav class="main">
+        <a href={aboutPath} class={activeNav === 'about' ? 'active' : undefined}>{t('About', 'Био')}</a>
+        <a href={portfolioPath} class={activeNav === 'portfolio' ? 'active' : undefined}>{t('Portfolio', 'Портфолио')}</a>
+        <a href={blogPath} class={activeNav === 'blog' ? 'active' : undefined}>{t('Writing', 'Блог')}</a>
+        <a href="/files/nikita-lanskov-senior-software-engineer.pdf" class="ext" target="_blank" rel="noopener">CV</a>
+        <a href="https://garden.leins275.xyz" class="ext" target="_blank" rel="noopener">{t('Garden', 'Сад')}</a>
+      </nav>
+      <div class="ctrls">
+        <LangSwitch lang={lang} otherLangHref={otherLangHref} label={t('Language', 'Язык')} />
+        <ThemeToggle label={t('Theme', 'Тема')} />
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <slot />
+  </main>
+
+  <footer class="site">
+    <div class="foot">
+      <span class="c">© 2021–{new Date().getFullYear()} Nikita Lanskov</span>
+      <span class="fl">
+        <a href="https://github.com/leins275" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/leins275" target="_blank" rel="noopener">Telegram</a>
+        <a href={rssPath}>RSS</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

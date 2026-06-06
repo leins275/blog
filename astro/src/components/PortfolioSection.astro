@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import type { Lang } from '../lib/posts';
+
+type Entry = CollectionEntry<'portfolioEn' | 'portfolioRu'>;
+const { lang, entries } = Astro.props as { lang: Lang; entries: Entry[] };
+const t = (en: string, ru: string) => (lang === 'ru' ? ru : en);
+
+const sorted = [...entries].sort((a, b) => (a.data.weight ?? 0) - (b.data.weight ?? 0));
+
+const rendered = await Promise.all(
+  sorted.map(async (entry) => {
+    const slug = entry.id.replace(/\/index\.(en|ru)$/, '').split('/').pop()!;
+    const { Content } = await render(entry);
+    return { entry, slug, Content };
+  }),
+);
+
+const palette: Record<string, string> = {
+  C: '#9a4a2f', T: '#5c4ee5', L: '#2b2b2b', K: '#326ce5',
+  A: '#9a4a2f', G: '#3a7d5a', P: '#3a6b8f', S: '#caa53e',
+};
+const colorFor = (title: string) => {
+  const key = title.trim().charAt(0).toUpperCase();
+  return palette[key] ?? '#46433c';
+};
+const ytThumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+---
+<div class="phead">
+  <div class="kick">{t('Portfolio', 'Портфолио')}</div>
+  <h1>{t('Background & work', 'Опыт и работы')}</h1>
+  <p class="sub">{t(
+    'Education, open-source contributions, talks, and certifications.',
+    'Образование, опенсорс, выступления и сертификаты.',
+  )}</p>
+</div>
+
+<div class="pf">
+  {rendered.map(({ entry, slug, Content }) => (
+    <section>
+      <div class="sect-h"><h2>{entry.data.title}</h2></div>
+
+      {slug === 'meetups' && entry.data.videos && (
+        <div class="talks">
+          {entry.data.videos.map((v) => (
+            <a class="talk" href={`https://www.youtube.com/watch?v=${v.youtube}`} target="_blank" rel="noopener">
+              <div class="thumb"><img src={ytThumb(v.youtube)} alt={v.title} loading="lazy" /></div>
+              <div class="cap">{v.title}</div>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {slug === 'certs' && entry.data.items && (
+        <div class="certs">
+          {entry.data.items.map((item) => (
+            <a class="cert" href={item.link ?? '#'} target="_blank" rel="noopener">
+              <div class="ic" style={`background:${colorFor(item.title)}`}>{item.title.trim().charAt(0).toUpperCase()}</div>
+              <div>
+                <div class="cn">{item.title}</div>
+                {item.link && <div class="cv">{new URL(item.link).hostname} ↗</div>}
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {(slug === 'edu' || slug === 'opensource') && (
+        <div class="body"><Content /></div>
+      )}
+    </section>
+  ))}
+</div>

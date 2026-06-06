@@ -1,0 +1,27 @@
+---
+import PostRow from './PostRow.astro';
+import { groupByYear, type Lang, type PostEntry } from '../lib/posts';
+
+const { lang, posts } = Astro.props as { lang: Lang; posts: PostEntry[] };
+const t = (en: string, ru: string) => (lang === 'ru' ? ru : en);
+const byYear = groupByYear(posts);
+const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+---
+<div class="phead">
+  <div class="kick">{t('The blog', 'Блог')}</div>
+  <h1>{t('Writing', 'Записи')}</h1>
+  <p class="sub">
+    {t(
+      'Notes and essays on engineering, systems, and living deliberately. Mostly short, occasionally not.',
+      'Заметки и эссе об инженерии, системах и осознанной жизни. В основном короткие.',
+    )}
+  </p>
+</div>
+<div class="yeargroup">
+  {years.map((y) => (
+    <>
+      <div class="yearlabel">{y}</div>
+      {byYear[y].map((p, i) => <PostRow entry={p} index={i} lang={lang} />)}
+    </>
+  ))}
+</div>

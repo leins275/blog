@@ -1,0 +1,14 @@
+---
+const { lang, otherLangHref, label = 'Language' } = Astro.props as {
+  lang: 'en' | 'ru';
+  otherLangHref: string;
+  label?: string;
+};
+---
+<a class="ctrl lang" href={otherLangHref} title={label} rel="alternate" hreflang={lang === 'en' ? 'ru' : 'en'}>
+  {lang === 'en' ? (
+    <><b>EN</b><span>RU</span></>
+  ) : (
+    <><span>EN</span><b>RU</b></>
+  )}
+</a>
