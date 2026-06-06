@@ -1,0 +1,30 @@
+{{ define "title" }}
+  {{- i18n (lower .Title) | default .Title | title }} · {{ .Site.Title -}}
+{{ end }}
+{{ define "content" }}
+  <section class="container post portfolio">
+    <article>
+      <header>
+        <h1 class="title">
+          <a class="title-link" href="{{ .Permalink | safeURL }}">
+            {{- i18n (lower .Title) | default .Title | title -}}
+          </a>
+        </h1>
+      </header>
+
+      <div class="post-content">
+        {{ .Content }}
+
+        {{- $sections := where .Pages "Params.draft" "!=" true -}}
+        {{- range (sort $sections "Weight") }}
+          <section id="{{ .File.ContentBaseName }}" class="portfolio-section">
+            <h2>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            {{ .Content }}
+          </section>
+        {{- end }}
+      </div>
+    </article>
+  </section>
+{{ end }}
