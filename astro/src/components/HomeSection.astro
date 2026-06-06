@@ -6,9 +6,13 @@ const { lang, posts } = Astro.props as { lang: Lang; posts: PostEntry[] };
 const t = (en: string, ru: string) => (lang === 'ru' ? ru : en);
 const blogPath = lang === 'en' ? '/blog/' : '/ru/blog/';
 const rssPath = lang === 'en' ? '/rss.xml' : '/ru/rss.xml';
+
+// Gravatar hash for leins275@gmail.com — mirrors the Hugo config.
+const avatarSrc = 'https://www.gravatar.com/avatar/f99a07794a2d5ea22d0223fa27c1e502?s=240&d=mp';
 ---
 <div class="hero">
-  <div class="kick">{t('Full Stack DevOps & Magician', 'Full Stack DevOps & Фокусник')}</div>
+  <img class="avatar" src={avatarSrc} alt={t('Nikita Lanskov', 'Никита Лансков')} width="120" height="120" loading="eager" />
+  <div class="kick">{t('Full Stack DevOps & Wizard', 'Full Stack DevOps & Волшебник')}</div>
   <h1 class="name">Nikita <em>Lanskov</em></h1>
   <p class="lede">
     {t(
@@ -18,10 +22,12 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/ru/rss.xml';
   </p>
   <div class="meta where">Izmir, Türkiye · UTC+3</div>
   <div class="socials">
-    <a href="https://github.com/leins275" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://t.me/leins275" target="_blank" rel="noopener">Telegram</a>
-    <a href="https://www.linkedin.com/in/leins275" target="_blank" rel="noopener">LinkedIn</a>
-    <a href={rssPath}>RSS</a>
+    <a href="https://github.com/leins275/" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://t.me/nlanskov" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://www.linkedin.com/in/leins275/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.instagram.com/leins275/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.youtube.com/@leins275" target="_blank" rel="noopener">YouTube</a>
+    <a href={rssPath} rel="alternate" type="application/rss+xml">RSS</a>
   </div>
 </div>
 

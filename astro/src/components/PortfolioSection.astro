@@ -7,7 +7,10 @@ type Entry = CollectionEntry<'portfolioEn' | 'portfolioRu'>;
 const { lang, entries } = Astro.props as { lang: Lang; entries: Entry[] };
 const t = (en: string, ru: string) => (lang === 'ru' ? ru : en);
 
-const sorted = [...entries].sort((a, b) => (a.data.weight ?? 0) - (b.data.weight ?? 0));
+const HIDDEN_SLUGS = new Set(['opensource']);
+const sorted = [...entries]
+  .filter((e) => !HIDDEN_SLUGS.has(e.id.split('/')[0]))
+  .sort((a, b) => (a.data.weight ?? 0) - (b.data.weight ?? 0));
 
 const rendered = await Promise.all(
   sorted.map(async (entry) => {
@@ -66,7 +69,7 @@ const ytThumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
         </div>
       )}
 
-      {(slug === 'edu' || slug === 'opensource') && (
+      {slug === 'edu' && (
         <div class="body"><Content /></div>
       )}
     </section>

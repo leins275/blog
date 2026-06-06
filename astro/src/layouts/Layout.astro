@@ -68,9 +68,8 @@ const canonical = new URL(pathname, Astro.site).toString();
       <nav class="main">
         <a href={aboutPath} class={activeNav === 'about' ? 'active' : undefined}>{t('About', 'Био')}</a>
         <a href={portfolioPath} class={activeNav === 'portfolio' ? 'active' : undefined}>{t('Portfolio', 'Портфолио')}</a>
-        <a href={blogPath} class={activeNav === 'blog' ? 'active' : undefined}>{t('Writing', 'Блог')}</a>
+        <a href={blogPath} class={activeNav === 'blog' ? 'active' : undefined}>{t('Blog', 'Блог')}</a>
         <a href="/files/nikita-lanskov-senior-software-engineer.pdf" class="ext" target="_blank" rel="noopener">CV</a>
-        <a href="https://garden.leins275.xyz" class="ext" target="_blank" rel="noopener">{t('Garden', 'Сад')}</a>
       </nav>
       <div class="ctrls">
         <LangSwitch lang={lang} otherLangHref={otherLangHref} label={t('Language', 'Язык')} />
@@ -88,7 +87,7 @@ const canonical = new URL(pathname, Astro.site).toString();
       <span class="c">© 2021–{new Date().getFullYear()} Nikita Lanskov</span>
       <span class="fl">
         <a href="https://github.com/leins275" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://t.me/leins275" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://t.me/nlanskov" target="_blank" rel="noopener">Telegram</a>
         <a href={rssPath}>RSS</a>
       </span>
     </div>
