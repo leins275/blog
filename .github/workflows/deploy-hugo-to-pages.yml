@@ -57,19 +57,20 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
+            --source hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Install Chromium for CV PDF rendering
-        run: sudo apt-get update && sudo apt-get install -y chromium-browser
-      - name: Render CV PDFs via headless Chrome
-        env:
-          CHROME: chromium-browser
+      - name: Install typst
+        uses: typst-community/setup-typst@v3
+      - name: Install Inter font for typst
+        run: make install-fonts
+      - name: Build CV PDFs with typst
         run: make pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./hugo/public
 
   # Deployment job
   deploy:

@@ -1,11 +1,12 @@
 HUGO ?= hugo
+HUGO_DIR := hugo
 HUGO_ENVIRONMENT ?= production
 HUGO_ENV ?= production
 BASE_URL ?= http://localhost:1313/
 PORT ?= 1313
 
 TYPST ?= typst
-PDF_DIR := public/files
+PDF_DIR := $(HUGO_DIR)/public/files
 CV_NAME := nikita-lanskov-senior-software-engineer
 
 INTER_VERSION ?= 4.1
@@ -17,13 +18,13 @@ export HUGO_ENV
 .PHONY: run build clean pdf install-fonts
 
 run:
-	$(HUGO) server --gc --minify --baseURL "$(BASE_URL)" --port $(PORT) --bind 0.0.0.0
+	$(HUGO) server --source $(HUGO_DIR) --gc --minify --baseURL "$(BASE_URL)" --port $(PORT) --bind 0.0.0.0
 
 build:
-	$(HUGO) --gc --minify --baseURL "$(BASE_URL)"
+	$(HUGO) --source $(HUGO_DIR) --gc --minify --baseURL "$(BASE_URL)"
 
 clean:
-	rm -rf public resources/_gen
+	rm -rf $(HUGO_DIR)/public $(HUGO_DIR)/resources/_gen
 
 # Build the CV PDFs from Typst sources into public/files/. Independent of Hugo
 # (no HTML rendering step). Install typst with `cargo install --locked typst-cli`
