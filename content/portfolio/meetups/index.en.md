@@ -8,4 +8,5 @@ build: {render: never, list: always, publishResources: true}
 videos:
 - {title: Personal Knowledge Management meetup, youtube: sdgjbPIgvRQ}
 - {title: Image segmentation with U-net, youtube: unuBcZAFOvY}
+- {title: 'AI in development: cases, basics & practical tricks', youtube: BH0lUGVtYpA}
 ---

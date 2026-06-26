@@ -8,4 +8,5 @@ build: {render: never, list: always, publishResources: true}
 videos:
 - {title: Митап по управлению знаниями, youtube: sdgjbPIgvRQ}
 - {title: Лекция по сегментации изображений с использованием U-net, youtube: unuBcZAFOvY}
+- {title: 'AI «для своих»: кейсы, база и приёмы', youtube: BH0lUGVtYpA}
 ---
