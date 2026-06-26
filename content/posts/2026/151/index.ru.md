@@ -3,7 +3,7 @@ date: "2026-06-24T19:18:01+00:00"
 slug: "151"
 authors: [leins275]
 categories: [post]
-title: "Рассказывал тут про AI "для..."
+title: 'Рассказывал тут про AI "для..."'
 draft: false
 ---
 
