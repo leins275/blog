@@ -29,6 +29,9 @@ const otherLangHref = lang === 'en'
 
 const t = (en: string, ru: string) => (lang === 'ru' ? ru : en);
 const canonical = new URL(pathname, Astro.site).toString();
+// Telegram and other crawlers reject relative og:image values, and the image()
+// schema yields a site-relative src. An already-absolute value passes through.
+const ogImageUrl = ogImage ? new URL(ogImage, Astro.site).toString() : undefined;
 ---
 <!doctype html>
 <html lang={lang} data-lang={lang} data-theme="light">
@@ -44,7 +47,9 @@ const canonical = new URL(pathname, Astro.site).toString();
   {description && <meta property="og:description" content={description} />}
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
-  {ogImage && <meta property="og:image" content={ogImage} />}
+  {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+  <meta name="twitter:card" content={ogImageUrl ? 'summary_large_image' : 'summary'} />
+  {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link

@@ -5,6 +5,7 @@ authors: [leins275]
 categories: [post]
 title: Я теперь сертифицированный вайб-кодер. Хвастаюсь!
 draft: false
+preview: ./preview.jpg
 ---
 
 

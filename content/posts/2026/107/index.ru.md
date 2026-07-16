@@ -5,6 +5,7 @@ authors: [leins275]
 categories: [post]
 title: Клод код, Телешоу и Турецкий...
 draft: false
+preview: ./preview.jpg
 ---
 
 

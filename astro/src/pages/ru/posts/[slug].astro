@@ -1,5 +1,6 @@
 ---
 import type { GetStaticPaths } from 'astro';
+import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import { listPosts, cleanSlug, formatDate } from '../../../lib/posts';
@@ -13,12 +14,14 @@ const { entry } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(entry);
 const readingText: string | undefined = remarkPluginFrontmatter?.readingTime?.text;
 const cat = entry.data.categories?.[0] ?? 'notes';
+const preview = entry.data.preview;
 ---
 <Layout
   title={`${entry.data.title} — leins275`}
   description={entry.data.description}
   lang="ru"
   activeNav="blog"
+  ogImage={preview?.src}
 >
   <article>
     <div class="ahead">
@@ -30,6 +33,9 @@ const cat = entry.data.categories?.[0] ?? 'notes';
         <span class="meta">{formatDate(entry.data.date, 'ru')}</span>
       </div>
     </div>
+    {preview && (
+      <Image class="cover" src={preview} alt={entry.data.title} loading="eager" />
+    )}
     <div class="body">
       <Content />
     </div>

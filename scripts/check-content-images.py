@@ -14,7 +14,10 @@ import sys
 from pathlib import Path
 
 CONTENT = Path(__file__).resolve().parent.parent / "content"
-FIELD_RE = re.compile(r"^(preview|image|cover):\s*['\"]?(\./[^'\"\s]+)['\"]?\s*$")
+# Any relative ref, not just `./`-prefixed — a bare `preview: preview.jpg` resolves
+# the same way and must not slip past. Absolute paths and URLs are not ours to check.
+FIELD_RE = re.compile(r"^(preview|image|cover):\s*['\"]?([^'\"\s]+)['\"]?\s*$")
+SKIP_RE = re.compile(r"^(/|[a-z][a-z0-9+.-]*:)", re.IGNORECASE)
 
 
 def main() -> int:
@@ -32,7 +35,9 @@ def main() -> int:
             if not in_frontmatter:
                 break
             m = FIELD_RE.match(line)
-            if m and not (md.parent / m.group(2)).exists():
+            if not m or SKIP_RE.match(m.group(2)):
+                continue
+            if not (md.parent / m.group(2)).exists():
                 broken.append(f"{md}:{lineno}: {m.group(1)} -> {m.group(2)} does not exist")
 
     if broken:

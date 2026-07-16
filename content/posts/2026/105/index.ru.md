@@ -5,6 +5,7 @@ authors: [leins275]
 categories: [post]
 title: Я долго держался
 draft: false
+preview: ./preview.jpg
 ---
 
 

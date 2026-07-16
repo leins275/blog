@@ -25,7 +25,7 @@ def split_frontmatter(text: str) -> tuple[str, str, str] | None:
         return None
     head = text[: text.find("\n") + 1]  # first "---\n"
     fm = text[len(head) : end + 1]
-    rest = text[end + 1 :]
+    rest = text[end:]  # keeps the newline, so rest starts at the closing "\n---"
     if not rest.startswith("\n---"):
         return None
     return head, fm, rest
@@ -56,7 +56,8 @@ def inject(path: Path) -> bool:
     if fm.strip().startswith("{"):
         print(f"[skip] flow-style frontmatter, edit by hand: {path}", file=sys.stderr)
         return False
-    new_fm = fm.rstrip("\n") + "\n" + PREVIEW_LINE + "\n"
+    # No trailing newline: `rest` already supplies the one before the closing "---".
+    new_fm = fm.rstrip("\n") + "\n" + PREVIEW_LINE
     path.write_text(head + new_fm + rest, encoding="utf-8")
     return True
 
