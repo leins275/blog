@@ -24,7 +24,7 @@ export HUGO_ENV
 
 .PHONY: run build clean pdf cv install-fonts \
         astro-install astro-run astro-build astro-check astro-clean \
-        backfill-previews
+        backfill-previews content-check
 
 run:
 	$(HUGO) server --source $(HUGO_DIR) --gc --minify --baseURL "$(BASE_URL)" --port $(PORT) --bind 0.0.0.0
@@ -46,8 +46,13 @@ astro-run:
 astro-build:
 	cd $(ASTRO_DIR) && npm run build
 
-astro-check:
+astro-check: content-check
 	cd $(ASTRO_DIR) && npm run check
+
+# Catch dangling relative image refs (e.g. `preview: ./preview.jpg` with no such
+# file) before Astro's image() resolver fails the build with an opaque trace.
+content-check:
+	uv run python scripts/check-content-images.py
 
 astro-clean:
 	rm -rf $(ASTRO_DIR)/dist $(ASTRO_DIR)/.astro

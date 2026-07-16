@@ -58,6 +58,9 @@ jobs:
       - name: Build CV PDFs with typst
         run: make pdf PDF_DIR=${{ env.PDF_DIR }}
 
+      - name: Check content image references
+        run: python3 scripts/check-content-images.py
+
       - name: Build Astro site
         working-directory: astro
         run: npm run build
