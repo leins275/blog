@@ -59,8 +59,12 @@ header.site {
 }
 .bar { max-width: var(--wide); margin: 0 auto; padding: 15px 28px; display: flex; align-items: center; gap: 22px; }
 .logo { font-family: var(--mono); font-weight: 700; font-size: 14px; letter-spacing: .02em; display: flex; align-items: center; gap: 8px; }
-.logo .mk { display: inline-grid; place-items: center; width: 24px; height: 24px; border: 1.5px solid var(--ink); border-radius: 50%; font-size: 12px; transition: .25s var(--ease); }
-.logo:hover .mk { background: var(--accent); border-color: var(--accent); color: #fff; transform: rotate(-12deg); }
+.logo .mk {
+  width: 17px; height: 30px; display: block; flex: none;
+  fill: none; stroke: var(--accent); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .25s var(--ease), stroke .5s var(--ease);
+}
+.logo:hover .mk { transform: rotate(-8deg); }
 nav.main { margin-left: auto; display: flex; align-items: center; gap: 4px; }
 nav.main a {
   font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;

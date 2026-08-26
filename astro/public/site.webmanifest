@@ -1,0 +1,11 @@
+{
+  "name": "leins275",
+  "short_name": "leins275",
+  "icons": [
+    { "src": "/favicon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#9a4a2f",
+  "background_color": "#f5f3ec",
+  "display": "standalone"
+}

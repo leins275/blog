@@ -40,6 +40,12 @@ const ogImageUrl = ogImage ? new URL(ogImage, Astro.site).toString() : undefined
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png" />
+  <link rel="apple-touch-icon" href="/favicon-180.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#9a4a2f" />
   <link rel="canonical" href={canonical} />
   <link rel="alternate" hreflang={lang === 'en' ? 'ru' : 'en'} href={new URL(otherLangHref, Astro.site).toString()} />
   <link rel="alternate" type="application/rss+xml" title={`leins275 — ${lang.toUpperCase()}`} href={rssPath} />
@@ -69,7 +75,14 @@ const ogImageUrl = ogImage ? new URL(ogImage, Astro.site).toString() : undefined
 <body>
   <header class="site">
     <div class="bar">
-      <a class="logo" href={homePath}><span class="mk">✦</span>leins275</a>
+      <a class="logo" href={homePath} aria-label="leins275">
+        <svg class="mk" viewBox="0 0 111 200" aria-hidden="true" focusable="false">
+          <path d="M63.6 10 C 59 70 52 130 47.4 190" />
+          <path d="M63.6 10 C 65 40 76 64 101 72 C 72 80 42 90 20 97" />
+          <path d="M47.4 190 C 46 160 35 136 10 128 C 39 120 69 110 91 103" />
+        </svg>
+        leins275
+      </a>
       <nav class="main">
         <a href={aboutPath} class={activeNav === 'about' ? 'active' : undefined}>{t('About', 'Био')}</a>
         <a href={portfolioPath} class={activeNav === 'portfolio' ? 'active' : undefined}>{t('Portfolio', 'Портфолио')}</a>
