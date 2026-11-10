@@ -58,7 +58,12 @@ const portfolioSchema = z
     date: z.coerce.date().optional(),
     items: z
       .array(
-        z.object({ title: z.string(), image: z.string().optional(), link: z.string().optional() }),
+        z.object({
+          title: z.string(),
+          image: z.string().optional(),
+          link: z.string().optional(),
+          description: z.string().optional(),
+        }),
       )
       .optional(),
     videos: z

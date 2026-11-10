@@ -271,9 +271,19 @@ article .body pre code { background: none; border: 0; padding: 0; font-size: inh
 .cert .ic img { width: 100%; height: 100%; object-fit: cover; }
 .cert .cn { font-size: 16px; line-height: 1.25; }
 .cert .cv { font-family: var(--mono); font-size: 11px; color: var(--mut); }
+.repos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 8px; }
+.repo {
+  display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--rule-strong);
+  border-radius: 10px; padding: 14px 16px; transition: .25s var(--ease);
+}
+.repo:hover { border-color: var(--accent); transform: translateY(-2px); }
+.repo .rn { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+.repo .rn .arrow { color: var(--mut); font-weight: 400; }
+.repo .rd { font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
+.repo .rh { font-family: var(--mono); font-size: 11px; color: var(--mut); margin-top: auto; }
 
 @media (max-width: 680px) {
-  .talks, .certs { grid-template-columns: 1fr; }
+  .talks, .certs, .repos { grid-template-columns: 1fr; }
   nav.main a { padding: 7px 8px; }
   .bar { flex-wrap: wrap; gap: 12px; }
   body { font-size: 18px; }

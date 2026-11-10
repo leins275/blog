@@ -4,22 +4,11 @@ date: 2025-05-08T07:30:21+03:00
 title: Опенсорс
 weight: 20
 build: {render: never, list: always, publishResources: true}
+items:
+- title: Transcriber
+  link: https://github.com/leins275/transcriber
+  description: Local-first десктопное приложение для транскрибации, саммаризации и организации записей встреч. Python, faster-whisper, llama.cpp.
+- title: Eye Saver
+  link: https://github.com/leins275/eye-saver
+  description: Таймер перерывов для глаз по правилу 20-20-20 с HUD-отсчётом и затемнением экрана. Tauri v2, Rust, React.
 ---
-
-# [CRAN parser](https://github.com/leins275/cran-parser)
-
-Этот проект я делал в Епаме, это была тестовая задачка на один их проектов. Задача была - составить полный список всех зависимостей к исходному списку R пакетов. Эта штука нужна для работы с модулями EasyBuild.
-
-Тест я прошел успешно, но в итоге пошел на [другой проект](/projects/gctocbot/), который хотел меня сильнее.
-
-# [Тема hugo-coder](https://github.com/luizdepra/hugo-coder)
-
-Я есть в списке контрибуторов в репозитории с темой, которая использована на этом сайте.
-
-Мне нужна была поддержка яндекс метрики, я ее добавил и мейнтейнер смерджил мою небольшую фичу.
-
-# [Sanctions check](https://github.com/MikhailFokanov/sanctions-check)
-
-Над этим проектом я работал в EPAM. Мы делали PoC для проверки имен в санкционных списках. Поиск осуществлялся при помощи opensearch и дополнительного процессинга при помощи ГПТ апи.
-
-Стек: OpenSearch, Python, ChatGPT API
