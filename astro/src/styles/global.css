@@ -136,9 +136,6 @@ main { min-height: 62vh; }
 .phead { max-width: var(--measure); margin: 0 auto; padding: 70px 0 8px; }
 .phead h1 { font-size: clamp(34px, 6vw, 52px); font-weight: 500; letter-spacing: -.02em; line-height: 1.02; margin: 10px 0 0; }
 .phead p.sub { color: var(--ink-soft); font-size: 19px; margin: 14px 0 0; max-width: 34rem; }
-.phead .cv-link { display: inline-block; margin-top: 22px; font-family: var(--mono); font-size: 13px; letter-spacing: .04em; color: var(--accent); border-bottom: 1px solid var(--rule-strong); }
-.phead .cv-link:hover { border-color: var(--accent); }
-.phead .cv-link .arrow { color: var(--mut); font-size: 11px; margin-left: 3px; }
 
 /* ---------- blog index ---------- */
 .yeargroup { max-width: var(--measure); margin: 0 auto; }
@@ -269,6 +266,13 @@ article .body pre code { background: none; border: 0; padding: 0; font-size: inh
 .cert .ic img { width: 100%; height: 100%; object-fit: cover; }
 .cert .cn { font-size: 16px; line-height: 1.25; }
 .cert .cv { font-family: var(--mono); font-size: 11px; color: var(--mut); }
+.cvs { list-style: none; margin: 8px 0 0; padding: 0; }
+.cvs li { border-bottom: 1px solid var(--rule); }
+.cvs a { display: flex; align-items: baseline; gap: 10px; padding: 12px 0; font-size: 17px; color: var(--ink); }
+.cvs a:hover .ct { color: var(--accent); }
+.cvs time { font-family: var(--mono); font-size: 12px; color: var(--mut); white-space: nowrap; }
+.cvs .sep { color: var(--mut); }
+.cvs .arrow { color: var(--mut); font-size: 12px; margin-left: auto; }
 .repos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 8px; }
 .repo {
   display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--rule-strong);

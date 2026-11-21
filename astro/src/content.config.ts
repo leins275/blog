@@ -60,6 +60,7 @@ const portfolioSchema = z
       .array(
         z.object({
           title: z.string(),
+          date: z.coerce.date().optional(),
           image: z.string().optional(),
           link: z.string().optional(),
           description: z.string().optional(),

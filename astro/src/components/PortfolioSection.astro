@@ -26,6 +26,10 @@ const colorFor = (title: string) => {
   return palette[key] ?? '#46433c';
 };
 const ytThumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+const fmtDate = (d: Date) =>
+  d.toLocaleDateString(lang === 'ru' ? 'ru-RU' : 'en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
+const byDateDesc = <T extends { date?: Date }>(items: T[]) =>
+  [...items].sort((a, b) => (b.date?.getTime() ?? 0) - (a.date?.getTime() ?? 0));
 ---
 <div class="phead">
   <div class="kick">{t('Portfolio', 'Портфолио')}</div>
@@ -34,15 +38,27 @@ const ytThumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
     'Education, open-source contributions, talks, and certifications.',
     'Образование, опенсорс, выступления и сертификаты.',
   )}</p>
-  <a class="cv-link" href="/files/nikita-lanskov-senior-software-engineer.pdf" target="_blank" rel="noopener">
-    {t('Download CV (PDF)', 'Скачать CV (PDF)')} <span class="arrow">↗</span>
-  </a>
 </div>
 
 <div class="pf">
   {rendered.map(({ entry, slug, Content }) => (
     <section>
       <div class="sect-h"><h2>{entry.data.title}</h2></div>
+
+      {slug === 'cv' && entry.data.items && (
+        <ul class="cvs">
+          {byDateDesc(entry.data.items).map((item) => (
+            <li>
+              <a href={item.link ?? '#'} target="_blank" rel="noopener">
+                {item.date && <time datetime={item.date.toISOString().slice(0, 10)}>{fmtDate(item.date)}</time>}
+                <span class="sep">—</span>
+                <span class="ct">{item.title}</span>
+                <span class="arrow">↗</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
 
       {slug === 'meetups' && entry.data.videos && (
         <div class="talks">
