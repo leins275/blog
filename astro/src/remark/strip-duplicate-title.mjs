@@ -1,7 +1,7 @@
 // tg-smm post bodies often repeat the title as the first paragraph (the bot
 // writes the post-as-sent-on-Telegram verbatim, which usually opens with the
 // title). On the post page that produces a duplicate heading-then-tiny-line
-// sequence and breaks the drop-cap layout. Strip it when it matches.
+// sequence. Strip it when it matches.
 //
 // Compares case-insensitively and ignores trailing punctuation / whitespace
 // to absorb minor variations.
